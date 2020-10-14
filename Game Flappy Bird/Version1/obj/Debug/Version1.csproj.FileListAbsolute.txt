@@ -1,0 +1,20 @@
+C:\Users\MACBOOK\Desktop\Game Flappy Bird\Version1\bin\Debug\Version1.exe.config
+C:\Users\MACBOOK\Desktop\Game Flappy Bird\Version1\bin\Debug\Version1.exe
+C:\Users\MACBOOK\Desktop\Game Flappy Bird\Version1\bin\Debug\Version1.pdb
+C:\Users\MACBOOK\Desktop\Game Flappy Bird\Version1\obj\Debug\Version1.csprojAssemblyReference.cache
+C:\Users\MACBOOK\Desktop\Game Flappy Bird\Version1\obj\Debug\Version1.Form1.resources
+C:\Users\MACBOOK\Desktop\Game Flappy Bird\Version1\obj\Debug\Version1.Properties.Resources.resources
+C:\Users\MACBOOK\Desktop\Game Flappy Bird\Version1\obj\Debug\Version1.csproj.GenerateResource.cache
+C:\Users\MACBOOK\Desktop\Game Flappy Bird\Version1\obj\Debug\Version1.csproj.CoreCompileInputs.cache
+C:\Users\MACBOOK\Desktop\Game Flappy Bird\Version1\obj\Debug\Version1.exe
+C:\Users\MACBOOK\Desktop\Game Flappy Bird\Version1\obj\Debug\Version1.pdb
+C:\UIT\UIT HK3\Visual Programing\Game Flappy Bird\Version1\bin\Debug\Version1.exe.config
+C:\UIT\UIT HK3\Visual Programing\Game Flappy Bird\Version1\bin\Debug\Version1.exe
+C:\UIT\UIT HK3\Visual Programing\Game Flappy Bird\Version1\bin\Debug\Version1.pdb
+C:\UIT\UIT HK3\Visual Programing\Game Flappy Bird\Version1\obj\Debug\Version1.csprojAssemblyReference.cache
+C:\UIT\UIT HK3\Visual Programing\Game Flappy Bird\Version1\obj\Debug\Version1.Form1.resources
+C:\UIT\UIT HK3\Visual Programing\Game Flappy Bird\Version1\obj\Debug\Version1.Properties.Resources.resources
+C:\UIT\UIT HK3\Visual Programing\Game Flappy Bird\Version1\obj\Debug\Version1.csproj.GenerateResource.cache
+C:\UIT\UIT HK3\Visual Programing\Game Flappy Bird\Version1\obj\Debug\Version1.csproj.CoreCompileInputs.cache
+C:\UIT\UIT HK3\Visual Programing\Game Flappy Bird\Version1\obj\Debug\Version1.exe
+C:\UIT\UIT HK3\Visual Programing\Game Flappy Bird\Version1\obj\Debug\Version1.pdb
