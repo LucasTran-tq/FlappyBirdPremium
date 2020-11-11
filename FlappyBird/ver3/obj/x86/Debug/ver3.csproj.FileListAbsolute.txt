@@ -1,0 +1,8 @@
+C:\Users\PC\Desktop\FlappyBird\ver3\bin\Debug\ver3.exe
+C:\Users\PC\Desktop\FlappyBird\ver3\bin\Debug\ver3.pdb
+C:\Users\PC\Desktop\FlappyBird\ver3\obj\x86\Debug\ver3.Form1.resources
+C:\Users\PC\Desktop\FlappyBird\ver3\obj\x86\Debug\ver3.Properties.Resources.resources
+C:\Users\PC\Desktop\FlappyBird\ver3\obj\x86\Debug\ver3.csproj.GenerateResource.Cache
+C:\Users\PC\Desktop\FlappyBird\ver3\obj\x86\Debug\ver3.exe
+C:\Users\PC\Desktop\FlappyBird\ver3\obj\x86\Debug\ver3.pdb
+C:\Users\PC\Desktop\FlappyBird\ver3\obj\x86\Debug\ver3.csprojResolveAssemblyReference.cache
