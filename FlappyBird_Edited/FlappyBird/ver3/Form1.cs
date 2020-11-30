@@ -18,6 +18,8 @@ namespace ver3
             InitializeComponent();
         }
 
+        int thangtran;
+
         int Y_OngTren1, Y_OngTren2;
 
         int Y_OngDuoi1, Y_OngDuoi2;
