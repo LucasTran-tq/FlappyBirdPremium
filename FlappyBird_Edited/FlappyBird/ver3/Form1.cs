@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using System.Threading.Tasks;
-using System.Drawing.Text;
 
 namespace ver3
 {
@@ -18,28 +11,9 @@ namespace ver3
             InitializeComponent();
         }
 
-        int Y_OngTren1, Y_OngTren2;
-
-        int Y_OngDuoi1, Y_OngDuoi2;
-
-        int DoLech = 125;
-
-        int X_CapOng1, X_CapOng2;
-
-        int Diem = 0;
-
-        
-        
-
-
         Bird bird = new Bird();
-        
-
-       
-
-        
-
-       
+        Pipe pipe = new Pipe();
+        Score score = new Score();
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
@@ -56,27 +30,27 @@ namespace ver3
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
            
 
-            X_CapOng1 = this.Width + 150;
-            Y_OngTren1 = -150;
+            pipe.X_pipePair1 = this.Width + 150;
+            pipe.Y_pipeAbove1 = -150;
             
-            ongtren1.Location = new Point(X_CapOng1, Y_OngTren1);
-            Y_OngDuoi1 = (250 + Y_OngTren1) + DoLech;
+            ongtren1.Location = new Point(pipe.X_pipePair1, pipe.Y_pipeAbove1);
+            pipe.Y_pipeBottom1 = (250 + pipe.Y_pipeAbove1) + pipe.Distance_Between2Pipes;
         
-            ongduoi1.Location = new Point(X_CapOng1, Y_OngDuoi1);
+            ongduoi1.Location = new Point(pipe.X_pipePair1, pipe.Y_pipeBottom1);
 
-            X_CapOng2 = X_CapOng1 + ongtren1.Width + 250;
-            Y_OngTren2 = -150;
+            pipe.X_pipePair2 = pipe.X_pipePair1 + ongtren1.Width + 250;
+            pipe.Y_pipeAbove2 = -150;
           
-            ongtren2.Location = new Point(X_CapOng2, Y_OngTren2);
-            Y_OngDuoi2 = (250 + Y_OngTren2) + DoLech;
+            ongtren2.Location = new Point(pipe.X_pipePair2, pipe.Y_pipeAbove2);
+            pipe.Y_pipeBottome2 = (250 + pipe.Y_pipeAbove2) + pipe.Distance_Between2Pipes;
            
-            ongduoi2.Location = new Point(X_CapOng2, Y_OngDuoi2);
+            ongduoi2.Location = new Point(pipe.X_pipePair2, pipe.Y_pipeBottome2);
 
 
 
             timer1.Interval = 35;
 
-            bird.bird_Timer.Tick += Bird_Timer_Tick;
+            
 
             //timer2.Interval = 70;
 
@@ -87,39 +61,39 @@ namespace ver3
             this.SetStyle(ControlStyles.AllPaintingInWmPaint |
             ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer, true);
 
-            X_CapOng1 -= 10;
-            X_CapOng2 -= 10;
+            pipe.X_pipePair1 -= 10;
+            pipe.X_pipePair2 -= 10;
 
-            ongtren1.Location = new Point(X_CapOng1, Y_OngTren1);
-            ongduoi1.Location = new Point(X_CapOng1, Y_OngDuoi1);
-            ongtren2.Location = new Point(X_CapOng2, Y_OngTren2);
-            ongduoi2.Location = new Point(X_CapOng2, Y_OngDuoi2);
+            ongtren1.Location = new Point(pipe.X_pipePair1, pipe.Y_pipeAbove1);
+            ongduoi1.Location = new Point(pipe.X_pipePair1, pipe.Y_pipeBottom1);
+            ongtren2.Location = new Point(pipe.X_pipePair2, pipe.Y_pipeAbove2);
+            ongduoi2.Location = new Point(pipe.X_pipePair2, pipe.Y_pipeBottome2);
 
-            if (X_CapOng1 + ongtren1.Width <= 0)
+            if (pipe.X_pipePair1 + ongtren1.Width <= 0)
             {
-                Diem++;
+                score.scoreOfGame++;
 
-                X_CapOng1 = 400 + ongtren2.Width + 150;
+                pipe.X_pipePair1 = 400 + ongtren2.Width + 150;
 
                 Random cao = new Random();
-                Y_OngTren1 = cao.Next(-175, -25);
-                Y_OngDuoi1 = (256 + Y_OngTren1) + DoLech;
-                ongtren1.Location = new Point(X_CapOng1, Y_OngTren1);
-                ongduoi1.Location = new Point(X_CapOng1, Y_OngDuoi1);
+                pipe.Y_pipeAbove1 = cao.Next(-175, -25);
+                pipe.Y_pipeBottom1 = (256 + pipe.Y_pipeAbove1) + pipe.Distance_Between2Pipes;
+                ongtren1.Location = new Point(pipe.X_pipePair1, pipe.Y_pipeAbove1);
+                ongduoi1.Location = new Point(pipe.X_pipePair1, pipe.Y_pipeBottom1);
             }
 
-            if (X_CapOng2 + ongtren2.Width <= 0)
+            if (pipe.X_pipePair2 + ongtren2.Width <= 0)
             {
-                Diem++;
-                X_CapOng2 = 400 + ongtren1.Width + 150;
+                score.scoreOfGame++;
+                pipe.X_pipePair2 = 400 + ongtren1.Width + 150;
                 Random cao = new Random();
-                Y_OngTren2 = cao.Next(-175, -25);
-                Y_OngDuoi2 = (256 + Y_OngTren2) + DoLech;
-                ongtren2.Location = new Point(X_CapOng2, Y_OngTren2);
-                ongduoi2.Location = new Point(X_CapOng2, Y_OngDuoi2);
+                pipe.Y_pipeAbove2 = cao.Next(-175, -25);
+                pipe.Y_pipeBottome2 = (256 + pipe.Y_pipeAbove2) + pipe.Distance_Between2Pipes;
+                ongtren2.Location = new Point(pipe.X_pipePair2, pipe.Y_pipeAbove2);
+                ongduoi2.Location = new Point(pipe.X_pipePair2, pipe.Y_pipeBottome2);
             }
 
-            lbldiem.Text = Diem.ToString();
+            lbldiem.Text = score.scoreOfGame.ToString();
 
         }
         int dem = 0;
@@ -160,7 +134,7 @@ namespace ver3
 
         }
 
-     
+        
 
         private void Bird_Timer_Tick(object sender, EventArgs e)
         {
@@ -173,9 +147,9 @@ namespace ver3
             {
                 bird.Y_Bird += 10;
                 
-                if (bird.X_Bird + bird.birdPicture.Width >= X_CapOng1 && bird.X_Bird + bird.birdPicture.Width <= X_CapOng1 + ongtren1.Width)
+                if (bird.X_Bird + bird.birdPicture.Width >= pipe.X_pipePair1 && bird.X_Bird + bird.birdPicture.Width <= pipe.X_pipePair1 + ongtren1.Width)
                 {
-                    if (bird.Y_Bird <= 250 + Y_OngTren1 || bird.Y_Bird + bird.birdPicture.Height >= Y_OngDuoi1)
+                    if (bird.Y_Bird <= 250 + pipe.Y_pipeAbove1 || bird.Y_Bird + bird.birdPicture.Height >= pipe.Y_pipeBottom1)
                     {
                         timer1.Stop();
                        
@@ -191,9 +165,9 @@ namespace ver3
                       
                     }
                 }
-                if (bird.X_Bird + bird.birdPicture.Width >= X_CapOng2 && bird.X_Bird + bird.birdPicture.Width <= X_CapOng2 + ongtren2.Width)
+                if (bird.X_Bird + bird.birdPicture.Width >= pipe.X_pipePair2 && bird.X_Bird + bird.birdPicture.Width <= pipe.X_pipePair2 + ongtren2.Width)
                 {
-                    if (bird.Y_Bird <= 250 + Y_OngTren2 || bird.Y_Bird + bird.birdPicture.Height >= Y_OngDuoi2)
+                    if (bird.Y_Bird <= 250 + pipe.Y_pipeAbove2 || bird.Y_Bird + bird.birdPicture.Height >= pipe.Y_pipeBottome2)
                     {
                         timer1.Stop();
                         pb_GameOver.Visible = true;
