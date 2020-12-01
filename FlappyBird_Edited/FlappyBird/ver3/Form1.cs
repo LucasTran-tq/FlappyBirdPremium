@@ -22,57 +22,30 @@ namespace ver3
 
         int Y_OngDuoi1, Y_OngDuoi2;
 
-
         int DoLech = 125;
 
         int X_CapOng1, X_CapOng2;
 
         int Diem = 0;
 
-        Bitmap bird_1 = new Bitmap(Properties.Resources.redbird_downflap),
-            bird_2 = new Bitmap(Properties.Resources.redbird_midflap),
-            bird_3 = new Bitmap(Properties.Resources.redbird_upflap);
+        
+        
 
-        Bitmap[] array_Bird; 
-        Bitmap birdPicture;
-        Timer bird_Timer = new Timer();
 
-        float X_Bird = 60;
-        float Y_Bird = 200;
+        Bird bird = new Bird();
+        
 
-        int count = 0;
-
-        private void Bird_Animator()
-        {
-
-            bird_Timer.Interval = 100;
-            bird_Timer.Tick += Bird_Timer_Tick;
-            bird_Timer.Start();
-        }
+       
 
         
 
-        private Bitmap Draw2D_Bird()
-        {
-            array_Bird = new Bitmap[] { bird_1, bird_2, bird_3 };
-
-            if (count < array_Bird.Length)
-            {
-                birdPicture = array_Bird[count++];
-            }
-            else
-            {
-                count = 0;
-            }
-
-            return birdPicture;
-        }
+       
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            if (bird_Timer.Enabled == true)
+            if (bird.bird_Timer.Enabled == true)
             {
-                e.Graphics.DrawImage(Draw2D_Bird(), X_Bird, Y_Bird);
+                e.Graphics.DrawImage( bird.Draw2D_Bird(), bird.X_Bird, bird.Y_Bird);
             }
         }
 
@@ -102,8 +75,11 @@ namespace ver3
 
 
             timer1.Interval = 35;
+
+            bird.bird_Timer.Tick += Bird_Timer_Tick;
+
             //timer2.Interval = 70;
-               
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -170,7 +146,7 @@ namespace ver3
         {
             if (e.KeyCode == Keys.Space)
             {
-                Y_Bird -= 50;
+                bird.Y_Bird -= 50;
             }
 
             //if (e.KeyCode == Keys.A)
@@ -193,15 +169,16 @@ namespace ver3
             this.SetStyle(ControlStyles.AllPaintingInWmPaint |
             ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer, true);
 
-            if (Y_Bird + birdPicture.Height <= this.Height)
+            if (bird.Y_Bird + bird.birdPicture.Height <= this.Height)
             {
-                Y_Bird += 10;
+                bird.Y_Bird += 10;
                 
-                if (X_Bird + birdPicture.Width >= X_CapOng1 && X_Bird + birdPicture.Width <= X_CapOng1 + ongtren1.Width)
+                if (bird.X_Bird + bird.birdPicture.Width >= X_CapOng1 && bird.X_Bird + bird.birdPicture.Width <= X_CapOng1 + ongtren1.Width)
                 {
-                    if (Y_Bird <= 250 + Y_OngTren1 || Y_Bird + birdPicture.Height >= Y_OngDuoi1)
+                    if (bird.Y_Bird <= 250 + Y_OngTren1 || bird.Y_Bird + bird.birdPicture.Height >= Y_OngDuoi1)
                     {
                         timer1.Stop();
+                       
                         pb_GameOver.Visible = true;
 
                         ongduoi1.Visible = false;
@@ -214,9 +191,9 @@ namespace ver3
                       
                     }
                 }
-                if (X_Bird + birdPicture.Width >= X_CapOng2 && X_Bird + birdPicture.Width <= X_CapOng2 + ongtren2.Width)
+                if (bird.X_Bird + bird.birdPicture.Width >= X_CapOng2 && bird.X_Bird + bird.birdPicture.Width <= X_CapOng2 + ongtren2.Width)
                 {
-                    if (Y_Bird <= 250 + Y_OngTren2 || Y_Bird + birdPicture.Height >= Y_OngDuoi2)
+                    if (bird.Y_Bird <= 250 + Y_OngTren2 || bird.Y_Bird + bird.birdPicture.Height >= Y_OngDuoi2)
                     {
                         timer1.Stop();
                         pb_GameOver.Visible = true;
@@ -236,8 +213,8 @@ namespace ver3
             else
             {
                 timer1.Stop();
-              
-                bird_Timer.Stop();
+
+                bird.bird_Timer.Stop();
                 pb_GameOver.Visible = true;
 
                 ongduoi1.Visible = false;
