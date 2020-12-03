@@ -11,9 +11,13 @@ namespace ver3
             InitializeComponent();
         }
 
+
         Bird bird = new Bird();
         Pipe pipe = new Pipe();
         Score score = new Score();
+
+
+
 
         Timer bird_Timer = new Timer();
 
