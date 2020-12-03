@@ -1,9 +1,0 @@
-C:\UIT\UIT HK3\Visual Programing\Project FlappyBird remote\Remote - Copy\FlappyBird\ver3\bin\Debug\ver3.exe
-C:\UIT\UIT HK3\Visual Programing\Project FlappyBird remote\Remote - Copy\FlappyBird\ver3\bin\Debug\ver3.pdb
-C:\UIT\UIT HK3\Visual Programing\Project FlappyBird remote\Remote - Copy\FlappyBird\ver3\obj\x86\Debug\ver3.Form1.resources
-C:\UIT\UIT HK3\Visual Programing\Project FlappyBird remote\Remote - Copy\FlappyBird\ver3\obj\x86\Debug\ver3.Properties.Resources.resources
-C:\UIT\UIT HK3\Visual Programing\Project FlappyBird remote\Remote - Copy\FlappyBird\ver3\obj\x86\Debug\ver3.csproj.GenerateResource.cache
-C:\UIT\UIT HK3\Visual Programing\Project FlappyBird remote\Remote - Copy\FlappyBird\ver3\obj\x86\Debug\ver3.csproj.CoreCompileInputs.cache
-C:\UIT\UIT HK3\Visual Programing\Project FlappyBird remote\Remote - Copy\FlappyBird\ver3\obj\x86\Debug\ver3.exe
-C:\UIT\UIT HK3\Visual Programing\Project FlappyBird remote\Remote - Copy\FlappyBird\ver3\obj\x86\Debug\ver3.pdb
-C:\UIT\UIT HK3\Visual Programing\Project FlappyBird remote\Remote - Copy\FlappyBird\ver3\obj\x86\Debug\ver3.csprojAssemblyReference.cache
