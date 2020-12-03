@@ -7,7 +7,7 @@ namespace ver3
 {
     class Score
     {
-        public int scoreOfGame = 0;
+         public int scoreOfGame = 0;
 
 
     }
