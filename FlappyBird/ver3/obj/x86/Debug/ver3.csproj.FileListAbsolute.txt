@@ -50,3 +50,12 @@ C:\UIT\UIT HK3\Visual Programing\Git - FlappyBird\FlappyBird\ver3\obj\x86\Debug\
 C:\UIT\UIT HK3\Visual Programing\Git - FlappyBird\FlappyBird\ver3\obj\x86\Debug\ver3.csproj.CopyComplete
 C:\UIT\UIT HK3\Visual Programing\Git - FlappyBird\FlappyBird\ver3\obj\x86\Debug\ver3.exe
 C:\UIT\UIT HK3\Visual Programing\Git - FlappyBird\FlappyBird\ver3\obj\x86\Debug\ver3.pdb
+E:\11\FB\FlappyBird\ver3\obj\x86\Debug\ver3.exe
+E:\11\FB\FlappyBird\ver3\obj\x86\Debug\ver3.pdb
+E:\11\FB\FlappyBird\ver3\bin\Debug\ver3.exe
+E:\11\FB\FlappyBird\ver3\bin\Debug\ver3.pdb
+E:\11\FB\FlappyBird\ver3\bin\Debug\Guna.UI.dll
+E:\11\FB\FlappyBird\ver3\obj\x86\Debug\ver3.csprojResolveAssemblyReference.cache
+E:\11\FB\FlappyBird\ver3\obj\x86\Debug\ver3.Form1.resources
+E:\11\FB\FlappyBird\ver3\obj\x86\Debug\ver3.Properties.Resources.resources
+E:\11\FB\FlappyBird\ver3\obj\x86\Debug\ver3.csproj.GenerateResource.Cache

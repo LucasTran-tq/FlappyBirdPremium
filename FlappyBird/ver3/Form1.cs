@@ -45,6 +45,7 @@ namespace ver3
             pictureBox_introBird.Visible = false;
             menu.Visible = false;
             exit.Visible = false;
+            lbldiem.Visible = true;
         }
 
         private void GameOver()
@@ -60,7 +61,7 @@ namespace ver3
             exit.Visible = true;
 
             //bird.soundDie.Play();
-            bird.soundHit.Play();
+            //bird.soundHit.Play();
             
         }
 
@@ -116,7 +117,7 @@ namespace ver3
             if (pipe.X_pipePairs1 + picBoxPipeAbove1.Width <= 0)
             {
                 score.scoreOfGame++;
-                score.soundPoint.Play();
+                //score.soundPoint.Play();
                 pipe.X_pipePairs1 = 400 + picBoxPipeAbove2.Width + 150;
 
                 Random cao = new Random();
@@ -129,7 +130,7 @@ namespace ver3
             if (pipe.X_pipePairs2 + picBoxPipeAbove2.Width <= 0)
             {
                 score.scoreOfGame++;
-                score.soundPoint.Play();
+                //score.soundPoint.Play();
                 pipe.X_pipePairs2 = 400 + picBoxPipeAbove1.Width + 150;
                 Random cao = new Random();
                 pipe.Y_pipeAbove2 = cao.Next(-175, -25);
@@ -165,7 +166,7 @@ namespace ver3
             if (e.KeyCode == Keys.Space)
             {
                 bird.Y_Bird -= 50;
-                bird.soundWing.Play();
+                //bird.soundWing.Play();
             }
         }
 
@@ -210,7 +211,7 @@ namespace ver3
 
             if(bird.Y_Bird > this.Height)
             {
-                bird.soundHit.Stop();
+                //bird.soundHit.Stop();
             }
         }
 
