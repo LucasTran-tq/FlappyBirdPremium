@@ -36,8 +36,8 @@ namespace ver3
         }
 
         // audio
-        public SoundPlayer soundWing = new SoundPlayer(@"C: \UIT\UIT HK3\Visual Programing\Git - FlappyBird\FlappyBird\assets\audio\wing.wav");
-        public SoundPlayer soundHit = new SoundPlayer(@"C: \UIT\UIT HK3\Visual Programing\Git - FlappyBird\FlappyBird\assets\audio\hit.wav");
-        public SoundPlayer soundDie = new SoundPlayer(@"C: \UIT\UIT HK3\Visual Programing\Git - FlappyBird\FlappyBird\assets\audio\die.wav");
+        public SoundPlayer soundWing = new SoundPlayer(Properties.Resources.wing);
+        public SoundPlayer soundHit = new SoundPlayer(Properties.Resources.hit);
+        public SoundPlayer soundDie = new SoundPlayer(Properties.Resources.die);
     }
 }

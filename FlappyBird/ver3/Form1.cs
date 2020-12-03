@@ -28,12 +28,13 @@ namespace ver3
         
         Timer bird_Timer = new Timer();
 
-        
+        public SoundPlayer soundClick = new SoundPlayer(Properties.Resources.ClickSound);
+        public SoundPlayer soundGameOver = new SoundPlayer(Properties.Resources.GameOverSound);
 
         private void Bird_Animator()
         {
 
-            bird_Timer.Interval = 100;
+            bird_Timer.Interval = 60;
             bird_Timer.Tick += Bird_Timer_Tick;
             bird_Timer.Start();
         }
@@ -60,8 +61,9 @@ namespace ver3
             exit.Visible = true;
 
             //bird.soundDie.Play();
-            bird.soundHit.Play();
-            
+            //bird.soundHit.Play();
+
+            soundGameOver.Play();
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -144,6 +146,7 @@ namespace ver3
         int dem = 0;
         private void nutplay_Click(object sender, EventArgs e)
         {
+            soundClick.Play();
             Reset();
 
             dem++;
@@ -164,7 +167,7 @@ namespace ver3
         {
             if (e.KeyCode == Keys.Space)
             {
-                bird.Y_Bird -= 50;
+                bird.Y_Bird -= 40;
                 bird.soundWing.Play();
             }
         }
@@ -180,8 +183,8 @@ namespace ver3
 
             if (bird.Y_Bird + bird.birdPicture.Height <= this.Height && bird.Y_Bird >= 0)
             {
-                bird.Y_Bird += 10;
-                
+                //bird.Y_Bird += 10;
+                bird.Y_Bird += 7;
                 if (bird.X_Bird + bird.birdPicture.Width >= pipe.X_pipePairs1 && bird.X_Bird + bird.birdPicture.Width <= pipe.X_pipePairs1 + picBoxPipeAbove1.Width)
                 {
                     if (bird.Y_Bird <= 250 + pipe.Y_pipeAbove1 || bird.Y_Bird + bird.birdPicture.Height >= pipe.Y_pipeBottom1)
@@ -202,8 +205,10 @@ namespace ver3
             }
             else
             {
+                //bird.Y_Bird += 10;
+                bird.Y_Bird += 7;
                 GameOver();
-                bird.Y_Bird += 10;
+                
                 
 
             }
