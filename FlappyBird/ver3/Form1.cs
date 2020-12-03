@@ -38,7 +38,7 @@ namespace ver3
             bird_Timer.Start();
         }
 
-        private void Reset()
+        private void Playing()
         {
             nutplay.Visible = false;
             pb_Title.Visible = false;
@@ -46,6 +46,20 @@ namespace ver3
             menu.Visible = false;
             exit.Visible = false;
             lbldiem.Visible = true;
+        }
+
+        private void Reset()
+        {
+            nutplay.Visible = true;
+            pb_Title.Visible = true;
+            pictureBox_introBird.Visible = true;
+            menu.Visible = true;
+            exit.Visible = true;
+
+            
+            //lbldiem.Visible = false;
+            //pb_GameOver.Visible = false;
+            //retry.Visible = false;
         }
 
         private void GameOver()
@@ -59,10 +73,37 @@ namespace ver3
 
             pb_GameOver.Visible = true;
             exit.Visible = true;
+            retry.Visible = true;
 
             //bird.soundDie.Play();
             //bird.soundHit.Play();
             
+        }
+
+        private void Menu_Show()
+        {
+            bgMenu.Visible = true;
+            lb_sence.Visible = true;
+            lb_speed.Visible = true;
+            lb_item.Visible = true;
+            arrow.Visible = true;
+
+            menu.Visible = false;
+            exit.Visible = false;
+            nutplay.Visible = false;
+        }
+
+        private void Menu_Reset()
+        {
+            nutplay.Visible = true;
+            menu.Visible = true;
+            exit.Visible = true;
+
+            bgMenu.Visible = false;
+            lb_sence.Visible = false;
+            lb_speed.Visible = false;
+            lb_item.Visible = false;
+            arrow.Visible = false;
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -145,7 +186,7 @@ namespace ver3
         int dem = 0;
         private void nutplay_Click(object sender, EventArgs e)
         {
-            Reset();
+            Playing();
 
             dem++;
             if (dem % 2 != 0)
@@ -217,15 +258,37 @@ namespace ver3
 
     
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+
+       
+        private void exit_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void menu_Click(object sender, EventArgs e)
         {
             menu.Visible = false;
+        }
+
+        private void bgMenu_Paint(object sender, PaintEventArgs e)
+        {
 
         }
 
-        private void exit_Click(object sender, EventArgs e)
+        private void menu_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            Menu_Show();
+        }
+
+        private void arrow_Click(object sender, EventArgs e)
+        {
+            Menu_Reset();
+        }
+
+        private void retry_Click(object sender, EventArgs e)
+        {
+           
+                   
         }
 
 
