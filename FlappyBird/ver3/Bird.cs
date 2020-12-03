@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Drawing;
+using System.Media;
 namespace ver3
 {
     class Bird
@@ -33,5 +34,10 @@ namespace ver3
 
             return birdPicture;
         }
+
+        // audio
+        public SoundPlayer soundWing = new SoundPlayer(@"C: \UIT\UIT HK3\Visual Programing\Git - FlappyBird\FlappyBird\assets\audio\wing.wav");
+        public SoundPlayer soundHit = new SoundPlayer(@"C: \UIT\UIT HK3\Visual Programing\Git - FlappyBird\FlappyBird\assets\audio\hit.wav");
+        public SoundPlayer soundDie = new SoundPlayer(@"C: \UIT\UIT HK3\Visual Programing\Git - FlappyBird\FlappyBird\assets\audio\die.wav");
     }
 }

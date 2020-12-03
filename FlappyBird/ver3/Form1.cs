@@ -9,6 +9,8 @@ using System.Windows.Forms;
 using System.Threading.Tasks;
 using System.Drawing.Text;
 using System.Runtime.InteropServices;
+using System.Media;
+
 namespace ver3
 {
     public partial class Form1 : Form
@@ -26,6 +28,7 @@ namespace ver3
         
         Timer bird_Timer = new Timer();
 
+        
 
         private void Bird_Animator()
         {
@@ -56,6 +59,9 @@ namespace ver3
             pb_GameOver.Visible = true;
             exit.Visible = true;
 
+            //bird.soundDie.Play();
+            bird.soundHit.Play();
+            
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -110,7 +116,7 @@ namespace ver3
             if (pipe.X_pipePairs1 + picBoxPipeAbove1.Width <= 0)
             {
                 score.scoreOfGame++;
-
+                score.soundPoint.Play();
                 pipe.X_pipePairs1 = 400 + picBoxPipeAbove2.Width + 150;
 
                 Random cao = new Random();
@@ -123,6 +129,7 @@ namespace ver3
             if (pipe.X_pipePairs2 + picBoxPipeAbove2.Width <= 0)
             {
                 score.scoreOfGame++;
+                score.soundPoint.Play();
                 pipe.X_pipePairs2 = 400 + picBoxPipeAbove1.Width + 150;
                 Random cao = new Random();
                 pipe.Y_pipeAbove2 = cao.Next(-175, -25);
@@ -158,17 +165,8 @@ namespace ver3
             if (e.KeyCode == Keys.Space)
             {
                 bird.Y_Bird -= 50;
+                bird.soundWing.Play();
             }
-
-            //if (e.KeyCode == Keys.A)
-            //{
-            //    Bird_Animator();
-            //}
-            //if (e.KeyCode == Keys.D)
-            //{
-            //    bird_Timer.Stop();
-            //}
-
         }
 
      
@@ -204,9 +202,15 @@ namespace ver3
             }
             else
             {
-                bird.Y_Bird += 10;
                 GameOver();
+                bird.Y_Bird += 10;
+                
 
+            }
+
+            if(bird.Y_Bird > this.Height)
+            {
+                bird.soundHit.Stop();
             }
         }
 
