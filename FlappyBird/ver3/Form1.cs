@@ -7,59 +7,122 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Threading.Tasks;
-
+using System.Drawing.Text;
+using System.Runtime.InteropServices;
 namespace ver3
 {
     public partial class Form1 : Form
     {
+       
+
         public Form1()
         {
             InitializeComponent();
         }
+
+      
+
         int Y_OngTren1, Y_OngTren2;
 
         int Y_OngDuoi1, Y_OngDuoi2;
 
-        int X_ConChim, Y_ConChim;
 
         int DoLech = 125;
 
         int X_CapOng1, X_CapOng2;
 
         int Diem = 0;
+
+        Bitmap bird_1 = new Bitmap(Properties.Resources.redbird_downflap),
+            bird_2 = new Bitmap(Properties.Resources.redbird_midflap),
+            bird_3 = new Bitmap(Properties.Resources.redbird_upflap);
+
+        Bitmap[] array_Bird; 
+        Bitmap birdPicture;
+        Timer bird_Timer = new Timer();
+
+        float X_Bird = 60;
+        float Y_Bird = 200;
+
+        int count = 0;
+
+        private void Bird_Animator()
+        {
+
+            bird_Timer.Interval = 100;
+            bird_Timer.Tick += Bird_Timer_Tick;
+            bird_Timer.Start();
+        }
+
+        private void Reset()
+        {
+            nutplay.Visible = false;
+            pb_Title.Visible = false;
+            pictureBox_introBird.Visible = false;
+            menu.Visible = false;
+            exit.Visible = false;
+        }
+
+        private void GameOver()
+        {
+            ongduoi1.Visible = false;
+            ongduoi2.Visible = false;
+            ongtren1.Visible = false;
+            ongtren2.Visible = false;
+            exit.Visible = true;
+        }
+
+        private Bitmap Draw2D_Bird()
+        {
+            array_Bird = new Bitmap[] { bird_1, bird_2, bird_3 };
+
+            if (count < array_Bird.Length)
+            {
+                birdPicture = array_Bird[count++];
+            }
+            else
+            {
+                count = 0;
+            }
+
+            return birdPicture;
+        }
+
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            if (bird_Timer.Enabled == true)
+            {
+                e.Graphics.DrawImage(Draw2D_Bird(), X_Bird, Y_Bird);
+            }
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.Left = 0;
-            this.Top = 0;
-            this.Bounds = Screen.PrimaryScreen.Bounds;
+           
+            
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+           
 
             X_CapOng1 = this.Width + 150;
             Y_OngTren1 = -150;
-            ongtren1.Size = new Size(44, 256);
+            
             ongtren1.Location = new Point(X_CapOng1, Y_OngTren1);
-            Y_OngDuoi1 = (256 + Y_OngTren1) + DoLech;
-            ongduoi1.Size = new Size(44, 256);
+            Y_OngDuoi1 = (250 + Y_OngTren1) + DoLech;
+        
             ongduoi1.Location = new Point(X_CapOng1, Y_OngDuoi1);
 
             X_CapOng2 = X_CapOng1 + ongtren1.Width + 250;
             Y_OngTren2 = -150;
-            ongtren2.Size = new Size(44, 256);
+          
             ongtren2.Location = new Point(X_CapOng2, Y_OngTren2);
-            Y_OngDuoi2 = (256 + Y_OngTren2) + DoLech;
-            ongduoi2.Size = new Size(44, 256);
+            Y_OngDuoi2 = (250 + Y_OngTren2) + DoLech;
+           
             ongduoi2.Location = new Point(X_CapOng2, Y_OngDuoi2);
 
-            conchim.Size = new Size(50, 43);
-            X_ConChim = conchim.Location.X;
-            Y_ConChim = conchim.Location.Y;
 
-            nutplay.Size = new System.Drawing.Size(35, 35);
-
-            lbldiem.Location = new Point(0, this.Height - 25);
 
             timer1.Interval = 35;
-            timer2.Interval = 70;
+            //timer2.Interval = 70;
                
         }
 
@@ -100,22 +163,25 @@ namespace ver3
                 ongduoi2.Location = new Point(X_CapOng2, Y_OngDuoi2);
             }
 
-            lbldiem.Text = "Score: " + Diem.ToString();
+            lbldiem.Text = Diem.ToString();
 
         }
         int dem = 0;
         private void nutplay_Click(object sender, EventArgs e)
         {
+            Reset();
+
             dem++;
             if (dem % 2 != 0)
             {
                 timer1.Start();
-                timer2.Start();
+                //timer2.Start();
+                Bird_Animator();
             }
             else
             {
                 timer1.Stop();
-                timer2.Stop();
+         
             }
         }
 
@@ -123,32 +189,60 @@ namespace ver3
         {
             if (e.KeyCode == Keys.Space)
             {
-                Y_ConChim -= 50;
+                Y_Bird -= 50;
             }
+
+            //if (e.KeyCode == Keys.A)
+            //{
+            //    Bird_Animator();
+            //}
+            //if (e.KeyCode == Keys.D)
+            //{
+            //    bird_Timer.Stop();
+            //}
 
         }
 
-        private void timer2_Tick(object sender, EventArgs e)
+     
+
+        private void Bird_Timer_Tick(object sender, EventArgs e)
         {
+            Invalidate();
+
             this.SetStyle(ControlStyles.AllPaintingInWmPaint |
             ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer, true);
-            if (Y_ConChim + conchim.Height <= this.Height)
-            {
-                Y_ConChim += 10;
-                conchim.Location = new Point(X_ConChim, Y_ConChim);
 
-                if (X_ConChim + conchim.Width >= X_CapOng1 && X_ConChim + conchim.Width <= X_CapOng1 + ongtren1.Width)
+            if (Y_Bird + birdPicture.Height <= this.Height)
+            {
+                Y_Bird += 10;
+                
+                if (X_Bird + birdPicture.Width >= X_CapOng1 && X_Bird + birdPicture.Width <= X_CapOng1 + ongtren1.Width)
                 {
-                    if (Y_ConChim <= 256 + Y_OngTren1 || Y_ConChim + conchim.Height >= Y_OngDuoi1)
+                    if (Y_Bird <= 250 + Y_OngTren1 || Y_Bird + birdPicture.Height >= Y_OngDuoi1)
                     {
                         timer1.Stop();
+                        pb_GameOver.Visible = true;
+
+                        GameOver();
+
+                      
+
+                      
                     }
                 }
-                if (X_ConChim + conchim.Width >= X_CapOng2 && X_ConChim + conchim.Width <= X_CapOng2 + ongtren2.Width)
+                if (X_Bird + birdPicture.Width >= X_CapOng2 && X_Bird + birdPicture.Width <= X_CapOng2 + ongtren2.Width)
                 {
-                    if (Y_ConChim <= 256 + Y_OngTren2 || Y_ConChim + conchim.Height >= Y_OngDuoi2)
+                    if (Y_Bird <= 250 + Y_OngTren2 || Y_Bird + birdPicture.Height >= Y_OngDuoi2)
                     {
                         timer1.Stop();
+                        pb_GameOver.Visible = true;
+
+                        GameOver();
+
+
+                    
+
+                       
                     }
                 }
 
@@ -156,16 +250,33 @@ namespace ver3
             else
             {
                 timer1.Stop();
-                timer2.Stop();
+              
+                bird_Timer.Stop();
+                pb_GameOver.Visible = true;
+
+                GameOver();
+
+          
+              
             }
+        }
+
+    
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            menu.Visible = false;
 
         }
 
-       
+        private void exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
-       
-        
 
-       
+
+
+
     }
 }
