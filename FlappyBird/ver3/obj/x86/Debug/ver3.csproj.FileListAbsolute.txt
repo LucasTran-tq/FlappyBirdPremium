@@ -69,3 +69,5 @@ C:\UIT\UIT HK3\Visual Programing\Git-FlappyBird\FlappyBird\ver3\obj\x86\Debug\ve
 C:\UIT\UIT HK3\Visual Programing\Git-FlappyBird\FlappyBird\ver3\obj\x86\Debug\ver3.csproj.CopyComplete
 C:\UIT\UIT HK3\Visual Programing\Git-FlappyBird\FlappyBird\ver3\obj\x86\Debug\ver3.exe
 C:\UIT\UIT HK3\Visual Programing\Git-FlappyBird\FlappyBird\ver3\obj\x86\Debug\ver3.pdb
+C:\Users\Nguyen\Documents\FlappyBirdPremium\FlappyBird\ver3\obj\x86\Debug\ver3.exe
+C:\Users\Nguyen\Documents\FlappyBirdPremium\FlappyBird\ver3\obj\x86\Debug\ver3.pdb
