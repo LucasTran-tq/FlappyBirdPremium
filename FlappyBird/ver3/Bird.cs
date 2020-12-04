@@ -8,9 +8,15 @@ namespace ver3
 {
     class Bird
     {
-        public Bitmap bird_1 = new Bitmap(Properties.Resources.redbird_downflap),
-            bird_2 = new Bitmap(Properties.Resources.redbird_midflap),
-            bird_3 = new Bitmap(Properties.Resources.redbird_upflap);
+        public Bitmap rebird_1 = new Bitmap(Properties.Resources.redbird_downflap),
+            rebird_2 = new Bitmap(Properties.Resources.redbird_midflap),
+            rebird_3 = new Bitmap(Properties.Resources.redbird_upflap),
+            yebird_1 = new Bitmap(Properties.Resources.yellowbird_downflap),
+            yebird_2 = new Bitmap(Properties.Resources.yellowbird_midflap),
+            yebird_3 = new Bitmap(Properties.Resources.yellowbird_upflap),
+            blbird_1 = new Bitmap(Properties.Resources.bluebird_downflap),
+            blbird_2 = new Bitmap(Properties.Resources.bluebird_midflap),
+            blbird_3 = new Bitmap(Properties.Resources.bluebird_upflap);
 
         Bitmap[] array_Bird;
         public Bitmap birdPicture;
@@ -19,9 +25,13 @@ namespace ver3
         public float Y_Bird = 200;
 
         int count = 0;
+        public int choose = 0;
         public Bitmap Draw2D_Bird()
         {
-            array_Bird = new Bitmap[] { bird_1, bird_2, bird_3 };
+            if (choose == 1) array_Bird = new Bitmap[] { yebird_1, yebird_2, yebird_3 };
+            else if (choose == 2) array_Bird = new Bitmap[] { blbird_1, blbird_2, blbird_3 };
+            else if (choose == 3) array_Bird = new Bitmap[] { rebird_1, rebird_2, rebird_3 };
+            else array_Bird = new Bitmap[] { yebird_1, yebird_2, yebird_3 };
 
             if (count < array_Bird.Length)
             {

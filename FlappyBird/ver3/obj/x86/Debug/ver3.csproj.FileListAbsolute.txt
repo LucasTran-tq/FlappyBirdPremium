@@ -69,3 +69,15 @@ C:\UIT\UIT HK3\Visual Programing\Git-FlappyBird\FlappyBird\ver3\obj\x86\Debug\ve
 C:\UIT\UIT HK3\Visual Programing\Git-FlappyBird\FlappyBird\ver3\obj\x86\Debug\ver3.csproj.CopyComplete
 C:\UIT\UIT HK3\Visual Programing\Git-FlappyBird\FlappyBird\ver3\obj\x86\Debug\ver3.exe
 C:\UIT\UIT HK3\Visual Programing\Git-FlappyBird\FlappyBird\ver3\obj\x86\Debug\ver3.pdb
+C:\Users\Nguyen\Documents\FlappyBirdPremium\FlappyBird\ver3\obj\x86\Debug\ver3.exe
+C:\Users\Nguyen\Documents\FlappyBirdPremium\FlappyBird\ver3\obj\x86\Debug\ver3.pdb
+C:\Users\Admin\Documents\FlappyBirdPremium\FlappyBird\ver3\bin\Debug\ver3.exe
+C:\Users\Admin\Documents\FlappyBirdPremium\FlappyBird\ver3\bin\Debug\ver3.pdb
+C:\Users\Admin\Documents\FlappyBirdPremium\FlappyBird\ver3\obj\x86\Debug\ver3.csprojAssemblyReference.cache
+C:\Users\Admin\Documents\FlappyBirdPremium\FlappyBird\ver3\obj\x86\Debug\ver3.Form1.resources
+C:\Users\Admin\Documents\FlappyBirdPremium\FlappyBird\ver3\obj\x86\Debug\ver3.Properties.Resources.resources
+C:\Users\Admin\Documents\FlappyBirdPremium\FlappyBird\ver3\obj\x86\Debug\ver3.csproj.GenerateResource.cache
+C:\Users\Admin\Documents\FlappyBirdPremium\FlappyBird\ver3\obj\x86\Debug\ver3.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\FlappyBirdPremium\FlappyBird\ver3\obj\x86\Debug\ver3.csproj.CopyComplete
+C:\Users\Admin\Documents\FlappyBirdPremium\FlappyBird\ver3\obj\x86\Debug\ver3.exe
+C:\Users\Admin\Documents\FlappyBirdPremium\FlappyBird\ver3\obj\x86\Debug\ver3.pdb
