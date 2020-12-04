@@ -51,6 +51,7 @@
             this.lb_speed = new System.Windows.Forms.Label();
             this.lb_sence = new System.Windows.Forms.Label();
             this.sense_SubMenu = new System.Windows.Forms.Panel();
+            this.arrow2 = new System.Windows.Forms.PictureBox();
             this.rebirdPictureBox = new System.Windows.Forms.PictureBox();
             this.blbirdPictureBox = new System.Windows.Forms.PictureBox();
             this.choose_lb = new System.Windows.Forms.Label();
@@ -59,7 +60,7 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.percentage = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.arrow2 = new System.Windows.Forms.PictureBox();
+            this.flash_panel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPipeBottom1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPipeAbove1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nutplay)).BeginInit();
@@ -71,11 +72,11 @@
             this.bgMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.arrow1)).BeginInit();
             this.sense_SubMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.arrow2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rebirdPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blbirdPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.yebirdPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Title1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arrow2)).BeginInit();
             this.SuspendLayout();
             // 
             // picBoxPipeBottom1
@@ -341,6 +342,18 @@
             this.sense_SubMenu.TabIndex = 14;
             this.sense_SubMenu.Visible = false;
             // 
+            // arrow2
+            // 
+            this.arrow2.BackColor = System.Drawing.Color.Transparent;
+            this.arrow2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("arrow2.BackgroundImage")));
+            this.arrow2.Location = new System.Drawing.Point(23, 167);
+            this.arrow2.Name = "arrow2";
+            this.arrow2.Size = new System.Drawing.Size(30, 20);
+            this.arrow2.TabIndex = 19;
+            this.arrow2.TabStop = false;
+            this.arrow2.Visible = false;
+            this.arrow2.Click += new System.EventHandler(this.arrow2_Click);
+            // 
             // rebirdPictureBox
             // 
             this.rebirdPictureBox.BackColor = System.Drawing.Color.Transparent;
@@ -430,17 +443,13 @@
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
-            // arrow2
+            // flash_panel
             // 
-            this.arrow2.BackColor = System.Drawing.Color.Transparent;
-            this.arrow2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("arrow2.BackgroundImage")));
-            this.arrow2.Location = new System.Drawing.Point(23, 167);
-            this.arrow2.Name = "arrow2";
-            this.arrow2.Size = new System.Drawing.Size(30, 20);
-            this.arrow2.TabIndex = 19;
-            this.arrow2.TabStop = false;
-            this.arrow2.Visible = false;
-            this.arrow2.Click += new System.EventHandler(this.arrow2_Click);
+            this.flash_panel.Location = new System.Drawing.Point(-1, -1);
+            this.flash_panel.Name = "flash_panel";
+            this.flash_panel.Size = new System.Drawing.Size(400, 500);
+            this.flash_panel.TabIndex = 19;
+            this.flash_panel.Visible = false;
             // 
             // Form1
             // 
@@ -450,6 +459,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(400, 500);
             this.ControlBox = false;
+            this.Controls.Add(this.flash_panel);
             this.Controls.Add(this.percentage);
             this.Controls.Add(this.pb_Title1);
             this.Controls.Add(this.progressBar1);
@@ -489,11 +499,11 @@
             this.bgMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.arrow1)).EndInit();
             this.sense_SubMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.arrow2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rebirdPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.blbirdPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.yebirdPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Title1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arrow2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -530,6 +540,7 @@
         private System.Windows.Forms.Label percentage;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.PictureBox arrow2;
+        private System.Windows.Forms.Panel flash_panel;
     }
 }
 

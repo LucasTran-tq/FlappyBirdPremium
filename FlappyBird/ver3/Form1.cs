@@ -62,10 +62,16 @@ namespace ver3
             //retry.Visible = false;
         }
 
+        private void Flash()
+        {
+            flash_panel.Visible = true;
+            System.Threading.Thread.Sleep(10);
+            flash_panel.Visible = false;
+        }
         private void GameOver()
         {
             timer1.Stop();
-
+            Flash();
             picBoxPipeBottom1.Visible = false;
             picBoxPipeBottom2.Visible = false;
             picBoxPipeAbove1.Visible = false;
@@ -146,7 +152,7 @@ namespace ver3
             int sum = 0;
             for (int i = 1; i <= 100; i++)
             {
-                System.Threading.Thread.Sleep(100);
+                System.Threading.Thread.Sleep(50);
                 sum = sum + i;
                 backgroundWorker1.ReportProgress(i);
                 if (i == 100)
@@ -298,9 +304,12 @@ namespace ver3
                 
                 if (bird.X_Bird + bird.birdPicture.Width >= pipe.X_pipePairs1 && bird.X_Bird + bird.birdPicture.Width <= pipe.X_pipePairs1 + picBoxPipeAbove1.Width)
                 {
+                    
                     if (bird.Y_Bird <= 250 + pipe.Y_pipeAbove1 || bird.Y_Bird + bird.birdPicture.Height >= pipe.Y_pipeBottom1)
                     {
+                        
                         GameOver();
+                        return;
 
                     }
                 }
@@ -309,6 +318,7 @@ namespace ver3
                     if (bird.Y_Bird <= 250 + pipe.Y_pipeAbove2 || bird.Y_Bird + bird.birdPicture.Height >= pipe.Y_pipeBottom2)
                     {
                         GameOver();
+                        return;
 
                     }
                 }
@@ -316,6 +326,7 @@ namespace ver3
             }
             else
             {
+                
                 GameOver();
                 bird.Y_Bird += 10;
                 
@@ -326,6 +337,7 @@ namespace ver3
             {
                 bird.soundHit.Stop();
             }
+            
         }
 
     

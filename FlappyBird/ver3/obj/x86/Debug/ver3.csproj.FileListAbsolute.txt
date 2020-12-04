@@ -81,3 +81,4 @@ C:\Users\Admin\Documents\FlappyBirdPremium\FlappyBird\ver3\obj\x86\Debug\ver3.cs
 C:\Users\Admin\Documents\FlappyBirdPremium\FlappyBird\ver3\obj\x86\Debug\ver3.csproj.CopyComplete
 C:\Users\Admin\Documents\FlappyBirdPremium\FlappyBird\ver3\obj\x86\Debug\ver3.exe
 C:\Users\Admin\Documents\FlappyBirdPremium\FlappyBird\ver3\obj\x86\Debug\ver3.pdb
+C:\Users\Admin\Documents\FlappyBirdPremium\FlappyBird\ver3\bin\Debug\Guna.UI2.dll
