@@ -36,7 +36,7 @@
             this.nutplay = new System.Windows.Forms.PictureBox();
             this.picBoxPipeAbove2 = new System.Windows.Forms.PictureBox();
             this.picBoxPipeBottom2 = new System.Windows.Forms.PictureBox();
-            this.pb_Title = new System.Windows.Forms.PictureBox();
+            this.pb_Title2 = new System.Windows.Forms.PictureBox();
             this.pb_GameOver = new System.Windows.Forms.PictureBox();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.pictureBox_introBird = new System.Windows.Forms.PictureBox();
@@ -46,29 +46,36 @@
             this.exit = new System.Windows.Forms.Label();
             this.retry = new System.Windows.Forms.Label();
             this.bgMenu = new System.Windows.Forms.Panel();
-            this.arrow = new System.Windows.Forms.PictureBox();
+            this.arrow1 = new System.Windows.Forms.PictureBox();
             this.lb_item = new System.Windows.Forms.Label();
             this.lb_speed = new System.Windows.Forms.Label();
             this.lb_sence = new System.Windows.Forms.Label();
             this.sense_SubMenu = new System.Windows.Forms.Panel();
-            this.yebirdPictureBox = new System.Windows.Forms.PictureBox();
-            this.choose_lb = new System.Windows.Forms.Label();
-            this.blbirdPictureBox = new System.Windows.Forms.PictureBox();
             this.rebirdPictureBox = new System.Windows.Forms.PictureBox();
+            this.blbirdPictureBox = new System.Windows.Forms.PictureBox();
+            this.choose_lb = new System.Windows.Forms.Label();
+            this.yebirdPictureBox = new System.Windows.Forms.PictureBox();
+            this.pb_Title1 = new System.Windows.Forms.PictureBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.percentage = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.arrow2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPipeBottom1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPipeAbove1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nutplay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPipeAbove2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPipeBottom2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Title)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Title2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_GameOver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_introBird)).BeginInit();
             this.bgMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.arrow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arrow1)).BeginInit();
             this.sense_SubMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.yebirdPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blbirdPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rebirdPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blbirdPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yebirdPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Title1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arrow2)).BeginInit();
             this.SuspendLayout();
             // 
             // picBoxPipeBottom1
@@ -136,16 +143,17 @@
             this.picBoxPipeBottom2.TabIndex = 10;
             this.picBoxPipeBottom2.TabStop = false;
             // 
-            // pb_Title
+            // pb_Title2
             // 
-            this.pb_Title.BackColor = System.Drawing.Color.Transparent;
-            this.pb_Title.Image = ((System.Drawing.Image)(resources.GetObject("pb_Title.Image")));
-            this.pb_Title.Location = new System.Drawing.Point(69, 93);
-            this.pb_Title.Name = "pb_Title";
-            this.pb_Title.Size = new System.Drawing.Size(266, 72);
-            this.pb_Title.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_Title.TabIndex = 11;
-            this.pb_Title.TabStop = false;
+            this.pb_Title2.BackColor = System.Drawing.Color.Transparent;
+            this.pb_Title2.Image = ((System.Drawing.Image)(resources.GetObject("pb_Title2.Image")));
+            this.pb_Title2.Location = new System.Drawing.Point(69, 93);
+            this.pb_Title2.Name = "pb_Title2";
+            this.pb_Title2.Size = new System.Drawing.Size(266, 72);
+            this.pb_Title2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Title2.TabIndex = 11;
+            this.pb_Title2.TabStop = false;
+            this.pb_Title2.Visible = false;
             // 
             // pb_GameOver
             // 
@@ -175,6 +183,7 @@
             this.pictureBox_introBird.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_introBird.TabIndex = 12;
             this.pictureBox_introBird.TabStop = false;
+            this.pictureBox_introBird.Visible = false;
             // 
             // lbldiem
             // 
@@ -209,6 +218,7 @@
             this.menu.TabIndex = 8;
             this.menu.Text = "MENU";
             this.menu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.menu.Visible = false;
             this.menu.Click += new System.EventHandler(this.menu_Click_1);
             // 
             // exit
@@ -224,6 +234,7 @@
             this.exit.TabIndex = 8;
             this.exit.Text = "QUIT";
             this.exit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.exit.Visible = false;
             this.exit.Click += new System.EventHandler(this.exit_Click_1);
             // 
             // retry
@@ -246,7 +257,7 @@
             // 
             this.bgMenu.BackColor = System.Drawing.Color.Transparent;
             this.bgMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bgMenu.BackgroundImage")));
-            this.bgMenu.Controls.Add(this.arrow);
+            this.bgMenu.Controls.Add(this.arrow1);
             this.bgMenu.Controls.Add(this.lb_item);
             this.bgMenu.Controls.Add(this.lb_speed);
             this.bgMenu.Controls.Add(this.lb_sence);
@@ -257,17 +268,17 @@
             this.bgMenu.Visible = false;
             this.bgMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.bgMenu_Paint);
             // 
-            // arrow
+            // arrow1
             // 
-            this.arrow.BackColor = System.Drawing.Color.Transparent;
-            this.arrow.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("arrow.BackgroundImage")));
-            this.arrow.Location = new System.Drawing.Point(23, 177);
-            this.arrow.Name = "arrow";
-            this.arrow.Size = new System.Drawing.Size(30, 20);
-            this.arrow.TabIndex = 9;
-            this.arrow.TabStop = false;
-            this.arrow.Visible = false;
-            this.arrow.Click += new System.EventHandler(this.arrow_Click);
+            this.arrow1.BackColor = System.Drawing.Color.Transparent;
+            this.arrow1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("arrow1.BackgroundImage")));
+            this.arrow1.Location = new System.Drawing.Point(23, 177);
+            this.arrow1.Name = "arrow1";
+            this.arrow1.Size = new System.Drawing.Size(30, 20);
+            this.arrow1.TabIndex = 9;
+            this.arrow1.TabStop = false;
+            this.arrow1.Visible = false;
+            this.arrow1.Click += new System.EventHandler(this.arrow1_Click);
             // 
             // lb_item
             // 
@@ -319,6 +330,7 @@
             // 
             this.sense_SubMenu.BackColor = System.Drawing.Color.Transparent;
             this.sense_SubMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sense_SubMenu.BackgroundImage")));
+            this.sense_SubMenu.Controls.Add(this.arrow2);
             this.sense_SubMenu.Controls.Add(this.rebirdPictureBox);
             this.sense_SubMenu.Controls.Add(this.blbirdPictureBox);
             this.sense_SubMenu.Controls.Add(this.choose_lb);
@@ -328,44 +340,6 @@
             this.sense_SubMenu.Size = new System.Drawing.Size(168, 205);
             this.sense_SubMenu.TabIndex = 14;
             this.sense_SubMenu.Visible = false;
-            // 
-            // yebirdPictureBox
-            // 
-            this.yebirdPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.yebirdPictureBox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.yebirdPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("yebirdPictureBox.Image")));
-            this.yebirdPictureBox.Location = new System.Drawing.Point(63, 62);
-            this.yebirdPictureBox.Name = "yebirdPictureBox";
-            this.yebirdPictureBox.Size = new System.Drawing.Size(53, 39);
-            this.yebirdPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.yebirdPictureBox.TabIndex = 13;
-            this.yebirdPictureBox.TabStop = false;
-            this.yebirdPictureBox.Visible = false;
-            this.yebirdPictureBox.Click += new System.EventHandler(this.yebirdPictureBox_Click);
-            // 
-            // choose_lb
-            // 
-            this.choose_lb.Font = new System.Drawing.Font("Kosal says hy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.choose_lb.Location = new System.Drawing.Point(27, 26);
-            this.choose_lb.Name = "choose_lb";
-            this.choose_lb.Size = new System.Drawing.Size(146, 23);
-            this.choose_lb.TabIndex = 14;
-            this.choose_lb.Text = "CHOOSE ONE";
-            this.choose_lb.Visible = false;
-            // 
-            // blbirdPictureBox
-            // 
-            this.blbirdPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.blbirdPictureBox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.blbirdPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("blbirdPictureBox.Image")));
-            this.blbirdPictureBox.Location = new System.Drawing.Point(63, 107);
-            this.blbirdPictureBox.Name = "blbirdPictureBox";
-            this.blbirdPictureBox.Size = new System.Drawing.Size(53, 38);
-            this.blbirdPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.blbirdPictureBox.TabIndex = 15;
-            this.blbirdPictureBox.TabStop = false;
-            this.blbirdPictureBox.Visible = false;
-            this.blbirdPictureBox.Click += new System.EventHandler(this.blbirdPictureBox_Click);
             // 
             // rebirdPictureBox
             // 
@@ -381,6 +355,93 @@
             this.rebirdPictureBox.Visible = false;
             this.rebirdPictureBox.Click += new System.EventHandler(this.rebirdPictureBox_Click);
             // 
+            // blbirdPictureBox
+            // 
+            this.blbirdPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.blbirdPictureBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.blbirdPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("blbirdPictureBox.Image")));
+            this.blbirdPictureBox.Location = new System.Drawing.Point(63, 107);
+            this.blbirdPictureBox.Name = "blbirdPictureBox";
+            this.blbirdPictureBox.Size = new System.Drawing.Size(53, 38);
+            this.blbirdPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.blbirdPictureBox.TabIndex = 15;
+            this.blbirdPictureBox.TabStop = false;
+            this.blbirdPictureBox.Visible = false;
+            this.blbirdPictureBox.Click += new System.EventHandler(this.blbirdPictureBox_Click);
+            // 
+            // choose_lb
+            // 
+            this.choose_lb.Font = new System.Drawing.Font("Kosal says hy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.choose_lb.Location = new System.Drawing.Point(27, 26);
+            this.choose_lb.Name = "choose_lb";
+            this.choose_lb.Size = new System.Drawing.Size(146, 23);
+            this.choose_lb.TabIndex = 14;
+            this.choose_lb.Text = "CHOOSE ONE";
+            this.choose_lb.Visible = false;
+            // 
+            // yebirdPictureBox
+            // 
+            this.yebirdPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.yebirdPictureBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.yebirdPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("yebirdPictureBox.Image")));
+            this.yebirdPictureBox.Location = new System.Drawing.Point(63, 62);
+            this.yebirdPictureBox.Name = "yebirdPictureBox";
+            this.yebirdPictureBox.Size = new System.Drawing.Size(53, 39);
+            this.yebirdPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.yebirdPictureBox.TabIndex = 13;
+            this.yebirdPictureBox.TabStop = false;
+            this.yebirdPictureBox.Visible = false;
+            this.yebirdPictureBox.Click += new System.EventHandler(this.yebirdPictureBox_Click);
+            // 
+            // pb_Title1
+            // 
+            this.pb_Title1.BackColor = System.Drawing.Color.Transparent;
+            this.pb_Title1.Image = ((System.Drawing.Image)(resources.GetObject("pb_Title1.Image")));
+            this.pb_Title1.Location = new System.Drawing.Point(35, 171);
+            this.pb_Title1.Name = "pb_Title1";
+            this.pb_Title1.Size = new System.Drawing.Size(334, 116);
+            this.pb_Title1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Title1.TabIndex = 16;
+            this.pb_Title1.TabStop = false;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(34, 323);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(354, 39);
+            this.progressBar1.TabIndex = 17;
+            // 
+            // percentage
+            // 
+            this.percentage.BackColor = System.Drawing.Color.Transparent;
+            this.percentage.Font = new System.Drawing.Font("Hanoi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.percentage.ForeColor = System.Drawing.Color.Black;
+            this.percentage.Location = new System.Drawing.Point(349, 301);
+            this.percentage.Name = "percentage";
+            this.percentage.Size = new System.Drawing.Size(50, 19);
+            this.percentage.TabIndex = 18;
+            this.percentage.Text = "label1";
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.WorkerReportsProgress = true;
+            this.backgroundWorker1.WorkerSupportsCancellation = true;
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
+            // 
+            // arrow2
+            // 
+            this.arrow2.BackColor = System.Drawing.Color.Transparent;
+            this.arrow2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("arrow2.BackgroundImage")));
+            this.arrow2.Location = new System.Drawing.Point(23, 167);
+            this.arrow2.Name = "arrow2";
+            this.arrow2.Size = new System.Drawing.Size(30, 20);
+            this.arrow2.TabIndex = 19;
+            this.arrow2.TabStop = false;
+            this.arrow2.Visible = false;
+            this.arrow2.Click += new System.EventHandler(this.arrow2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -389,6 +450,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(400, 500);
             this.ControlBox = false;
+            this.Controls.Add(this.percentage);
+            this.Controls.Add(this.pb_Title1);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.sense_SubMenu);
             this.Controls.Add(this.lbldiem);
             this.Controls.Add(this.pictureBox_introBird);
@@ -397,7 +461,7 @@
             this.Controls.Add(this.retry);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.nutplay);
-            this.Controls.Add(this.pb_Title);
+            this.Controls.Add(this.pb_Title2);
             this.Controls.Add(this.picBoxPipeBottom2);
             this.Controls.Add(this.picBoxPipeAbove2);
             this.Controls.Add(this.picBoxPipeAbove1);
@@ -419,15 +483,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.nutplay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPipeAbove2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPipeBottom2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Title)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Title2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_GameOver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_introBird)).EndInit();
             this.bgMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.arrow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arrow1)).EndInit();
             this.sense_SubMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.yebirdPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blbirdPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rebirdPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blbirdPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yebirdPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Title1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arrow2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -440,7 +506,7 @@
         private System.Windows.Forms.PictureBox nutplay;
         private System.Windows.Forms.PictureBox picBoxPipeAbove2;
         private System.Windows.Forms.PictureBox picBoxPipeBottom2;
-        private System.Windows.Forms.PictureBox pb_Title;
+        private System.Windows.Forms.PictureBox pb_Title2;
         private System.Windows.Forms.PictureBox pb_GameOver;
         private Guna.UI.WinForms.GunaElipse gunaElipse1;
         private System.Windows.Forms.PictureBox pictureBox_introBird;
@@ -453,12 +519,17 @@
         private System.Windows.Forms.Label lb_item;
         private System.Windows.Forms.Label lb_speed;
         private System.Windows.Forms.Label lb_sence;
-        private System.Windows.Forms.PictureBox arrow;
+        private System.Windows.Forms.PictureBox arrow1;
         private System.Windows.Forms.Panel sense_SubMenu;
         private System.Windows.Forms.PictureBox rebirdPictureBox;
         private System.Windows.Forms.PictureBox blbirdPictureBox;
         private System.Windows.Forms.Label choose_lb;
         private System.Windows.Forms.PictureBox yebirdPictureBox;
+        private System.Windows.Forms.PictureBox pb_Title1;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label percentage;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.PictureBox arrow2;
     }
 }
 

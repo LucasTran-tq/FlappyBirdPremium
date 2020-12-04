@@ -41,7 +41,7 @@ namespace ver3
         private void Playing()
         {
             nutplay.Visible = false;
-            pb_Title.Visible = false;
+            pb_Title2.Visible = false;
             pictureBox_introBird.Visible = false;
             menu.Visible = false;
             exit.Visible = false;
@@ -51,7 +51,7 @@ namespace ver3
         private void Reset()
         {
             nutplay.Visible = true;
-            pb_Title.Visible = true;
+            pb_Title2.Visible = true;
             pictureBox_introBird.Visible = true;
             menu.Visible = true;
             exit.Visible = true;
@@ -81,44 +81,56 @@ namespace ver3
             soundGameOver.Play();
         }
 
-        private void Menu_Show()
+        private void MainScreen_On()
+        {
+            menu.Visible = true;
+            exit.Visible = true;
+            nutplay.Visible = true;
+        }
+
+        private void MainScreen_Off()
+        {
+            menu.Visible = false;
+            exit.Visible = false;
+            nutplay.Visible = false;
+        }
+        private void Menu_ShowOn()
         {
             bgMenu.Visible = true;
             lb_sence.Visible = true;
             lb_speed.Visible = true;
             lb_item.Visible = true;
-            arrow.Visible = true;
-
-            menu.Visible = false;
-            exit.Visible = false;
-            nutplay.Visible = false;
+            arrow1.Visible = true;
+            MainScreen_Off();
         }
 
-        private void Menu_Reset()
-        {
-            nutplay.Visible = true;
-            menu.Visible = true;
-            exit.Visible = true;
-
-            bgMenu.Visible = false;
-            lb_sence.Visible = false;
-            lb_speed.Visible = false;
-            lb_item.Visible = false;
-            arrow.Visible = false;
-        }
-
-        private void SenseMenu()
+        private void Menu_ShowOff()
         {
             bgMenu.Visible = false;
             lb_sence.Visible = false;
-            lb_speed.Visible = false;
+            lb_speed.Visible = true;
             lb_item.Visible = false;
+            arrow1.Visible = false;
+        }
+
+        private void SenseMenuOn()
+        {
+            Menu_ShowOff();
             sense_SubMenu.Visible = true;
+            arrow2.Visible = true;
             choose_lb.Visible = true;
             yebirdPictureBox.Visible = true;
             blbirdPictureBox.Visible = true;
             rebirdPictureBox.Visible = true;
-           
+        }
+        private void SenseMenuOff()
+        {
+            sense_SubMenu.Visible = false;
+            arrow2.Visible = false;
+            choose_lb.Visible = false;
+            yebirdPictureBox.Visible = false;
+            blbirdPictureBox.Visible = false;
+            rebirdPictureBox.Visible = false;
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -129,10 +141,53 @@ namespace ver3
             }
         }
 
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            int sum = 0;
+            for (int i = 1; i <= 100; i++)
+            {
+                System.Threading.Thread.Sleep(100);
+                sum = sum + i;
+                backgroundWorker1.ReportProgress(i);
+                if (i == 100)
+                {
+                    e.Cancel = true;
+                    backgroundWorker1.ReportProgress(100);
+                    return;
+                }
+                if (backgroundWorker1.CancellationPending)
+                {
+                    e.Cancel = true;
+                    backgroundWorker1.ReportProgress(0);
+                    return;
+                }
+            }
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            progressBar1.Value = e.ProgressPercentage;
+            percentage.Text = e.ProgressPercentage.ToString() + "%";
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            percentage.Visible = false;
+            progressBar1.Visible = false;
+            pb_Title1.Visible = false;
+            pb_Title2.Visible = true;
+            nutplay.Visible = true;
+            menu.Visible = true;
+            exit.Visible = true;
+
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
-           
-            
+            if (!backgroundWorker1.IsBusy)
+            {
+                backgroundWorker1.RunWorkerAsync();
+            }
+
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
            
 
@@ -296,14 +351,9 @@ namespace ver3
         private void menu_Click_1(object sender, EventArgs e)
         {
             soundClick.Play();
-            Menu_Show();
+            Menu_ShowOn();
         }
 
-        private void arrow_Click(object sender, EventArgs e)
-        {
-            soundClick.Play();
-            Menu_Reset();
-        }
 
         private void retry_Click(object sender, EventArgs e)
         {
@@ -315,49 +365,46 @@ namespace ver3
         private void lb_sence_Click_1(object sender, EventArgs e)
         {
             soundClick.Play();
-            SenseMenu();
+            SenseMenuOn();
         }
 
         private void yebirdPictureBox_Click(object sender, EventArgs e)
         {
             soundClick.Play();
             bird.choose = 1;
-            sense_SubMenu.Visible = false;
-            choose_lb.Visible = false;
-            yebirdPictureBox.Visible = false;
-            rebirdPictureBox.Visible = false;
-            blbirdPictureBox.Visible = false;
-            nutplay.Visible = true;
-            menu.Visible = true;
-            exit.Visible = true;
+            SenseMenuOff();
+            MainScreen_On();
         }
 
         private void blbirdPictureBox_Click(object sender, EventArgs e)
         {
             soundClick.Play();
             bird.choose = 2;
-            sense_SubMenu.Visible = false;
-            choose_lb.Visible = false;
-            yebirdPictureBox.Visible = false;
-            rebirdPictureBox.Visible = false;
-            blbirdPictureBox.Visible = false;
-            nutplay.Visible = true;
-            menu.Visible = true;
-            exit.Visible = true;
+            SenseMenuOff();
+            MainScreen_On();
         }
 
         private void rebirdPictureBox_Click(object sender, EventArgs e)
         {
             soundClick.Play();
             bird.choose = 3;
-            sense_SubMenu.Visible = false;
-            choose_lb.Visible = false;
-            yebirdPictureBox.Visible = false;
-            rebirdPictureBox.Visible = false;
-            blbirdPictureBox.Visible = false;
-            nutplay.Visible = true;
-            menu.Visible = true;
-            exit.Visible = true;
+            SenseMenuOff();
+            MainScreen_On();
+        }
+
+       
+
+        private void arrow1_Click(object sender, EventArgs e)
+        {
+            soundClick.Play();
+            Menu_ShowOff();
+            MainScreen_On();
+        }
+
+        private void arrow2_Click(object sender, EventArgs e)
+        {
+            SenseMenuOff();
+            Menu_ShowOn();
         }
     }
 }
