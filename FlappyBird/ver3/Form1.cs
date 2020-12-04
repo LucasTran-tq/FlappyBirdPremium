@@ -183,6 +183,7 @@ namespace ver3
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            progressBar1.ForeColor = Color.Gold;
             if (!backgroundWorker1.IsBusy)
             {
                 backgroundWorker1.RunWorkerAsync();
