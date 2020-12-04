@@ -28,8 +28,8 @@ namespace ver3
         
         Timer bird_Timer = new Timer();
 
-        
-
+        SoundPlayer soundClick = new SoundPlayer(Properties.Resources.clickSound);
+        SoundPlayer soundGameOver = new SoundPlayer(Properties.Resources.SoundGameOver);
         private void Bird_Animator()
         {
 
@@ -76,8 +76,9 @@ namespace ver3
             retry.Visible = true;
 
             //bird.soundDie.Play();
-            //bird.soundHit.Play();
-            
+            bird.soundHit.Play();
+
+            soundGameOver.Play();
         }
 
         private void Menu_Show()
@@ -158,7 +159,7 @@ namespace ver3
             if (pipe.X_pipePairs1 + picBoxPipeAbove1.Width <= 0)
             {
                 score.scoreOfGame++;
-                //score.soundPoint.Play();
+                score.soundPoint.Play();
                 pipe.X_pipePairs1 = 400 + picBoxPipeAbove2.Width + 150;
 
                 Random cao = new Random();
@@ -171,7 +172,7 @@ namespace ver3
             if (pipe.X_pipePairs2 + picBoxPipeAbove2.Width <= 0)
             {
                 score.scoreOfGame++;
-                //score.soundPoint.Play();
+                score.soundPoint.Play();
                 pipe.X_pipePairs2 = 400 + picBoxPipeAbove1.Width + 150;
                 Random cao = new Random();
                 pipe.Y_pipeAbove2 = cao.Next(-175, -25);
@@ -186,6 +187,7 @@ namespace ver3
         int dem = 0;
         private void nutplay_Click(object sender, EventArgs e)
         {
+            soundClick.Play();
             Playing();
 
             dem++;
@@ -207,7 +209,7 @@ namespace ver3
             if (e.KeyCode == Keys.Space)
             {
                 bird.Y_Bird -= 50;
-                //bird.soundWing.Play();
+                bird.soundWing.Play();
             }
         }
 
@@ -252,7 +254,7 @@ namespace ver3
 
             if(bird.Y_Bird > this.Height)
             {
-                //bird.soundHit.Stop();
+                bird.soundHit.Stop();
             }
         }
 
@@ -267,28 +269,32 @@ namespace ver3
 
         private void menu_Click(object sender, EventArgs e)
         {
+            soundClick.Play();
             menu.Visible = false;
+            
         }
 
         private void bgMenu_Paint(object sender, PaintEventArgs e)
         {
-
+            soundClick.Play();
         }
 
         private void menu_Click_1(object sender, EventArgs e)
         {
+            soundClick.Play();
             Menu_Show();
         }
 
         private void arrow_Click(object sender, EventArgs e)
         {
+            soundClick.Play();
             Menu_Reset();
         }
 
         private void retry_Click(object sender, EventArgs e)
         {
-           
-                   
+            soundClick.Play();
+
         }
 
 

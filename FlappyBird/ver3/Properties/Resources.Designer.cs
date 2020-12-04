@@ -83,6 +83,15 @@ namespace ver3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream clickSound {
+            get {
+                return ResourceManager.GetStream("clickSound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream die {
             get {
                 return ResourceManager.GetStream("die", resourceCulture);
@@ -134,6 +143,15 @@ namespace ver3.Properties {
             get {
                 object obj = ResourceManager.GetObject("redbird_upflap", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream SoundGameOver {
+            get {
+                return ResourceManager.GetStream("SoundGameOver", resourceCulture);
             }
         }
         

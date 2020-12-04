@@ -8,6 +8,6 @@ namespace ver3
     class Score
     {
         public int scoreOfGame = 0;
-        public SoundPlayer soundWing = new SoundPlayer(Properties.Resources.point);
+        public SoundPlayer soundPoint = new SoundPlayer(Properties.Resources.point);
     }
 }
