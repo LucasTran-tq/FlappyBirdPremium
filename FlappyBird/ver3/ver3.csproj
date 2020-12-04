@@ -106,6 +106,21 @@
   <ItemGroup>
     <None Include="Resources\Background_Night.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\die.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hit.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\swoosh.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wing.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
