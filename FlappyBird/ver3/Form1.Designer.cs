@@ -46,10 +46,15 @@
             this.exit = new System.Windows.Forms.Label();
             this.retry = new System.Windows.Forms.Label();
             this.bgMenu = new System.Windows.Forms.Panel();
-            this.lb_sence = new System.Windows.Forms.Label();
-            this.lb_speed = new System.Windows.Forms.Label();
-            this.lb_item = new System.Windows.Forms.Label();
             this.arrow = new System.Windows.Forms.PictureBox();
+            this.lb_item = new System.Windows.Forms.Label();
+            this.lb_speed = new System.Windows.Forms.Label();
+            this.lb_sence = new System.Windows.Forms.Label();
+            this.sense_SubMenu = new System.Windows.Forms.Panel();
+            this.yebirdPictureBox = new System.Windows.Forms.PictureBox();
+            this.choose_lb = new System.Windows.Forms.Label();
+            this.blbirdPictureBox = new System.Windows.Forms.PictureBox();
+            this.rebirdPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPipeBottom1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPipeAbove1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nutplay)).BeginInit();
@@ -60,6 +65,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_introBird)).BeginInit();
             this.bgMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.arrow)).BeginInit();
+            this.sense_SubMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.yebirdPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blbirdPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rebirdPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // picBoxPipeBottom1
@@ -190,7 +199,7 @@
             // menu
             // 
             this.menu.BackColor = System.Drawing.Color.Transparent;
-            this.menu.Font = new System.Drawing.Font("Adobe Garamond Pro Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.menu.Image = ((System.Drawing.Image)(resources.GetObject("menu.Image")));
             this.menu.Location = new System.Drawing.Point(65, 305);
@@ -205,7 +214,7 @@
             // exit
             // 
             this.exit.BackColor = System.Drawing.Color.Transparent;
-            this.exit.Font = new System.Drawing.Font("Adobe Garamond Pro Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.exit.Image = ((System.Drawing.Image)(resources.GetObject("exit.Image")));
             this.exit.Location = new System.Drawing.Point(226, 307);
@@ -220,7 +229,7 @@
             // retry
             // 
             this.retry.BackColor = System.Drawing.Color.Transparent;
-            this.retry.Font = new System.Drawing.Font("Adobe Garamond Pro Bold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.retry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.retry.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.retry.Image = ((System.Drawing.Image)(resources.GetObject("retry.Image")));
             this.retry.Location = new System.Drawing.Point(86, 306);
@@ -248,51 +257,6 @@
             this.bgMenu.Visible = false;
             this.bgMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.bgMenu_Paint);
             // 
-            // lb_sence
-            // 
-            this.lb_sence.BackColor = System.Drawing.Color.Transparent;
-            this.lb_sence.Font = new System.Drawing.Font("Adobe Garamond Pro Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_sence.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lb_sence.Image = ((System.Drawing.Image)(resources.GetObject("lb_sence.Image")));
-            this.lb_sence.Location = new System.Drawing.Point(45, 12);
-            this.lb_sence.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_sence.Name = "lb_sence";
-            this.lb_sence.Size = new System.Drawing.Size(89, 47);
-            this.lb_sence.TabIndex = 8;
-            this.lb_sence.Text = "SENCE";
-            this.lb_sence.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lb_sence.Visible = false;
-            // 
-            // lb_speed
-            // 
-            this.lb_speed.BackColor = System.Drawing.Color.Transparent;
-            this.lb_speed.Font = new System.Drawing.Font("Adobe Garamond Pro Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_speed.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lb_speed.Image = ((System.Drawing.Image)(resources.GetObject("lb_speed.Image")));
-            this.lb_speed.Location = new System.Drawing.Point(45, 70);
-            this.lb_speed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_speed.Name = "lb_speed";
-            this.lb_speed.Size = new System.Drawing.Size(89, 47);
-            this.lb_speed.TabIndex = 8;
-            this.lb_speed.Text = "SPEED";
-            this.lb_speed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lb_speed.Visible = false;
-            // 
-            // lb_item
-            // 
-            this.lb_item.BackColor = System.Drawing.Color.Transparent;
-            this.lb_item.Font = new System.Drawing.Font("Adobe Garamond Pro Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_item.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lb_item.Image = ((System.Drawing.Image)(resources.GetObject("lb_item.Image")));
-            this.lb_item.Location = new System.Drawing.Point(44, 127);
-            this.lb_item.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_item.Name = "lb_item";
-            this.lb_item.Size = new System.Drawing.Size(93, 47);
-            this.lb_item.TabIndex = 8;
-            this.lb_item.Text = "ITEM";
-            this.lb_item.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lb_item.Visible = false;
-            // 
             // arrow
             // 
             this.arrow.BackColor = System.Drawing.Color.Transparent;
@@ -305,6 +269,118 @@
             this.arrow.Visible = false;
             this.arrow.Click += new System.EventHandler(this.arrow_Click);
             // 
+            // lb_item
+            // 
+            this.lb_item.BackColor = System.Drawing.Color.Transparent;
+            this.lb_item.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_item.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lb_item.Image = ((System.Drawing.Image)(resources.GetObject("lb_item.Image")));
+            this.lb_item.Location = new System.Drawing.Point(44, 127);
+            this.lb_item.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_item.Name = "lb_item";
+            this.lb_item.Size = new System.Drawing.Size(93, 47);
+            this.lb_item.TabIndex = 8;
+            this.lb_item.Text = "ITEM";
+            this.lb_item.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lb_item.Visible = false;
+            // 
+            // lb_speed
+            // 
+            this.lb_speed.BackColor = System.Drawing.Color.Transparent;
+            this.lb_speed.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_speed.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lb_speed.Image = ((System.Drawing.Image)(resources.GetObject("lb_speed.Image")));
+            this.lb_speed.Location = new System.Drawing.Point(45, 70);
+            this.lb_speed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_speed.Name = "lb_speed";
+            this.lb_speed.Size = new System.Drawing.Size(89, 47);
+            this.lb_speed.TabIndex = 8;
+            this.lb_speed.Text = "SPEED";
+            this.lb_speed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lb_speed.Visible = false;
+            // 
+            // lb_sence
+            // 
+            this.lb_sence.BackColor = System.Drawing.Color.Transparent;
+            this.lb_sence.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_sence.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lb_sence.Image = ((System.Drawing.Image)(resources.GetObject("lb_sence.Image")));
+            this.lb_sence.Location = new System.Drawing.Point(45, 12);
+            this.lb_sence.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_sence.Name = "lb_sence";
+            this.lb_sence.Size = new System.Drawing.Size(89, 47);
+            this.lb_sence.TabIndex = 8;
+            this.lb_sence.Text = "SENCE";
+            this.lb_sence.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lb_sence.Visible = false;
+            this.lb_sence.Click += new System.EventHandler(this.lb_sence_Click_1);
+            // 
+            // sense_SubMenu
+            // 
+            this.sense_SubMenu.BackColor = System.Drawing.Color.Transparent;
+            this.sense_SubMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sense_SubMenu.BackgroundImage")));
+            this.sense_SubMenu.Controls.Add(this.rebirdPictureBox);
+            this.sense_SubMenu.Controls.Add(this.blbirdPictureBox);
+            this.sense_SubMenu.Controls.Add(this.choose_lb);
+            this.sense_SubMenu.Controls.Add(this.yebirdPictureBox);
+            this.sense_SubMenu.Location = new System.Drawing.Point(107, 196);
+            this.sense_SubMenu.Name = "sense_SubMenu";
+            this.sense_SubMenu.Size = new System.Drawing.Size(168, 205);
+            this.sense_SubMenu.TabIndex = 14;
+            this.sense_SubMenu.Visible = false;
+            // 
+            // yebirdPictureBox
+            // 
+            this.yebirdPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.yebirdPictureBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.yebirdPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("yebirdPictureBox.Image")));
+            this.yebirdPictureBox.Location = new System.Drawing.Point(63, 62);
+            this.yebirdPictureBox.Name = "yebirdPictureBox";
+            this.yebirdPictureBox.Size = new System.Drawing.Size(53, 39);
+            this.yebirdPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.yebirdPictureBox.TabIndex = 13;
+            this.yebirdPictureBox.TabStop = false;
+            this.yebirdPictureBox.Visible = false;
+            this.yebirdPictureBox.Click += new System.EventHandler(this.yebirdPictureBox_Click);
+            // 
+            // choose_lb
+            // 
+            this.choose_lb.Font = new System.Drawing.Font("Kosal says hy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.choose_lb.Location = new System.Drawing.Point(27, 26);
+            this.choose_lb.Name = "choose_lb";
+            this.choose_lb.Size = new System.Drawing.Size(146, 23);
+            this.choose_lb.TabIndex = 14;
+            this.choose_lb.Text = "CHOOSE ONE";
+            this.choose_lb.Visible = false;
+            // 
+            // blbirdPictureBox
+            // 
+            this.blbirdPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.blbirdPictureBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.blbirdPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("blbirdPictureBox.Image")));
+            this.blbirdPictureBox.Location = new System.Drawing.Point(63, 107);
+            this.blbirdPictureBox.Name = "blbirdPictureBox";
+            this.blbirdPictureBox.Size = new System.Drawing.Size(53, 38);
+            this.blbirdPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.blbirdPictureBox.TabIndex = 15;
+            this.blbirdPictureBox.TabStop = false;
+            this.blbirdPictureBox.Visible = false;
+            this.blbirdPictureBox.Click += new System.EventHandler(this.blbirdPictureBox_Click);
+            // 
+            // rebirdPictureBox
+            // 
+            this.rebirdPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.rebirdPictureBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.rebirdPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("rebirdPictureBox.Image")));
+            this.rebirdPictureBox.Location = new System.Drawing.Point(63, 151);
+            this.rebirdPictureBox.Name = "rebirdPictureBox";
+            this.rebirdPictureBox.Size = new System.Drawing.Size(53, 36);
+            this.rebirdPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.rebirdPictureBox.TabIndex = 16;
+            this.rebirdPictureBox.TabStop = false;
+            this.rebirdPictureBox.Visible = false;
+            this.rebirdPictureBox.Click += new System.EventHandler(this.rebirdPictureBox_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -313,6 +389,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(400, 500);
             this.ControlBox = false;
+            this.Controls.Add(this.sense_SubMenu);
             this.Controls.Add(this.lbldiem);
             this.Controls.Add(this.pictureBox_introBird);
             this.Controls.Add(this.bgMenu);
@@ -347,6 +424,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_introBird)).EndInit();
             this.bgMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.arrow)).EndInit();
+            this.sense_SubMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.yebirdPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blbirdPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rebirdPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -373,8 +454,11 @@
         private System.Windows.Forms.Label lb_speed;
         private System.Windows.Forms.Label lb_sence;
         private System.Windows.Forms.PictureBox arrow;
-       
-
+        private System.Windows.Forms.Panel sense_SubMenu;
+        private System.Windows.Forms.PictureBox rebirdPictureBox;
+        private System.Windows.Forms.PictureBox blbirdPictureBox;
+        private System.Windows.Forms.Label choose_lb;
+        private System.Windows.Forms.PictureBox yebirdPictureBox;
     }
 }
 

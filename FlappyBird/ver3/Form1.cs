@@ -107,6 +107,20 @@ namespace ver3
             arrow.Visible = false;
         }
 
+        private void SenseMenu()
+        {
+            bgMenu.Visible = false;
+            lb_sence.Visible = false;
+            lb_speed.Visible = false;
+            lb_item.Visible = false;
+            sense_SubMenu.Visible = true;
+            choose_lb.Visible = true;
+            yebirdPictureBox.Visible = true;
+            blbirdPictureBox.Visible = true;
+            rebirdPictureBox.Visible = true;
+           
+        }
+
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             if (bird_Timer.Enabled == true)
@@ -298,8 +312,52 @@ namespace ver3
         }
 
 
+        private void lb_sence_Click_1(object sender, EventArgs e)
+        {
+            soundClick.Play();
+            SenseMenu();
+        }
 
+        private void yebirdPictureBox_Click(object sender, EventArgs e)
+        {
+            soundClick.Play();
+            bird.choose = 1;
+            sense_SubMenu.Visible = false;
+            choose_lb.Visible = false;
+            yebirdPictureBox.Visible = false;
+            rebirdPictureBox.Visible = false;
+            blbirdPictureBox.Visible = false;
+            nutplay.Visible = true;
+            menu.Visible = true;
+            exit.Visible = true;
+        }
 
+        private void blbirdPictureBox_Click(object sender, EventArgs e)
+        {
+            soundClick.Play();
+            bird.choose = 2;
+            sense_SubMenu.Visible = false;
+            choose_lb.Visible = false;
+            yebirdPictureBox.Visible = false;
+            rebirdPictureBox.Visible = false;
+            blbirdPictureBox.Visible = false;
+            nutplay.Visible = true;
+            menu.Visible = true;
+            exit.Visible = true;
+        }
 
+        private void rebirdPictureBox_Click(object sender, EventArgs e)
+        {
+            soundClick.Play();
+            bird.choose = 3;
+            sense_SubMenu.Visible = false;
+            choose_lb.Visible = false;
+            yebirdPictureBox.Visible = false;
+            rebirdPictureBox.Visible = false;
+            blbirdPictureBox.Visible = false;
+            nutplay.Visible = true;
+            menu.Visible = true;
+            exit.Visible = true;
+        }
     }
 }
