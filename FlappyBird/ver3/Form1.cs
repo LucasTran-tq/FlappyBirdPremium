@@ -24,6 +24,7 @@ namespace ver3
         Bird bird = new Bird();
         Pipe pipe = new Pipe();
         Score score = new Score();
+        int flashcount = 0;
 
         
         Timer bird_Timer = new Timer();
@@ -65,13 +66,17 @@ namespace ver3
         private void Flash()
         {
             flash_panel.Visible = true;
-            System.Threading.Thread.Sleep(10);
+            System.Threading.Thread.Sleep(5);
             flash_panel.Visible = false;
         }
         private void GameOver()
         {
             timer1.Stop();
-            Flash();
+            if (flashcount == 0)
+            {
+                Flash();
+                flashcount++;
+            }
             picBoxPipeBottom1.Visible = false;
             picBoxPipeBottom2.Visible = false;
             picBoxPipeAbove1.Visible = false;
@@ -263,6 +268,7 @@ namespace ver3
         int dem = 0;
         private void nutplay_Click(object sender, EventArgs e)
         {
+            flashcount = 0;
             soundClick.Play();
             Playing();
 
