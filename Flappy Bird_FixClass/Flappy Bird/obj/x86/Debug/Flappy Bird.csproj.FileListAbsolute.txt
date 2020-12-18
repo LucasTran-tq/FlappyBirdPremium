@@ -1,0 +1,9 @@
+E:\P.doc\Flappy Bird\Flappy Bird\bin\Debug\Flappy Bird.exe
+E:\P.doc\Flappy Bird\Flappy Bird\bin\Debug\Flappy Bird.pdb
+E:\P.doc\Flappy Bird\Flappy Bird\bin\Debug\Guna.UI.dll
+E:\P.doc\Flappy Bird\Flappy Bird\obj\x86\Debug\Flappy_Bird.Properties.Resources.resources
+E:\P.doc\Flappy Bird\Flappy Bird\obj\x86\Debug\Flappy Bird.csproj.GenerateResource.Cache
+E:\P.doc\Flappy Bird\Flappy Bird\obj\x86\Debug\Flappy Bird.exe
+E:\P.doc\Flappy Bird\Flappy Bird\obj\x86\Debug\Flappy Bird.pdb
+E:\P.doc\Flappy Bird\Flappy Bird\obj\x86\Debug\Flappy_Bird.BackgroundGame.resources
+E:\P.doc\Flappy Bird\Flappy Bird\obj\x86\Debug\Flappy_Bird.ColGame.resources
