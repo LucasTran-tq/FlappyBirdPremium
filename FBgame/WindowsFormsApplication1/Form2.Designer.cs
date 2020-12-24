@@ -69,14 +69,15 @@
             this.btt_Play.ForeColor = System.Drawing.Color.White;
             this.btt_Play.Image = null;
             this.btt_Play.ImageSize = new System.Drawing.Size(160, 70);
-            this.btt_Play.Location = new System.Drawing.Point(124, 225);
+            this.btt_Play.Location = new System.Drawing.Point(227, 415);
+            this.btt_Play.Margin = new System.Windows.Forms.Padding(6);
             this.btt_Play.Name = "btt_Play";
             this.btt_Play.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.btt_Play.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btt_Play.OnHoverForeColor = System.Drawing.Color.Transparent;
             this.btt_Play.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btt_Play.OnHoverImage")));
             this.btt_Play.OnPressedColor = System.Drawing.Color.Transparent;
-            this.btt_Play.Size = new System.Drawing.Size(153, 67);
+            this.btt_Play.Size = new System.Drawing.Size(281, 124);
             this.btt_Play.TabIndex = 2;
             this.btt_Play.Click += new System.EventHandler(this.btt_Play_Click);
             // 
@@ -94,14 +95,15 @@
             this.btt_exit2.ForeColor = System.Drawing.Color.White;
             this.btt_exit2.Image = null;
             this.btt_exit2.ImageSize = new System.Drawing.Size(62, 64);
-            this.btt_exit2.Location = new System.Drawing.Point(258, 299);
+            this.btt_exit2.Location = new System.Drawing.Point(473, 552);
+            this.btt_exit2.Margin = new System.Windows.Forms.Padding(6);
             this.btt_exit2.Name = "btt_exit2";
             this.btt_exit2.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.btt_exit2.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btt_exit2.OnHoverForeColor = System.Drawing.Color.Transparent;
             this.btt_exit2.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btt_exit2.OnHoverImage")));
             this.btt_exit2.OnPressedColor = System.Drawing.Color.Transparent;
-            this.btt_exit2.Size = new System.Drawing.Size(62, 64);
+            this.btt_exit2.Size = new System.Drawing.Size(114, 118);
             this.btt_exit2.TabIndex = 9;
             this.btt_exit2.Visible = false;
             this.btt_exit2.Click += new System.EventHandler(this.btt_exit2_Click);
@@ -120,14 +122,15 @@
             this.btt_replay.ForeColor = System.Drawing.Color.White;
             this.btt_replay.Image = null;
             this.btt_replay.ImageSize = new System.Drawing.Size(62, 64);
-            this.btt_replay.Location = new System.Drawing.Point(80, 298);
+            this.btt_replay.Location = new System.Drawing.Point(147, 550);
+            this.btt_replay.Margin = new System.Windows.Forms.Padding(6);
             this.btt_replay.Name = "btt_replay";
             this.btt_replay.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.btt_replay.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btt_replay.OnHoverForeColor = System.Drawing.Color.Transparent;
             this.btt_replay.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btt_replay.OnHoverImage")));
             this.btt_replay.OnPressedColor = System.Drawing.Color.Transparent;
-            this.btt_replay.Size = new System.Drawing.Size(62, 64);
+            this.btt_replay.Size = new System.Drawing.Size(114, 118);
             this.btt_replay.TabIndex = 10;
             this.btt_replay.Visible = false;
             // 
@@ -145,14 +148,15 @@
             this.btt_Exit.ForeColor = System.Drawing.Color.White;
             this.btt_Exit.Image = null;
             this.btt_Exit.ImageSize = new System.Drawing.Size(133, 68);
-            this.btt_Exit.Location = new System.Drawing.Point(223, 298);
+            this.btt_Exit.Location = new System.Drawing.Point(409, 550);
+            this.btt_Exit.Margin = new System.Windows.Forms.Padding(6);
             this.btt_Exit.Name = "btt_Exit";
             this.btt_Exit.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.btt_Exit.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btt_Exit.OnHoverForeColor = System.Drawing.Color.Transparent;
             this.btt_Exit.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btt_Exit.OnHoverImage")));
             this.btt_Exit.OnPressedColor = System.Drawing.Color.Transparent;
-            this.btt_Exit.Size = new System.Drawing.Size(130, 65);
+            this.btt_Exit.Size = new System.Drawing.Size(238, 120);
             this.btt_Exit.TabIndex = 8;
             this.btt_Exit.Click += new System.EventHandler(this.btt_exit2_Click);
             // 
@@ -170,14 +174,15 @@
             this.btt_Menu.ForeColor = System.Drawing.Color.White;
             this.btt_Menu.Image = null;
             this.btt_Menu.ImageSize = new System.Drawing.Size(133, 68);
-            this.btt_Menu.Location = new System.Drawing.Point(45, 298);
+            this.btt_Menu.Location = new System.Drawing.Point(83, 550);
+            this.btt_Menu.Margin = new System.Windows.Forms.Padding(6);
             this.btt_Menu.Name = "btt_Menu";
             this.btt_Menu.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.btt_Menu.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btt_Menu.OnHoverForeColor = System.Drawing.Color.Transparent;
             this.btt_Menu.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btt_Menu.OnHoverImage")));
             this.btt_Menu.OnPressedColor = System.Drawing.Color.Transparent;
-            this.btt_Menu.Size = new System.Drawing.Size(130, 65);
+            this.btt_Menu.Size = new System.Drawing.Size(238, 120);
             this.btt_Menu.TabIndex = 7;
             this.btt_Menu.Click += new System.EventHandler(this.btt_Menu_Click);
             // 
@@ -190,9 +195,10 @@
             // 
             this.pB_IntroBird.BackColor = System.Drawing.Color.Transparent;
             this.pB_IntroBird.Image = ((System.Drawing.Image)(resources.GetObject("pB_IntroBird.Image")));
-            this.pB_IntroBird.Location = new System.Drawing.Point(153, 73);
+            this.pB_IntroBird.Location = new System.Drawing.Point(281, 135);
+            this.pB_IntroBird.Margin = new System.Windows.Forms.Padding(6);
             this.pB_IntroBird.Name = "pB_IntroBird";
-            this.pB_IntroBird.Size = new System.Drawing.Size(94, 77);
+            this.pB_IntroBird.Size = new System.Drawing.Size(172, 142);
             this.pB_IntroBird.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pB_IntroBird.TabIndex = 11;
             this.pB_IntroBird.TabStop = false;
@@ -207,9 +213,10 @@
             this.pl_BgMenu.Controls.Add(this.btt_SpeedEasy);
             this.pl_BgMenu.Controls.Add(this.btt_SpeedHard);
             this.pl_BgMenu.Controls.Add(this.btt_SpeedMedium);
-            this.pl_BgMenu.Location = new System.Drawing.Point(127, 193);
+            this.pl_BgMenu.Location = new System.Drawing.Point(233, 356);
+            this.pl_BgMenu.Margin = new System.Windows.Forms.Padding(6);
             this.pl_BgMenu.Name = "pl_BgMenu";
-            this.pl_BgMenu.Size = new System.Drawing.Size(150, 234);
+            this.pl_BgMenu.Size = new System.Drawing.Size(275, 432);
             this.pl_BgMenu.TabIndex = 12;
             this.pl_BgMenu.Visible = false;
             // 
@@ -226,14 +233,15 @@
             this.btt_Back.ForeColor = System.Drawing.Color.White;
             this.btt_Back.Image = null;
             this.btt_Back.ImageSize = new System.Drawing.Size(29, 20);
-            this.btt_Back.Location = new System.Drawing.Point(3, 196);
+            this.btt_Back.Location = new System.Drawing.Point(6, 362);
+            this.btt_Back.Margin = new System.Windows.Forms.Padding(6);
             this.btt_Back.Name = "btt_Back";
             this.btt_Back.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.btt_Back.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btt_Back.OnHoverForeColor = System.Drawing.Color.Transparent;
             this.btt_Back.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btt_Back.OnHoverImage")));
             this.btt_Back.OnPressedColor = System.Drawing.Color.Transparent;
-            this.btt_Back.Size = new System.Drawing.Size(29, 20);
+            this.btt_Back.Size = new System.Drawing.Size(53, 37);
             this.btt_Back.TabIndex = 8;
             this.btt_Back.Click += new System.EventHandler(this.btt_Back_Click);
             // 
@@ -250,14 +258,15 @@
             this.btt_scene.ForeColor = System.Drawing.Color.White;
             this.btt_scene.Image = null;
             this.btt_scene.ImageSize = new System.Drawing.Size(133, 68);
-            this.btt_scene.Location = new System.Drawing.Point(10, 3);
+            this.btt_scene.Location = new System.Drawing.Point(18, 6);
+            this.btt_scene.Margin = new System.Windows.Forms.Padding(6);
             this.btt_scene.Name = "btt_scene";
             this.btt_scene.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.btt_scene.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btt_scene.OnHoverForeColor = System.Drawing.Color.Transparent;
             this.btt_scene.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btt_scene.OnHoverImage")));
             this.btt_scene.OnPressedColor = System.Drawing.Color.Transparent;
-            this.btt_scene.Size = new System.Drawing.Size(130, 65);
+            this.btt_scene.Size = new System.Drawing.Size(238, 120);
             this.btt_scene.TabIndex = 7;
             this.btt_scene.Visible = false;
             // 
@@ -274,14 +283,15 @@
             this.btt_speed.ForeColor = System.Drawing.Color.White;
             this.btt_speed.Image = null;
             this.btt_speed.ImageSize = new System.Drawing.Size(133, 68);
-            this.btt_speed.Location = new System.Drawing.Point(10, 128);
+            this.btt_speed.Location = new System.Drawing.Point(18, 236);
+            this.btt_speed.Margin = new System.Windows.Forms.Padding(6);
             this.btt_speed.Name = "btt_speed";
             this.btt_speed.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.btt_speed.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btt_speed.OnHoverForeColor = System.Drawing.Color.Transparent;
             this.btt_speed.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btt_speed.OnHoverImage")));
             this.btt_speed.OnPressedColor = System.Drawing.Color.Transparent;
-            this.btt_speed.Size = new System.Drawing.Size(130, 70);
+            this.btt_speed.Size = new System.Drawing.Size(238, 129);
             this.btt_speed.TabIndex = 7;
             this.btt_speed.Visible = false;
             this.btt_speed.Click += new System.EventHandler(this.btt_speed_Click);
@@ -299,14 +309,15 @@
             this.btt_item.ForeColor = System.Drawing.Color.White;
             this.btt_item.Image = null;
             this.btt_item.ImageSize = new System.Drawing.Size(133, 68);
-            this.btt_item.Location = new System.Drawing.Point(10, 65);
+            this.btt_item.Location = new System.Drawing.Point(18, 120);
+            this.btt_item.Margin = new System.Windows.Forms.Padding(6);
             this.btt_item.Name = "btt_item";
             this.btt_item.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.btt_item.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btt_item.OnHoverForeColor = System.Drawing.Color.Transparent;
             this.btt_item.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btt_item.OnHoverImage")));
             this.btt_item.OnPressedColor = System.Drawing.Color.Transparent;
-            this.btt_item.Size = new System.Drawing.Size(130, 65);
+            this.btt_item.Size = new System.Drawing.Size(238, 120);
             this.btt_item.TabIndex = 7;
             // 
             // btt_SpeedEasy
@@ -322,14 +333,15 @@
             this.btt_SpeedEasy.ForeColor = System.Drawing.Color.White;
             this.btt_SpeedEasy.Image = null;
             this.btt_SpeedEasy.ImageSize = new System.Drawing.Size(140, 60);
-            this.btt_SpeedEasy.Location = new System.Drawing.Point(10, 3);
+            this.btt_SpeedEasy.Location = new System.Drawing.Point(18, 6);
+            this.btt_SpeedEasy.Margin = new System.Windows.Forms.Padding(6);
             this.btt_SpeedEasy.Name = "btt_SpeedEasy";
             this.btt_SpeedEasy.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.btt_SpeedEasy.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btt_SpeedEasy.OnHoverForeColor = System.Drawing.Color.Transparent;
             this.btt_SpeedEasy.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btt_SpeedEasy.OnHoverImage")));
             this.btt_SpeedEasy.OnPressedColor = System.Drawing.Color.Transparent;
-            this.btt_SpeedEasy.Size = new System.Drawing.Size(137, 50);
+            this.btt_SpeedEasy.Size = new System.Drawing.Size(251, 92);
             this.btt_SpeedEasy.TabIndex = 6;
             this.btt_SpeedEasy.Visible = false;
             this.btt_SpeedEasy.Click += new System.EventHandler(this.btt_SpeedEasy_Click);
@@ -347,14 +359,15 @@
             this.btt_SpeedHard.ForeColor = System.Drawing.Color.White;
             this.btt_SpeedHard.Image = null;
             this.btt_SpeedHard.ImageSize = new System.Drawing.Size(150, 65);
-            this.btt_SpeedHard.Location = new System.Drawing.Point(7, 126);
+            this.btt_SpeedHard.Location = new System.Drawing.Point(13, 233);
+            this.btt_SpeedHard.Margin = new System.Windows.Forms.Padding(6);
             this.btt_SpeedHard.Name = "btt_SpeedHard";
             this.btt_SpeedHard.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.btt_SpeedHard.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btt_SpeedHard.OnHoverForeColor = System.Drawing.Color.Transparent;
             this.btt_SpeedHard.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btt_SpeedHard.OnHoverImage")));
             this.btt_SpeedHard.OnPressedColor = System.Drawing.Color.Transparent;
-            this.btt_SpeedHard.Size = new System.Drawing.Size(143, 59);
+            this.btt_SpeedHard.Size = new System.Drawing.Size(262, 109);
             this.btt_SpeedHard.TabIndex = 6;
             this.btt_SpeedHard.Visible = false;
             this.btt_SpeedHard.Click += new System.EventHandler(this.btt_SpeedHard_Click);
@@ -372,7 +385,8 @@
             this.btt_SpeedMedium.ForeColor = System.Drawing.Color.White;
             this.btt_SpeedMedium.Image = null;
             this.btt_SpeedMedium.ImageSize = new System.Drawing.Size(158, 75);
-            this.btt_SpeedMedium.Location = new System.Drawing.Point(7, 59);
+            this.btt_SpeedMedium.Location = new System.Drawing.Point(13, 109);
+            this.btt_SpeedMedium.Margin = new System.Windows.Forms.Padding(6);
             this.btt_SpeedMedium.Name = "btt_SpeedMedium";
             this.btt_SpeedMedium.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.btt_SpeedMedium.OnHoverBorderColor = System.Drawing.Color.Transparent;
@@ -380,18 +394,18 @@
             this.btt_SpeedMedium.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btt_SpeedMedium.OnHoverImage")));
             this.btt_SpeedMedium.OnPressedColor = System.Drawing.Color.Transparent;
             this.btt_SpeedMedium.OnPressedDepth = 100;
-            this.btt_SpeedMedium.Size = new System.Drawing.Size(140, 63);
+            this.btt_SpeedMedium.Size = new System.Drawing.Size(257, 116);
             this.btt_SpeedMedium.TabIndex = 6;
             this.btt_SpeedMedium.Visible = false;
             this.btt_SpeedMedium.Click += new System.EventHandler(this.btt_SpeedMedium_Click);
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(400, 460);
+            this.ClientSize = new System.Drawing.Size(733, 849);
             this.Controls.Add(this.pl_BgMenu);
             this.Controls.Add(this.pB_IntroBird);
             this.Controls.Add(this.btt_exit2);
@@ -399,12 +413,15 @@
             this.Controls.Add(this.btt_Exit);
             this.Controls.Add(this.btt_Menu);
             this.Controls.Add(this.btt_Play);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form2_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pB_IntroBird)).EndInit();
             this.pl_BgMenu.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -429,6 +446,5 @@
         private Guna.UI.WinForms.GunaCircleButton btt_SpeedEasy;
         private Guna.UI.WinForms.GunaCircleButton btt_SpeedHard;
         private Guna.UI.WinForms.GunaCircleButton btt_SpeedMedium;
-
     }
 }

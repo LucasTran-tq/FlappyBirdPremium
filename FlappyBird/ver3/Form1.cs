@@ -224,6 +224,37 @@ namespace ver3
                
         }
 
+        int dem = 0;
+        private void nutplay_Click(object sender, EventArgs e)
+        {
+            flashcount = 0;
+            soundClick.Play();
+            Playing();
+
+            dem++;
+            if (dem % 2 != 0)
+            {
+                timer1.Start();
+                //timer2.Start();
+                Bird_Animator();
+            }
+            else
+            {
+                timer1.Stop();
+
+            }
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Space)
+            {
+                bird.Y_Bird -= 50;
+                bird.soundWing.Play();
+            }
+        }
+
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             this.SetStyle(ControlStyles.AllPaintingInWmPaint |
@@ -265,37 +296,6 @@ namespace ver3
             lbldiem.Text = score.scoreOfGame.ToString();
 
         }
-        int dem = 0;
-        private void nutplay_Click(object sender, EventArgs e)
-        {
-            flashcount = 0;
-            soundClick.Play();
-            Playing();
-
-            dem++;
-            if (dem % 2 != 0)
-            {
-                timer1.Start();
-                //timer2.Start();
-                Bird_Animator();
-            }
-            else
-            {
-                timer1.Stop();
-         
-            }
-        }
-
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Space)
-            {
-                bird.Y_Bird -= 50;
-                bird.soundWing.Play();
-            }
-        }
-
-     
 
         private void Bird_Timer_Tick(object sender, EventArgs e)
         {
@@ -307,13 +307,13 @@ namespace ver3
             if (bird.Y_Bird + bird.birdPicture.Height <= this.Height && bird.Y_Bird >= 0)
             {
                 bird.Y_Bird += 10;
-                
+
                 if (bird.X_Bird + bird.birdPicture.Width >= pipe.X_pipePairs1 && bird.X_Bird + bird.birdPicture.Width <= pipe.X_pipePairs1 + picBoxPipeAbove1.Width)
                 {
-                    
+
                     if (bird.Y_Bird <= 250 + pipe.Y_pipeAbove1 || bird.Y_Bird + bird.birdPicture.Height >= pipe.Y_pipeBottom1)
                     {
-                        
+
                         GameOver();
                         return;
 
@@ -332,23 +332,19 @@ namespace ver3
             }
             else
             {
-                
+
                 GameOver();
                 bird.Y_Bird += 10;
-                
+
 
             }
 
-            if(bird.Y_Bird > this.Height)
+            if (bird.Y_Bird > this.Height)
             {
                 bird.soundHit.Stop();
             }
-            
+
         }
-
-    
-
-
        
         private void exit_Click_1(object sender, EventArgs e)
         {

@@ -53,6 +53,8 @@ namespace Flappy_Bird
             ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer, true);
 
             pipe.PipeInGame(pl_ScreenGame, clg.picBoxPipeAbove1, clg.picBoxPipeAbove2, clg.picBoxPipeBottom1, clg.picBoxPipeBottom2);
+            
+
         }
 
         private void btt_Play_Click(object sender, EventArgs e)

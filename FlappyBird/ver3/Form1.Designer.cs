@@ -83,10 +83,10 @@
             // 
             this.picBoxPipeBottom1.BackColor = System.Drawing.Color.Transparent;
             this.picBoxPipeBottom1.Image = ((System.Drawing.Image)(resources.GetObject("picBoxPipeBottom1.Image")));
-            this.picBoxPipeBottom1.Location = new System.Drawing.Point(149, 347);
-            this.picBoxPipeBottom1.Margin = new System.Windows.Forms.Padding(2);
+            this.picBoxPipeBottom1.Location = new System.Drawing.Point(273, 641);
+            this.picBoxPipeBottom1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picBoxPipeBottom1.Name = "picBoxPipeBottom1";
-            this.picBoxPipeBottom1.Size = new System.Drawing.Size(52, 280);
+            this.picBoxPipeBottom1.Size = new System.Drawing.Size(95, 517);
             this.picBoxPipeBottom1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxPipeBottom1.TabIndex = 2;
             this.picBoxPipeBottom1.TabStop = false;
@@ -95,10 +95,10 @@
             // 
             this.picBoxPipeAbove1.BackColor = System.Drawing.Color.Transparent;
             this.picBoxPipeAbove1.Image = ((System.Drawing.Image)(resources.GetObject("picBoxPipeAbove1.Image")));
-            this.picBoxPipeAbove1.Location = new System.Drawing.Point(149, -163);
-            this.picBoxPipeAbove1.Margin = new System.Windows.Forms.Padding(2);
+            this.picBoxPipeAbove1.Location = new System.Drawing.Point(273, -301);
+            this.picBoxPipeAbove1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picBoxPipeAbove1.Name = "picBoxPipeAbove1";
-            this.picBoxPipeAbove1.Size = new System.Drawing.Size(52, 250);
+            this.picBoxPipeAbove1.Size = new System.Drawing.Size(95, 462);
             this.picBoxPipeAbove1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxPipeAbove1.TabIndex = 3;
             this.picBoxPipeAbove1.TabStop = false;
@@ -111,10 +111,10 @@
             // 
             this.nutplay.BackColor = System.Drawing.Color.Transparent;
             this.nutplay.Image = ((System.Drawing.Image)(resources.GetObject("nutplay.Image")));
-            this.nutplay.Location = new System.Drawing.Point(130, 241);
-            this.nutplay.Margin = new System.Windows.Forms.Padding(2);
+            this.nutplay.Location = new System.Drawing.Point(238, 445);
+            this.nutplay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nutplay.Name = "nutplay";
-            this.nutplay.Size = new System.Drawing.Size(145, 62);
+            this.nutplay.Size = new System.Drawing.Size(266, 114);
             this.nutplay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.nutplay.TabIndex = 7;
             this.nutplay.TabStop = false;
@@ -124,10 +124,10 @@
             // 
             this.picBoxPipeAbove2.BackColor = System.Drawing.Color.Transparent;
             this.picBoxPipeAbove2.Image = ((System.Drawing.Image)(resources.GetObject("picBoxPipeAbove2.Image")));
-            this.picBoxPipeAbove2.Location = new System.Drawing.Point(300, -173);
-            this.picBoxPipeAbove2.Margin = new System.Windows.Forms.Padding(2);
+            this.picBoxPipeAbove2.Location = new System.Drawing.Point(550, -319);
+            this.picBoxPipeAbove2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picBoxPipeAbove2.Name = "picBoxPipeAbove2";
-            this.picBoxPipeAbove2.Size = new System.Drawing.Size(52, 250);
+            this.picBoxPipeAbove2.Size = new System.Drawing.Size(95, 462);
             this.picBoxPipeAbove2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxPipeAbove2.TabIndex = 9;
             this.picBoxPipeAbove2.TabStop = false;
@@ -136,10 +136,10 @@
             // 
             this.picBoxPipeBottom2.BackColor = System.Drawing.Color.Transparent;
             this.picBoxPipeBottom2.Image = ((System.Drawing.Image)(resources.GetObject("picBoxPipeBottom2.Image")));
-            this.picBoxPipeBottom2.Location = new System.Drawing.Point(300, 347);
-            this.picBoxPipeBottom2.Margin = new System.Windows.Forms.Padding(2);
+            this.picBoxPipeBottom2.Location = new System.Drawing.Point(550, 641);
+            this.picBoxPipeBottom2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picBoxPipeBottom2.Name = "picBoxPipeBottom2";
-            this.picBoxPipeBottom2.Size = new System.Drawing.Size(52, 280);
+            this.picBoxPipeBottom2.Size = new System.Drawing.Size(95, 517);
             this.picBoxPipeBottom2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxPipeBottom2.TabIndex = 10;
             this.picBoxPipeBottom2.TabStop = false;
@@ -148,9 +148,10 @@
             // 
             this.pb_Title2.BackColor = System.Drawing.Color.Transparent;
             this.pb_Title2.Image = ((System.Drawing.Image)(resources.GetObject("pb_Title2.Image")));
-            this.pb_Title2.Location = new System.Drawing.Point(69, 93);
+            this.pb_Title2.Location = new System.Drawing.Point(127, 172);
+            this.pb_Title2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pb_Title2.Name = "pb_Title2";
-            this.pb_Title2.Size = new System.Drawing.Size(266, 72);
+            this.pb_Title2.Size = new System.Drawing.Size(488, 133);
             this.pb_Title2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_Title2.TabIndex = 11;
             this.pb_Title2.TabStop = false;
@@ -160,9 +161,10 @@
             // 
             this.pb_GameOver.BackColor = System.Drawing.Color.Transparent;
             this.pb_GameOver.Image = ((System.Drawing.Image)(resources.GetObject("pb_GameOver.Image")));
-            this.pb_GameOver.Location = new System.Drawing.Point(61, 126);
+            this.pb_GameOver.Location = new System.Drawing.Point(112, 233);
+            this.pb_GameOver.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pb_GameOver.Name = "pb_GameOver";
-            this.pb_GameOver.Size = new System.Drawing.Size(291, 144);
+            this.pb_GameOver.Size = new System.Drawing.Size(534, 266);
             this.pb_GameOver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_GameOver.TabIndex = 11;
             this.pb_GameOver.TabStop = false;
@@ -178,9 +180,10 @@
             this.pictureBox_introBird.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox_introBird.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureBox_introBird.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_introBird.Image")));
-            this.pictureBox_introBird.Location = new System.Drawing.Point(161, 27);
+            this.pictureBox_introBird.Location = new System.Drawing.Point(295, 50);
+            this.pictureBox_introBird.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBox_introBird.Name = "pictureBox_introBird";
-            this.pictureBox_introBird.Size = new System.Drawing.Size(72, 60);
+            this.pictureBox_introBird.Size = new System.Drawing.Size(132, 111);
             this.pictureBox_introBird.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_introBird.TabIndex = 12;
             this.pictureBox_introBird.TabStop = false;
@@ -192,10 +195,10 @@
             this.lbldiem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbldiem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbldiem.Image = ((System.Drawing.Image)(resources.GetObject("lbldiem.Image")));
-            this.lbldiem.Location = new System.Drawing.Point(161, 23);
-            this.lbldiem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbldiem.Location = new System.Drawing.Point(295, 42);
+            this.lbldiem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbldiem.Name = "lbldiem";
-            this.lbldiem.Size = new System.Drawing.Size(72, 28);
+            this.lbldiem.Size = new System.Drawing.Size(132, 52);
             this.lbldiem.TabIndex = 8;
             this.lbldiem.Text = "0";
             this.lbldiem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -212,10 +215,10 @@
             this.menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.menu.Image = ((System.Drawing.Image)(resources.GetObject("menu.Image")));
-            this.menu.Location = new System.Drawing.Point(65, 305);
-            this.menu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.menu.Location = new System.Drawing.Point(119, 563);
+            this.menu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(93, 49);
+            this.menu.Size = new System.Drawing.Size(171, 90);
             this.menu.TabIndex = 8;
             this.menu.Text = "MENU";
             this.menu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -228,10 +231,10 @@
             this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.exit.Image = ((System.Drawing.Image)(resources.GetObject("exit.Image")));
-            this.exit.Location = new System.Drawing.Point(226, 307);
-            this.exit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.exit.Location = new System.Drawing.Point(414, 567);
+            this.exit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(93, 47);
+            this.exit.Size = new System.Drawing.Size(171, 87);
             this.exit.TabIndex = 8;
             this.exit.Text = "QUIT";
             this.exit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -244,10 +247,10 @@
             this.retry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.retry.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.retry.Image = ((System.Drawing.Image)(resources.GetObject("retry.Image")));
-            this.retry.Location = new System.Drawing.Point(86, 306);
-            this.retry.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.retry.Location = new System.Drawing.Point(158, 565);
+            this.retry.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.retry.Name = "retry";
-            this.retry.Size = new System.Drawing.Size(93, 49);
+            this.retry.Size = new System.Drawing.Size(171, 90);
             this.retry.TabIndex = 8;
             this.retry.Text = "RESTART";
             this.retry.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -262,9 +265,10 @@
             this.bgMenu.Controls.Add(this.lb_item);
             this.bgMenu.Controls.Add(this.lb_speed);
             this.bgMenu.Controls.Add(this.lb_sence);
-            this.bgMenu.Location = new System.Drawing.Point(107, 196);
+            this.bgMenu.Location = new System.Drawing.Point(196, 362);
+            this.bgMenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.bgMenu.Name = "bgMenu";
-            this.bgMenu.Size = new System.Drawing.Size(168, 205);
+            this.bgMenu.Size = new System.Drawing.Size(308, 378);
             this.bgMenu.TabIndex = 13;
             this.bgMenu.Visible = false;
             this.bgMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.bgMenu_Paint);
@@ -273,9 +277,10 @@
             // 
             this.arrow1.BackColor = System.Drawing.Color.Transparent;
             this.arrow1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("arrow1.BackgroundImage")));
-            this.arrow1.Location = new System.Drawing.Point(23, 177);
+            this.arrow1.Location = new System.Drawing.Point(42, 327);
+            this.arrow1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.arrow1.Name = "arrow1";
-            this.arrow1.Size = new System.Drawing.Size(30, 20);
+            this.arrow1.Size = new System.Drawing.Size(55, 37);
             this.arrow1.TabIndex = 9;
             this.arrow1.TabStop = false;
             this.arrow1.Visible = false;
@@ -287,10 +292,10 @@
             this.lb_item.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_item.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lb_item.Image = ((System.Drawing.Image)(resources.GetObject("lb_item.Image")));
-            this.lb_item.Location = new System.Drawing.Point(44, 127);
-            this.lb_item.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_item.Location = new System.Drawing.Point(81, 234);
+            this.lb_item.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_item.Name = "lb_item";
-            this.lb_item.Size = new System.Drawing.Size(93, 47);
+            this.lb_item.Size = new System.Drawing.Size(171, 87);
             this.lb_item.TabIndex = 8;
             this.lb_item.Text = "ITEM";
             this.lb_item.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -302,10 +307,10 @@
             this.lb_speed.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_speed.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lb_speed.Image = ((System.Drawing.Image)(resources.GetObject("lb_speed.Image")));
-            this.lb_speed.Location = new System.Drawing.Point(45, 70);
-            this.lb_speed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_speed.Location = new System.Drawing.Point(83, 129);
+            this.lb_speed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_speed.Name = "lb_speed";
-            this.lb_speed.Size = new System.Drawing.Size(89, 47);
+            this.lb_speed.Size = new System.Drawing.Size(163, 87);
             this.lb_speed.TabIndex = 8;
             this.lb_speed.Text = "SPEED";
             this.lb_speed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -317,10 +322,10 @@
             this.lb_sence.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_sence.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lb_sence.Image = ((System.Drawing.Image)(resources.GetObject("lb_sence.Image")));
-            this.lb_sence.Location = new System.Drawing.Point(45, 12);
-            this.lb_sence.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_sence.Location = new System.Drawing.Point(83, 22);
+            this.lb_sence.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_sence.Name = "lb_sence";
-            this.lb_sence.Size = new System.Drawing.Size(89, 47);
+            this.lb_sence.Size = new System.Drawing.Size(163, 87);
             this.lb_sence.TabIndex = 8;
             this.lb_sence.Text = "SENCE";
             this.lb_sence.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -336,9 +341,10 @@
             this.sense_SubMenu.Controls.Add(this.blbirdPictureBox);
             this.sense_SubMenu.Controls.Add(this.choose_lb);
             this.sense_SubMenu.Controls.Add(this.yebirdPictureBox);
-            this.sense_SubMenu.Location = new System.Drawing.Point(107, 196);
+            this.sense_SubMenu.Location = new System.Drawing.Point(196, 362);
+            this.sense_SubMenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.sense_SubMenu.Name = "sense_SubMenu";
-            this.sense_SubMenu.Size = new System.Drawing.Size(168, 205);
+            this.sense_SubMenu.Size = new System.Drawing.Size(308, 378);
             this.sense_SubMenu.TabIndex = 14;
             this.sense_SubMenu.Visible = false;
             // 
@@ -346,9 +352,10 @@
             // 
             this.arrow2.BackColor = System.Drawing.Color.Transparent;
             this.arrow2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("arrow2.BackgroundImage")));
-            this.arrow2.Location = new System.Drawing.Point(23, 167);
+            this.arrow2.Location = new System.Drawing.Point(42, 308);
+            this.arrow2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.arrow2.Name = "arrow2";
-            this.arrow2.Size = new System.Drawing.Size(30, 20);
+            this.arrow2.Size = new System.Drawing.Size(55, 37);
             this.arrow2.TabIndex = 19;
             this.arrow2.TabStop = false;
             this.arrow2.Visible = false;
@@ -359,9 +366,10 @@
             this.rebirdPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.rebirdPictureBox.Cursor = System.Windows.Forms.Cursors.Default;
             this.rebirdPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("rebirdPictureBox.Image")));
-            this.rebirdPictureBox.Location = new System.Drawing.Point(63, 151);
+            this.rebirdPictureBox.Location = new System.Drawing.Point(116, 279);
+            this.rebirdPictureBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.rebirdPictureBox.Name = "rebirdPictureBox";
-            this.rebirdPictureBox.Size = new System.Drawing.Size(53, 36);
+            this.rebirdPictureBox.Size = new System.Drawing.Size(97, 66);
             this.rebirdPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.rebirdPictureBox.TabIndex = 16;
             this.rebirdPictureBox.TabStop = false;
@@ -373,9 +381,10 @@
             this.blbirdPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.blbirdPictureBox.Cursor = System.Windows.Forms.Cursors.Default;
             this.blbirdPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("blbirdPictureBox.Image")));
-            this.blbirdPictureBox.Location = new System.Drawing.Point(63, 107);
+            this.blbirdPictureBox.Location = new System.Drawing.Point(116, 198);
+            this.blbirdPictureBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.blbirdPictureBox.Name = "blbirdPictureBox";
-            this.blbirdPictureBox.Size = new System.Drawing.Size(53, 38);
+            this.blbirdPictureBox.Size = new System.Drawing.Size(97, 70);
             this.blbirdPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.blbirdPictureBox.TabIndex = 15;
             this.blbirdPictureBox.TabStop = false;
@@ -384,10 +393,11 @@
             // 
             // choose_lb
             // 
-            this.choose_lb.Font = new System.Drawing.Font("Kosal says hy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.choose_lb.Location = new System.Drawing.Point(27, 26);
+            this.choose_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.choose_lb.Location = new System.Drawing.Point(50, 48);
+            this.choose_lb.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.choose_lb.Name = "choose_lb";
-            this.choose_lb.Size = new System.Drawing.Size(146, 23);
+            this.choose_lb.Size = new System.Drawing.Size(268, 42);
             this.choose_lb.TabIndex = 14;
             this.choose_lb.Text = "CHOOSE ONE";
             this.choose_lb.Visible = false;
@@ -397,9 +407,10 @@
             this.yebirdPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.yebirdPictureBox.Cursor = System.Windows.Forms.Cursors.Default;
             this.yebirdPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("yebirdPictureBox.Image")));
-            this.yebirdPictureBox.Location = new System.Drawing.Point(63, 62);
+            this.yebirdPictureBox.Location = new System.Drawing.Point(116, 114);
+            this.yebirdPictureBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.yebirdPictureBox.Name = "yebirdPictureBox";
-            this.yebirdPictureBox.Size = new System.Drawing.Size(53, 39);
+            this.yebirdPictureBox.Size = new System.Drawing.Size(97, 72);
             this.yebirdPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.yebirdPictureBox.TabIndex = 13;
             this.yebirdPictureBox.TabStop = false;
@@ -410,28 +421,31 @@
             // 
             this.pb_Title1.BackColor = System.Drawing.Color.Transparent;
             this.pb_Title1.Image = ((System.Drawing.Image)(resources.GetObject("pb_Title1.Image")));
-            this.pb_Title1.Location = new System.Drawing.Point(35, 171);
+            this.pb_Title1.Location = new System.Drawing.Point(64, 316);
+            this.pb_Title1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pb_Title1.Name = "pb_Title1";
-            this.pb_Title1.Size = new System.Drawing.Size(334, 116);
+            this.pb_Title1.Size = new System.Drawing.Size(612, 214);
             this.pb_Title1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_Title1.TabIndex = 16;
             this.pb_Title1.TabStop = false;
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(34, 323);
+            this.progressBar1.Location = new System.Drawing.Point(62, 596);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(354, 39);
+            this.progressBar1.Size = new System.Drawing.Size(649, 72);
             this.progressBar1.TabIndex = 17;
             // 
             // percentage
             // 
             this.percentage.BackColor = System.Drawing.Color.Transparent;
-            this.percentage.Font = new System.Drawing.Font("Hanoi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.percentage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.percentage.ForeColor = System.Drawing.Color.Black;
-            this.percentage.Location = new System.Drawing.Point(349, 301);
+            this.percentage.Location = new System.Drawing.Point(640, 556);
+            this.percentage.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.percentage.Name = "percentage";
-            this.percentage.Size = new System.Drawing.Size(50, 19);
+            this.percentage.Size = new System.Drawing.Size(92, 35);
             this.percentage.TabIndex = 18;
             this.percentage.Text = "label1";
             // 
@@ -445,19 +459,20 @@
             // 
             // flash_panel
             // 
-            this.flash_panel.Location = new System.Drawing.Point(-1, -1);
+            this.flash_panel.Location = new System.Drawing.Point(-2, -2);
+            this.flash_panel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.flash_panel.Name = "flash_panel";
-            this.flash_panel.Size = new System.Drawing.Size(400, 500);
+            this.flash_panel.Size = new System.Drawing.Size(12, 923);
             this.flash_panel.TabIndex = 19;
             this.flash_panel.Visible = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(400, 500);
+            this.ClientSize = new System.Drawing.Size(733, 923);
             this.ControlBox = false;
             this.Controls.Add(this.flash_panel);
             this.Controls.Add(this.percentage);
@@ -481,8 +496,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.MaximumSize = new System.Drawing.Size(400, 500);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(733, 923);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form1_Load);

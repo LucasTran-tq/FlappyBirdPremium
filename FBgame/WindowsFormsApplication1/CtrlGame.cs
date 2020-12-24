@@ -61,11 +61,11 @@ namespace WindowsFormsApplication1
             c4.Visible = false;
                 
         }
-        public void GameOver(Control c, Control c1, Control c2)
+        public void GameOver(Control c1, Control c2, Control c3)
         {
-            c.Visible = true;
             c1.Visible = true;
             c2.Visible = true;
+            c3.Visible = true;
         }
 
        

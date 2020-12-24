@@ -22,6 +22,8 @@ namespace WindowsFormsApplication1
 
         public int X_pipePairs1, X_pipePairs2;
 
+        Random random_height_Y_pipe = new Random();
+
         public PictureBox picBoxPipeAbove1 = new PictureBox()
         {
             BackColor = System.Drawing.Color.Transparent,
@@ -108,25 +110,28 @@ namespace WindowsFormsApplication1
             picBoxPipeAbove2.Location = new Point(X_pipePairs2, Y_pipeAbove2);
             picBoxPipeBottom2.Location = new Point(X_pipePairs2, Y_pipeBottom2);
 
-            if (X_pipePairs1 + picBoxPipeAbove1.Width <= 0)
+            if (X_pipePairs1 + picBoxPipeAbove1.Width <= -10)
             {
 
                 X_pipePairs1 = 400 + picBoxPipeAbove2.Width + 150;
 
-                Random cao = new Random();
-                Y_pipeAbove1 = cao.Next(-175, -25);
+                Y_pipeAbove1 = random_height_Y_pipe.Next(-175, -25);
+
                 Y_pipeBottom1 = (256 + Y_pipeAbove1) + distance_Between2Pipes;
+
                 picBoxPipeAbove1.Location = new Point(X_pipePairs1, Y_pipeAbove1);
                 picBoxPipeBottom1.Location = new Point(X_pipePairs1, Y_pipeBottom1);
             }
 
-            if (X_pipePairs2 + picBoxPipeAbove2.Width <= 0)
+            if (X_pipePairs2 + picBoxPipeAbove2.Width <= -10)
             {
 
                 X_pipePairs2 = 400 + picBoxPipeAbove1.Width + 150;
-                Random cao = new Random();
-                Y_pipeAbove2 = cao.Next(-175, -25);
+                
+                Y_pipeAbove2 = random_height_Y_pipe.Next(-175, -25);
+
                 Y_pipeBottom2 = (256 + Y_pipeAbove2) + distance_Between2Pipes;
+
                 picBoxPipeAbove2.Location = new Point(X_pipePairs2, Y_pipeAbove2);
                 picBoxPipeBottom2.Location = new Point(X_pipePairs2, Y_pipeBottom2);
             }

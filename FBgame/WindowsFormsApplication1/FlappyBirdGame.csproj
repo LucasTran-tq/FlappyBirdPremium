@@ -65,6 +65,7 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Items.cs" />
     <Compile Include="Pipe.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,18 +77,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -105,6 +106,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\chimney2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bluebird-downflap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bluebird-midflap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bluebird-upflap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redbird-downflap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redbird-midflap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redbird-upflap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellowbird-downflap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellowbird-midflap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellowbird-upflap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coins.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

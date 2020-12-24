@@ -33,7 +33,7 @@ namespace WindowsFormsApplication1
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Space)
+            if (e.KeyCode == Keys.Enter)
                 pB_Player.Visible = false; 
         }
 

@@ -118,16 +118,46 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="bluebird_downflap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bluebird-downflap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bluebird_midflap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bluebird-midflap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bluebird_upflap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bluebird-upflap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="chimney1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chimney1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="chimney2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chimney2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Coins" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Coins.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pipe_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pipe_down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pipe_up" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pipe_up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="redbird_downflap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\redbird-downflap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="redbird_midflap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\redbird-midflap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="redbird_upflap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\redbird-upflap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yellowbird_downflap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yellowbird-downflap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yellowbird_midflap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yellowbird-midflap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yellowbird_upflap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yellowbird-upflap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
