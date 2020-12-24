@@ -108,11 +108,11 @@ namespace WindowsFormsApplication1
 
         #endregion 
 
-        public void Impact_Bird_pipe(CtrlGame ctrlGame,Pipe pipe)
+        public void Impact_Bird_pipe(Form form,Pipe pipe, Timer timer)
         {
             //if (Y_Bird + birdPicture.Height <= c.Height && Y_Bird >= 0)
 
-            if(Y_Bird >= 0)
+            if(Y_Bird >= 0 && Y_Bird + picBoxBird.Height <= form.Height)
             {
                 Y_Bird += 7;
                 picBoxBird.Location = new Point(X_Bird, Y_Bird);
@@ -123,8 +123,10 @@ namespace WindowsFormsApplication1
                     if (Y_Bird <= 250 + pipe.Y_pipeAbove1 || Y_Bird + picBoxBird.Height >= pipe.Y_pipeBottom1)
                     {
                         //ctrlGame.GameOver(c1, c2, c3);
-                        //MessageBox.Show("go into");
+                        timer.Stop();
+                        //MessageBox.Show("GAME OVER");
                         //return;
+
 
                     }
                 }
@@ -133,18 +135,22 @@ namespace WindowsFormsApplication1
                     if (Y_Bird <= 250 + pipe.Y_pipeAbove2 || Y_Bird + picBoxBird.Height >= pipe.Y_pipeBottom2)
                     {
                         //ctrlGame.GameOver(c1, c2, c3);
-                        //MessageBox.Show("go into");
+                        timer.Stop();
+                        //MessageBox.Show("GAME OVER");
                         //return;
-
+                        
                     }
                 }
 
             }
             else
             {
-
                 Y_Bird += 7;
                 picBoxBird.Location = new Point(X_Bird, Y_Bird);
+
+                timer.Stop();
+
+                //MessageBox.Show("GAME OVER");
 
             }
 
