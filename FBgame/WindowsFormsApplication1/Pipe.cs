@@ -9,7 +9,9 @@ using System.Drawing.Design;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using System.Media;
+using WMPLib;
+using System.IO;
 namespace WindowsFormsApplication1
 {
     class Pipe
@@ -23,6 +25,13 @@ namespace WindowsFormsApplication1
         public int X_pipePairs1, X_pipePairs2;
 
         Random random_height_Y_pipe = new Random();
+
+        WindowsMediaPlayer sound = new WMPLib.WindowsMediaPlayer();
+
+        //string runningPath = AppDomain.CurrentDomain.BaseDirectory;
+        string path_SoundPoint = string.Format("{0}Resources\\point.wav",
+                  Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\")));
+
 
         public PictureBox picBoxPipeAbove1 = new PictureBox()
         {
@@ -80,26 +89,33 @@ namespace WindowsFormsApplication1
 
         };
 
+        public void SoundPoint()
+        {
+            sound.URL = path_SoundPoint;
 
-        public void DrawPipe(Form frm)
+            sound.controls.play();
+        }
+
+        public void DrawPipe(Form frm, Pipe pipe)
         {
 
             X_pipePairs1 = frm.Width + 150;
             Y_pipeAbove1 = -150;
             picBoxPipeAbove1.Location = new Point(X_pipePairs1, Y_pipeAbove1);
 
-            Y_pipeBottom1 = (250 + Y_pipeAbove1) + distance_Between2Pipes;
+            Y_pipeBottom1 = (pipe.picBoxPipeBottom1.Height + Y_pipeAbove1) + distance_Between2Pipes;
             picBoxPipeBottom1.Location = new Point(X_pipePairs1, Y_pipeBottom1);
 
-            X_pipePairs2 = X_pipePairs1 + picBoxPipeAbove1.Width + 250;
-            Y_pipeAbove2 = -150;
+            X_pipePairs2 = X_pipePairs1 + 300;
+            Y_pipeAbove2 = -100;
             picBoxPipeAbove2.Location = new Point(X_pipePairs2, Y_pipeAbove2);
 
-            Y_pipeBottom2 = (250 + Y_pipeAbove2) + distance_Between2Pipes;
+            Y_pipeBottom2 = (pipe.picBoxPipeBottom1.Height + Y_pipeAbove2) + distance_Between2Pipes;
             picBoxPipeBottom2.Location = new Point(X_pipePairs2, Y_pipeBottom2);
         }
 
-        public void PipeInGame()
+       
+        public void PipeInGame(Form form, Pipe pipe)
         {
 
             X_pipePairs1 -= 5;
@@ -112,12 +128,12 @@ namespace WindowsFormsApplication1
 
             if (X_pipePairs1 + picBoxPipeAbove1.Width <= -10)
             {
-
-                X_pipePairs1 = 400 + picBoxPipeAbove2.Width + 150;
+                
+                X_pipePairs1 = form.Width + 150;
 
                 Y_pipeAbove1 = random_height_Y_pipe.Next(-175, -25);
 
-                Y_pipeBottom1 = (256 + Y_pipeAbove1) + distance_Between2Pipes;
+                Y_pipeBottom1 = (pipe.picBoxPipeBottom1.Height + Y_pipeAbove1) + distance_Between2Pipes;
 
                 picBoxPipeAbove1.Location = new Point(X_pipePairs1, Y_pipeAbove1);
                 picBoxPipeBottom1.Location = new Point(X_pipePairs1, Y_pipeBottom1);
@@ -125,12 +141,12 @@ namespace WindowsFormsApplication1
 
             if (X_pipePairs2 + picBoxPipeAbove2.Width <= -10)
             {
-
-                X_pipePairs2 = 400 + picBoxPipeAbove1.Width + 150;
+               
+                X_pipePairs2 = form.Width + 150;
                 
                 Y_pipeAbove2 = random_height_Y_pipe.Next(-175, -25);
 
-                Y_pipeBottom2 = (256 + Y_pipeAbove2) + distance_Between2Pipes;
+                Y_pipeBottom2 = (pipe.picBoxPipeBottom1.Height + Y_pipeAbove2) + distance_Between2Pipes;
 
                 picBoxPipeAbove2.Location = new Point(X_pipePairs2, Y_pipeAbove2);
                 picBoxPipeBottom2.Location = new Point(X_pipePairs2, Y_pipeBottom2);

@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
+using WMPLib;
+using System.Media;
+using System.IO;
 
 namespace WindowsFormsApplication1
 {
@@ -13,15 +16,42 @@ namespace WindowsFormsApplication1
         public Bitmap rebird_1 = new Bitmap(Properties.Resources.redbird_downflap),
            rebird_2 = new Bitmap(Properties.Resources.redbird_midflap),
            rebird_3 = new Bitmap(Properties.Resources.redbird_upflap),
+           rebird_die = new Bitmap(Properties.Resources.redbird_die),
+
            yebird_1 = new Bitmap(Properties.Resources.yellowbird_downflap),
            yebird_2 = new Bitmap(Properties.Resources.yellowbird_midflap),
            yebird_3 = new Bitmap(Properties.Resources.yellowbird_upflap),
+           yebird_die = new Bitmap(Properties.Resources.yellowbird_die),
+
            blbird_1 = new Bitmap(Properties.Resources.bluebird_downflap),
            blbird_2 = new Bitmap(Properties.Resources.bluebird_midflap),
-           blbird_3 = new Bitmap(Properties.Resources.bluebird_upflap);
+           blbird_3 = new Bitmap(Properties.Resources.bluebird_upflap),
+           blbird_die = new Bitmap(Properties.Resources.bluebird_die),
+
+           flash_bird = new Bitmap(Properties.Resources.bird_flash_gif);
+
+          
 
         Bitmap[] array_Bird;
         public Bitmap birdPicture;
+
+        WindowsMediaPlayer soundWing = new WMPLib.WindowsMediaPlayer();
+        WindowsMediaPlayer soundGameOver = new WMPLib.WindowsMediaPlayer();
+        WindowsMediaPlayer soundHit = new WMPLib.WindowsMediaPlayer();
+        WindowsMediaPlayer soundPoint = new WMPLib.WindowsMediaPlayer();
+
+        //string runningPath = AppDomain.CurrentDomain.BaseDirectory;
+        string path_SoundWing = string.Format("{0}Resources\\wing.wav", 
+                  Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\")));
+
+        string path_SoundGameOver = string.Format("{0}Resources\\SoundGameOver.wav",
+                  Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\")));
+
+        string path_SoundHit = string.Format("{0}Resources\\hit.wav",
+                  Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\")));
+
+        string path_SoundPoint = string.Format("{0}Resources\\point.wav",
+                  Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\")));
 
         public int X_Bird = 100;
         public int Y_Bird = 100;
@@ -29,17 +59,22 @@ namespace WindowsFormsApplication1
         int count = 0;
         public int choose = 0;
 
+        public bool isAlive = true;
+        public bool isGetRocket = false;
+        public bool isGetGift = false;
+
         public PictureBox picBoxBird = new PictureBox()
         {
             BackColor = System.Drawing.Color.Transparent,
             Image = new Bitmap(Properties.Resources.redbird_downflap),
             BackgroundImageLayout = ImageLayout.Stretch,
-
+            SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom,
             Location = new System.Drawing.Point(20, 100),
 
             Name = "picBoxBird",
             Size = new System.Drawing.Size(34, 24),
-            BorderStyle = BorderStyle.None
+            BorderStyle = BorderStyle.None,
+            Visible = false,
 
         };
 
@@ -57,6 +92,33 @@ namespace WindowsFormsApplication1
             }
 
             return birdPicture;
+        }
+
+        public void SoundGameOver()
+        {
+            soundGameOver.URL = path_SoundGameOver;
+
+            soundGameOver.controls.play();
+        }
+
+        public void SoundWing()
+        {
+            soundWing.URL = path_SoundWing;
+
+            soundWing.controls.play();
+        }
+
+        public void SoundHit()
+        {
+            soundHit.URL = path_SoundHit;
+
+            soundHit.controls.play();
+        }
+        public void SoundPoint()
+        {
+            soundPoint.URL = path_SoundPoint;
+
+            soundPoint.controls.play();
         }
 
         // that isnt useful
@@ -106,9 +168,11 @@ namespace WindowsFormsApplication1
         //    }
         //}
 
-        #endregion 
+        #endregion
 
-        public void Impact_Bird_pipe(Form form,Pipe pipe, Timer timer)
+
+
+        public void Impact_Bird_pipe(Form form,Pipe pipe, Rocket rocket, Timer timer)
         {
             //if (Y_Bird + birdPicture.Height <= c.Height && Y_Bird >= 0)
 
@@ -117,28 +181,48 @@ namespace WindowsFormsApplication1
                 Y_Bird += 7;
                 picBoxBird.Location = new Point(X_Bird, Y_Bird);
 
+                rocket.Move_Fire(this);
+
                 if (X_Bird + picBoxBird.Width >= pipe.X_pipePairs1 && X_Bird + picBoxBird.Width <= pipe.X_pipePairs1 + 52)
                 {
 
                     if (Y_Bird <= 250 + pipe.Y_pipeAbove1 || Y_Bird + picBoxBird.Height >= pipe.Y_pipeBottom1)
                     {
-                        //ctrlGame.GameOver(c1, c2, c3);
-                        timer.Stop();
-                        //MessageBox.Show("GAME OVER");
-                        //return;
 
+                        if (isAlive)
+                        {
+                            
+                            //ctrlGame.GameOver(c1, c2, c3);
+                            timer.Stop();
+                            //MessageBox.Show("GAME OVER");
+                            //return;
 
+                            SoundHit();
+                            SoundGameOver();
+
+                            isAlive = false;
+                        }
+                        
+                        
                     }
                 }
                 if (X_Bird + picBoxBird.Width >= pipe.X_pipePairs2 && X_Bird + picBoxBird.Width <= pipe.X_pipePairs2 + 52)
                 {
                     if (Y_Bird <= 250 + pipe.Y_pipeAbove2 || Y_Bird + picBoxBird.Height >= pipe.Y_pipeBottom2)
                     {
-                        //ctrlGame.GameOver(c1, c2, c3);
-                        timer.Stop();
-                        //MessageBox.Show("GAME OVER");
-                        //return;
-                        
+                        if (isAlive)
+                        {
+
+                            //ctrlGame.GameOver(c1, c2, c3);
+                            timer.Stop();
+                            //MessageBox.Show("GAME OVER");
+                            //return;
+
+                            SoundHit();
+                            SoundGameOver();
+
+                            isAlive = false;
+                        }
                     }
                 }
 
@@ -146,22 +230,63 @@ namespace WindowsFormsApplication1
             else
             {
                 Y_Bird += 7;
+                
                 picBoxBird.Location = new Point(X_Bird, Y_Bird);
+                rocket.Move_Fire(this);
 
-                timer.Stop();
+                if (isAlive)
+                {
 
-                //MessageBox.Show("GAME OVER");
+                    //ctrlGame.GameOver(c1, c2, c3);
+                    timer.Stop();
+                    //MessageBox.Show("GAME OVER");
+                    //return;
 
+                    SoundHit();
+                    SoundGameOver();
+
+                    isAlive = false;
+                }
             }
 
+            if (!isAlive)
+            {
+                picBoxBird.Size = new Size(24, 34);
+                picBoxBird.Image = yebird_die;
+            }
+            //if(isGetGift)
+            //{
+            //    picBoxBird.Size = new Size(50, 25);
+            //    picBoxBird.Image = flash_bird;
+            //}
 
-            picBoxBird.Image = Draw2D_Bird();
+            else
+            {
+                picBoxBird.Image = Draw2D_Bird();
+            }
+            
         }
 
         public void Move_Bird_Up()
         {
+            SoundWing();
+
             Y_Bird -= 30;
             picBoxBird.Location = new Point(X_Bird, Y_Bird);
+
+        }
+
+
+        public int scoreOfGame = 0;
+        public void GetScore(Pipe pipe, Control c1)
+        {
+            if((X_Bird >= pipe.X_pipePairs1 + pipe.picBoxPipeAbove1.Width && X_Bird - 3 <= pipe.X_pipePairs1 + pipe.picBoxPipeAbove1.Width)
+                   || (X_Bird >= pipe.X_pipePairs2 + pipe.picBoxPipeAbove1.Width && X_Bird - 3 <= pipe.X_pipePairs2 + pipe.picBoxPipeAbove1.Width))
+            {
+                scoreOfGame++;
+                SoundPoint();
+            }
+
         }
     }
 }

@@ -18,3 +18,5 @@ C:\UIT\UIT HK3\Visual Programing\Git_FlappyBird\FBgame\WindowsFormsApplication1\
 C:\UIT\UIT HK3\Visual Programing\Git_FlappyBird\FBgame\WindowsFormsApplication1\obj\x86\Debug\FlappyBirdGame.csproj.CopyComplete
 C:\UIT\UIT HK3\Visual Programing\Git_FlappyBird\FBgame\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
 C:\UIT\UIT HK3\Visual Programing\Git_FlappyBird\FBgame\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+C:\UIT\UIT HK3\Visual Programing\Git_FlappyBird\FBgame\WindowsFormsApplication1\obj\x86\Debug\Interop.WMPLib.dll
+C:\UIT\UIT HK3\Visual Programing\Git_FlappyBird\FBgame\WindowsFormsApplication1\obj\x86\Debug\FlappyBirdGame.csproj.ResolveComReference.cache

@@ -118,6 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="bird_flash_gif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bird_flash_gif.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bluebird_die" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bluebird_die.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bluebird_downflap" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bluebird-downflap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -127,20 +133,56 @@
   <data name="bluebird_upflap" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bluebird-upflap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="boomExplosion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boomExplosion.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Cash_Register" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cash Register.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="chimney1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chimney1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="chimney2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chimney2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="clickSound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clickSound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Coins" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Coins.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="die" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\die.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="emergency" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\emergency.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="emergency_gif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\emergency_gif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ezgif_com_gif_maker" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ezgif.com-gif-maker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fire_gif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fire_gif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gift_gif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gift_gif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hit.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="pipe_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pipe_down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pipe_up" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pipe_up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="point" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\point.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="redbird_die" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\redbird_die.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="redbird_downflap" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\redbird-downflap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -150,6 +192,30 @@
   </data>
   <data name="redbird_upflap" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\redbird-upflap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SoundGameOver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SoundGameOver.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="startGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\startGame.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="swoosh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\swoosh.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="theFlash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\theFlash.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="thunder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\thunder.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="thunder_gif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\thunder_gif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wing.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="yellowbird_die" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yellowbird_die.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="yellowbird_downflap" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\yellowbird-downflap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

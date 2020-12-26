@@ -65,10 +65,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gift.cs" />
     <Compile Include="Items.cs" />
     <Compile Include="Pipe.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rocket.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,6 +82,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -136,6 +139,89 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Coins.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clickSound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\die.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hit.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SoundGameOver.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\swoosh.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wing.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Sound\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emergency.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\startGame.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cash Register.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ezgif.com-gif-maker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emergency.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emergency_gif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fire_gif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boomExplosion.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bird_flash_gif.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thunder_gif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gift_gif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bluebird_die.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redbird_die.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellowbird_die.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\theFlash.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thunder.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

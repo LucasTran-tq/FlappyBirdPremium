@@ -46,6 +46,7 @@
             this.btt_SpeedEasy = new Guna.UI.WinForms.GunaCircleButton();
             this.btt_SpeedHard = new Guna.UI.WinForms.GunaCircleButton();
             this.btt_SpeedMedium = new Guna.UI.WinForms.GunaCircleButton();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pB_IntroBird)).BeginInit();
             this.pl_BgMenu.SuspendLayout();
             this.SuspendLayout();
@@ -399,6 +400,15 @@
             this.btt_SpeedMedium.Visible = false;
             this.btt_SpeedMedium.Click += new System.EventHandler(this.btt_SpeedMedium_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(78, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 25);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "label1";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -406,6 +416,7 @@
             this.BackColor = System.Drawing.Color.Snow;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(733, 849);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pl_BgMenu);
             this.Controls.Add(this.pB_IntroBird);
             this.Controls.Add(this.btt_exit2);
@@ -425,6 +436,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pB_IntroBird)).EndInit();
             this.pl_BgMenu.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -446,5 +458,6 @@
         private Guna.UI.WinForms.GunaCircleButton btt_SpeedEasy;
         private Guna.UI.WinForms.GunaCircleButton btt_SpeedHard;
         private Guna.UI.WinForms.GunaCircleButton btt_SpeedMedium;
+        private System.Windows.Forms.Label label1;
     }
 }

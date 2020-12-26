@@ -1,30 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
+using System.IO;
+using WMPLib;
+using System.Media;
+using System.IO;
 
 namespace WindowsFormsApplication1
-{
+{ 
     public partial class Form2 : Form
     {
         public Form2()
         {
             InitializeComponent();
-            
+
         }
 
         CtrlGame ctrg = new CtrlGame();
         Pipe pipe = new Pipe();
         Items items = new Items();
+        Rocket rocket = new Rocket();
+        Gift gift = new Gift();
         Bird bird = new Bird();
 
         Timer timer_Bird = new Timer();
+        Timer timer2 = new Timer();
         private void Form2_Load(object sender, EventArgs e)
         {
+            
             // add pipe
             this.Controls.Add(pipe.picBoxPipeAbove1);
             this.Controls.Add(pipe.picBoxPipeAbove2);
@@ -37,17 +39,33 @@ namespace WindowsFormsApplication1
             // add items
             this.Controls.Add(items.picBoxCoins);
 
-            pipe.DrawPipe(this);
+            // add rocket
+            this.Controls.Add(rocket.picBoxRocket);
+            this.Controls.Add(rocket.picBoxEmergency);
+            this.Controls.Add(rocket.picBoxFire);
+
+            // add gift
+            this.Controls.Add(gift.picBoxGift);
+            this.Controls.Add(gift.picBoxThunder);
+
+
+            pipe.DrawPipe(this, pipe);
             //items.DrawCoins();
 
 
             timer_Bird.Interval = 70;
             timer_Bird.Tick += Timer_Bird_Tick;
+
+            timer2.Interval = 70;
+            timer2.Tick += Timer2_Tick;
         }
+
+        
 
         private void Timer_Bird_Tick(object sender, EventArgs e)
         {
-            bird.Impact_Bird_pipe(this, pipe, timer1); 
+            bird.Impact_Bird_pipe(this, pipe, rocket, timer1);
+            //rocket.Impact_Rocket_Bird(bird, timer_Bird, timer1);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -55,14 +73,36 @@ namespace WindowsFormsApplication1
             this.SetStyle(ControlStyles.AllPaintingInWmPaint |
             ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer, true);
 
-            
+            //pipe
+            pipe.PipeInGame(this, pipe);
 
-            pipe.PipeInGame();
-
+            // coins
             items.GetCoins(this, bird, pipe);
             items.CoinsInGame();
             items.Impact_Coins_Bird(bird);
 
+            // rocket
+            rocket.GetRocket(this, bird, pipe);
+            rocket.RocketInGame();
+            rocket.Impact_Rocket_Bird(bird, timer_Bird, timer1); 
+            rocket.InvisibleEmergency(this);
+
+            // Gift
+            gift.GetGift(this, pipe);
+            gift.GiftInGame();
+            gift.Impact_Gift_Bird(bird, timer1, timer_Bird);
+
+            // bird
+            bird.GetScore(pipe, label1);
+
+            //bird.scoreOfGame -= 23;
+            label1.Text = bird.scoreOfGame.ToString();
+
+            
+        }
+
+        private void Timer2_Tick(object sender, EventArgs e)
+        {
             
         }
 
@@ -75,6 +115,11 @@ namespace WindowsFormsApplication1
         private void btt_Play_Click(object sender, EventArgs e)
         {
             ctrg.MainScreenOff(btt_Play, btt_Menu, btt_Exit, pB_IntroBird);
+
+            bird.picBoxBird.Visible = true;
+
+            ctrg.SoundStartGame();
+
             timer1.Start();
 
             timer_Bird.Start();
@@ -123,7 +168,11 @@ namespace WindowsFormsApplication1
         {
             if (e.KeyCode == Keys.Space)
             {
-                bird.Move_Bird_Up();
+                if (bird.isAlive)
+                {
+                    bird.Move_Bird_Up();
+                }
+                
             }
                 //MessageBox.Show("go into");
                 //pB_IntroBird.Visible = false;

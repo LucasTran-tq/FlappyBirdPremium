@@ -6,7 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using System.Media;
+using WMPLib;
+using System.IO;
 namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form

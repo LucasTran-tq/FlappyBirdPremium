@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Media;
+using WMPLib;
+using System.IO;
 namespace WindowsFormsApplication1
 {
     class Items
@@ -14,22 +17,36 @@ namespace WindowsFormsApplication1
         int distance_2pipe = 150;
         int randomNext_Coins = 2;
 
+        
+
         Random random = new Random();
         public Bitmap coins = new Bitmap(Properties.Resources.Coins);
+        
+        WindowsMediaPlayer soundCash = new WMPLib.WindowsMediaPlayer();
+
+        string path_SoundCash = string.Format("{0}Resources\\Cash Register.wav",
+                 Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\")));
 
         public PictureBox picBoxCoins = new PictureBox()
         {
-            
-
             BackColor = System.Drawing.Color.Transparent,
             Image = global::WindowsFormsApplication1.Properties.Resources.Coins,
-            Location = new System.Drawing.Point(100, 110),
+            Location = new System.Drawing.Point(700, 110),
             Name = "pictureCoins",
             Size = new System.Drawing.Size(40, 40),
             SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom,
-            TabIndex = 13,
-            TabStop = false,
+            Visible = false,
+            //TabIndex = 13,
+            //TabStop = false,
         };
+
+        
+
+        public void SoundCash()
+        {
+            soundCash.URL = path_SoundCash;
+            soundCash.controls.play();
+        }
 
         public void GetCoins(Form form, Bird bird, Pipe pipe)
         {
@@ -54,9 +71,9 @@ namespace WindowsFormsApplication1
 
         public void DrawCoins(Form form, Pipe pipe)
         {
-            X_Coins = form.Height + 150 + pipe.picBoxPipeAbove1.Width + random.Next(50, distance_2pipe);
+            X_Coins = form.Width + 150 + pipe.picBoxPipeAbove1.Width + random.Next(0, distance_2pipe);
 
-            Y_Coins = random.Next(0, form.Height);
+            Y_Coins = random.Next(0, form.Height - 40);
            
             picBoxCoins.Location = new Point(X_Coins, Y_Coins);
         }
@@ -68,6 +85,7 @@ namespace WindowsFormsApplication1
             picBoxCoins.Location = new Point(X_Coins, Y_Coins);
         }
 
+
         public void Impact_Coins_Bird(Bird bird)
         {
             // 50 is the skin of picboxCoins
@@ -76,11 +94,19 @@ namespace WindowsFormsApplication1
                 // increase score
                 if(bird.Y_Bird + bird.picBoxBird.Height >= Y_Coins && bird.Y_Bird <= Y_Coins + picBoxCoins.Height)
                 {
-                    //MessageBox.Show("............................................");
+                    SoundCash();
+                    if (picBoxCoins.Visible)
+                    {
+                        bird.scoreOfGame += 10;
+                    }
                     picBoxCoins.Visible = false;
                 }
                 
             }
         }
+
+        
+
+        
     }
 }
