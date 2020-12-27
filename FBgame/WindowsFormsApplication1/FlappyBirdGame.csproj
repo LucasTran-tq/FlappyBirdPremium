@@ -67,6 +67,7 @@
     </Compile>
     <Compile Include="Gift.cs" />
     <Compile Include="Items.cs" />
+    <Compile Include="LifeSpan.cs" />
     <Compile Include="Pipe.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -222,6 +223,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\thunder.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart_item.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lifespan-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lifespan-removebg-preview Cropped.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lifespan-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ezgif.com-gif-maker %282%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ezgif.com-gif-maker %283%29.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

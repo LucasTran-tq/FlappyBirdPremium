@@ -20,6 +20,7 @@ namespace WindowsFormsApplication1
         Rocket rocket = new Rocket();
         Gift gift = new Gift();
         Bird bird = new Bird();
+        LifeSpan lifeSpan = new LifeSpan();
 
         Timer timer_Bird = new Timer();
 
@@ -38,6 +39,15 @@ namespace WindowsFormsApplication1
 
             // add items
             this.Controls.Add(items.picBoxCoins);
+            this.Controls.Add(items.picBoxHearts);
+
+            // add lifespan
+            this.Controls.Add(lifeSpan.picBoxLifeSpan1);
+            this.Controls.Add(lifeSpan.picBoxLifeSpan2);
+            this.Controls.Add(lifeSpan.picBoxLifeSpan3);
+
+            // add shield character
+            this.Controls.Add(lifeSpan.picBoxShieldCharacter);
 
             // add rocket
             this.Controls.Add(rocket.picBoxRocket);
@@ -82,6 +92,26 @@ namespace WindowsFormsApplication1
             items.CoinsInGame();
             items.Impact_Coins_Bird(bird);
 
+            /// lifespan
+            lifeSpan.DrawLifeSpan(this);
+            if (items.sign_getHearts == true)
+            {
+                lifeSpan.Increase();
+                items.sign_getHearts = false;
+            }
+
+            //// hearts
+            items.GetHearts(this, bird, pipe);
+            items.HeartsInGame();
+            items.Impact_Hearts_Bird(bird);
+            
+           
+            // shield character
+            if(lifeSpan.GetCount() > 1)
+            {
+                lifeSpan.SetVisibleOn(bird.X_Bird + 40, bird.Y_Bird - 30);
+            }    
+            
             //// rocket
             rocket.GetRocket(this, bird, pipe);
             rocket.RocketInGame();

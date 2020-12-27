@@ -20,3 +20,16 @@ C:\UIT\UIT HK3\Visual Programing\Git_FlappyBird\FBgame\WindowsFormsApplication1\
 C:\UIT\UIT HK3\Visual Programing\Git_FlappyBird\FBgame\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
 C:\UIT\UIT HK3\Visual Programing\Git_FlappyBird\FBgame\WindowsFormsApplication1\obj\x86\Debug\Interop.WMPLib.dll
 C:\UIT\UIT HK3\Visual Programing\Git_FlappyBird\FBgame\WindowsFormsApplication1\obj\x86\Debug\FlappyBirdGame.csproj.ResolveComReference.cache
+D:\store\Flappy Bird\FBgame\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+D:\store\Flappy Bird\FBgame\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+D:\store\Flappy Bird\FBgame\WindowsFormsApplication1\obj\x86\Debug\FlappyBirdGame.csprojAssemblyReference.cache
+D:\store\Flappy Bird\FBgame\WindowsFormsApplication1\obj\x86\Debug\Interop.WMPLib.dll
+D:\store\Flappy Bird\FBgame\WindowsFormsApplication1\obj\x86\Debug\FlappyBirdGame.csproj.ResolveComReference.cache
+D:\store\Flappy Bird\FBgame\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+D:\store\Flappy Bird\FBgame\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form2.resources
+D:\store\Flappy Bird\FBgame\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\store\Flappy Bird\FBgame\WindowsFormsApplication1\obj\x86\Debug\FlappyBirdGame.csproj.GenerateResource.cache
+D:\store\Flappy Bird\FBgame\WindowsFormsApplication1\obj\x86\Debug\FlappyBirdGame.csproj.CoreCompileInputs.cache
+D:\store\Flappy Bird\FBgame\WindowsFormsApplication1\obj\x86\Debug\FlappyBirdGame.csproj.CopyComplete
+D:\store\Flappy Bird\FBgame\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+D:\store\Flappy Bird\FBgame\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
