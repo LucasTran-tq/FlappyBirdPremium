@@ -18,14 +18,21 @@ namespace WindowsFormsApplication1
         int randomNext_Gift = 4;
         int distance_2pipe = 150;
 
+        public int count_Flash = 0;
+
         Random random = new Random();
 
         public Bitmap gift = new Bitmap(Properties.Resources.gift_gif);
 
         WindowsMediaPlayer soundThunder = new WMPLib.WindowsMediaPlayer();
+        public WindowsMediaPlayer soundTheFlash = new WMPLib.WindowsMediaPlayer();
 
         string path_SoundThunder = string.Format("{0}Resources\\thunder.wav",
                  Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\")));
+
+        string path_SoundTheFlash = string.Format("{0}Resources\\TheFlash.wav",
+                 Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\")));
+
 
         public PictureBox picBoxGift = new PictureBox()
         {
@@ -59,7 +66,12 @@ namespace WindowsFormsApplication1
 
             soundThunder.controls.play();
         }
+        public void SoundTheFlash()
+        {
+            soundTheFlash.URL = path_SoundTheFlash;
 
+            soundTheFlash.controls.play();
+        }
         public void GetGift(Form form, Pipe pipe)
         {
 
@@ -96,7 +108,7 @@ namespace WindowsFormsApplication1
             picBoxGift.Location = new Point(X_Gift, Y_Gift);
         }
 
-        public void Impact_Gift_Bird(Bird bird, Timer timer1, Timer timer_Bird)
+        public void Impact_Gift_Bird(Bird bird, Timer timer1, Timer timer_Bird, Timer timer2)
         {
             if ((bird.X_Bird + bird.picBoxBird.Width >= X_Gift)
                       && (bird.X_Bird <= X_Gift + picBoxGift.Width))
@@ -109,25 +121,15 @@ namespace WindowsFormsApplication1
                     if (picBoxGift.Visible)
                     {
                         
-
                         bird.isGetGift = true;
 
                         picBoxThunder.Visible = true;
 
                         SoundThunder();
 
-                        Appear_Thunder(bird);
+                        SoundTheFlash();
 
-                        //soundThunder.
-                        
-                        //bird.isGetRocket = true;
-                        //bird.isAlive = false;
-
-                        //SoundBoomExplosion();
-                        //timer.Stop();
-
-                        //timer1.Stop();
-                        //timer_Bird.Stop();
+                        timer2.Start();
                     }
 
                     picBoxGift.Visible = false;
@@ -139,10 +141,13 @@ namespace WindowsFormsApplication1
 
         public void Appear_Thunder(Bird bird)
         {
-            if (bird.isGetGift)
+            if (bird.isGetGift )
             {
                 picBoxThunder.Location = new Point(bird.X_Bird, bird.Y_Bird - 50);
-
+            }
+            else
+            {
+                picBoxThunder.Visible = false;
             }
         }
     }

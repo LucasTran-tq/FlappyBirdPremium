@@ -115,11 +115,19 @@ namespace WindowsFormsApplication1
         }
 
        
-        public void PipeInGame(Form form, Pipe pipe)
+        public void PipeInGame(Form form, Pipe pipe, Bird bird)
         {
-
-            X_pipePairs1 -= 5;
-            X_pipePairs2 -= 5;
+            if (bird.isGetGift)
+            {
+                X_pipePairs1 -= 20;
+                X_pipePairs2 -= 20;
+            }
+            else
+            {
+                X_pipePairs1 -= 5;
+                X_pipePairs2 -= 5;
+            }
+            
 
             picBoxPipeAbove1.Location = new Point(X_pipePairs1, Y_pipeAbove1);
             picBoxPipeBottom1.Location = new Point(X_pipePairs1, Y_pipeBottom1);
@@ -131,7 +139,7 @@ namespace WindowsFormsApplication1
                 
                 X_pipePairs1 = form.Width + 150;
 
-                Y_pipeAbove1 = random_height_Y_pipe.Next(-175, -25);
+                Y_pipeAbove1 = random_height_Y_pipe.Next(-150, -10);
 
                 Y_pipeBottom1 = (pipe.picBoxPipeBottom1.Height + Y_pipeAbove1) + distance_Between2Pipes;
 
@@ -144,7 +152,7 @@ namespace WindowsFormsApplication1
                
                 X_pipePairs2 = form.Width + 150;
                 
-                Y_pipeAbove2 = random_height_Y_pipe.Next(-175, -25);
+                Y_pipeAbove2 = random_height_Y_pipe.Next(-150, -10);
 
                 Y_pipeBottom2 = (pipe.picBoxPipeBottom1.Height + Y_pipeAbove2) + distance_Between2Pipes;
 

@@ -172,26 +172,41 @@ namespace WindowsFormsApplication1
 
 
 
-        public void Impact_Bird_pipe(Form form,Pipe pipe, Rocket rocket, Timer timer)
+        public void Impact_Bird_pipe(Form form,Pipe pipe, Rocket rocket, Gift gift, Timer timer, Timer timer2)
         {
-            //if (Y_Bird + birdPicture.Height <= c.Height && Y_Bird >= 0)
-
-            if(Y_Bird >= 0 && Y_Bird + picBoxBird.Height <= form.Height)
+            
+            // inside form 
+            if (Y_Bird >= 0 && Y_Bird + picBoxBird.Height <= form.Height)
             {
                 Y_Bird += 7;
                 picBoxBird.Location = new Point(X_Bird, Y_Bird);
 
                 rocket.Move_Fire(this);
+                gift.Appear_Thunder(this);
+
+                if (gift.count_Flash >= 95 )
+                {
+                    isGetGift = false;
+
+                    gift.count_Flash = 0;
+
+                    timer2.Stop();
+                }
 
                 if (X_Bird + picBoxBird.Width >= pipe.X_pipePairs1 && X_Bird + picBoxBird.Width <= pipe.X_pipePairs1 + 52)
                 {
 
                     if (Y_Bird <= 250 + pipe.Y_pipeAbove1 || Y_Bird + picBoxBird.Height >= pipe.Y_pipeBottom1)
                     {
-
-                        if (isAlive)
+                        if (isAlive && isGetGift)
                         {
                             
+                        }
+
+                        // is alive and DIE
+                        else
+                        {
+
                             //ctrlGame.GameOver(c1, c2, c3);
                             timer.Stop();
                             //MessageBox.Show("GAME OVER");
@@ -202,15 +217,19 @@ namespace WindowsFormsApplication1
 
                             isAlive = false;
                         }
-                        
-                        
                     }
                 }
                 if (X_Bird + picBoxBird.Width >= pipe.X_pipePairs2 && X_Bird + picBoxBird.Width <= pipe.X_pipePairs2 + 52)
                 {
                     if (Y_Bird <= 250 + pipe.Y_pipeAbove2 || Y_Bird + picBoxBird.Height >= pipe.Y_pipeBottom2)
                     {
-                        if (isAlive)
+                        if (isAlive && isGetGift)
+                        {
+                           
+                        }
+
+                        // is alive and DIE
+                        else
                         {
 
                             //ctrlGame.GameOver(c1, c2, c3);
@@ -227,12 +246,17 @@ namespace WindowsFormsApplication1
                 }
 
             }
+
+            // outside form and bird die
             else
             {
                 Y_Bird += 7;
                 
                 picBoxBird.Location = new Point(X_Bird, Y_Bird);
+
                 rocket.Move_Fire(this);
+
+                gift.picBoxGift.Visible = false;
 
                 if (isAlive)
                 {
@@ -249,21 +273,24 @@ namespace WindowsFormsApplication1
                 }
             }
 
+            // set image for bird
+            if(isAlive)
+            {
+                picBoxBird.Image = Draw2D_Bird();
+            }
+
             if (!isAlive)
             {
                 picBoxBird.Size = new Size(24, 34);
                 picBoxBird.Image = yebird_die;
             }
-            //if(isGetGift)
-            //{
-            //    picBoxBird.Size = new Size(50, 25);
-            //    picBoxBird.Image = flash_bird;
-            //}
-
-            else
+            if (isGetGift && isAlive)
             {
-                picBoxBird.Image = Draw2D_Bird();
+                picBoxBird.Size = new Size(50, 25);
+                picBoxBird.Image = flash_bird;
             }
+
+            
             
         }
 
@@ -286,6 +313,17 @@ namespace WindowsFormsApplication1
                 scoreOfGame++;
                 SoundPoint();
             }
+
+            if (isGetGift)
+            {
+                if ((X_Bird >= pipe.X_pipePairs1 + pipe.picBoxPipeAbove1.Width && X_Bird - 20 <= pipe.X_pipePairs1 + pipe.picBoxPipeAbove1.Width)
+                   || (X_Bird >= pipe.X_pipePairs2 + pipe.picBoxPipeAbove1.Width && X_Bird - 20 <= pipe.X_pipePairs2 + pipe.picBoxPipeAbove1.Width))
+                {
+                    scoreOfGame++;
+                    SoundPoint();
+                }
+            }
+            
 
         }
     }

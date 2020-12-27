@@ -127,36 +127,7 @@ namespace WindowsFormsApplication1
             picBoxRocket.Location = new Point(X_Rocket, Y_Rocket);
         }
 
-        public void Impact_Rocket_Bird(Bird bird, Timer timer_Bird, Timer timer)
-        {
-            
-            if ((bird.X_Bird + bird.picBoxBird.Width >= X_Rocket) 
-                      && (bird.X_Bird <= X_Rocket + picBoxRocket.Width ))
-            {
-                // increase score
-                if (bird.Y_Bird + bird.picBoxBird.Height >= Y_Rocket 
-                         && bird.Y_Bird <= Y_Rocket + picBoxRocket.Height)
-                {
-                    
-                    if (picBoxRocket.Visible)
-                    {
-                        bird.isGetRocket = true;
-                        bird.isAlive = false;
-
-                        bird.picBoxBird.BackColor = Color.Orange;
-
-                        picBoxFire.Visible = true;
-
-                        SoundBoomExplosion();
-                        timer.Stop();
-                    }
-                    
-                    picBoxRocket.Visible = false;
-             
-                }
-
-            }
-        }
+        
 
         public void InvisibleEmergency(Form form)
         {
@@ -187,5 +158,45 @@ namespace WindowsFormsApplication1
 
             }
         }
+
+        public void Impact_Rocket_Bird(Bird bird, Gift gift, Timer timer_Bird, Timer timer)
+        {
+
+            if ((bird.X_Bird + bird.picBoxBird.Width >= X_Rocket)
+                      && (bird.X_Bird <= X_Rocket + picBoxRocket.Width))
+            {
+                // increase score
+                if (bird.Y_Bird + bird.picBoxBird.Height >= Y_Rocket
+                         && bird.Y_Bird <= Y_Rocket + picBoxRocket.Height)
+                {
+
+                    if (picBoxRocket.Visible)
+                    {
+                        bird.isGetRocket = true;
+
+                        bird.isAlive = false;
+
+                        bird.picBoxBird.BackColor = Color.Orange;
+
+                        picBoxFire.Visible = true;
+
+                        SoundBoomExplosion();
+
+                        gift.picBoxThunder.Visible = false;
+
+                        gift.soundTheFlash.controls.stop();
+
+                        bird.SoundGameOver();
+
+                        timer.Stop();
+                    }
+
+                    picBoxRocket.Visible = false;
+
+                }
+
+            }
+        }
+
     }
 }

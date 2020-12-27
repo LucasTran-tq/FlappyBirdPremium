@@ -12,7 +12,6 @@ namespace WindowsFormsApplication1
         public Form2()
         {
             InitializeComponent();
-
         }
 
         CtrlGame ctrg = new CtrlGame();
@@ -23,6 +22,7 @@ namespace WindowsFormsApplication1
         Bird bird = new Bird();
 
         Timer timer_Bird = new Timer();
+
         Timer timer2 = new Timer();
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -58,13 +58,14 @@ namespace WindowsFormsApplication1
 
             timer2.Interval = 70;
             timer2.Tick += Timer2_Tick;
+
         }
 
-        
+       
 
         private void Timer_Bird_Tick(object sender, EventArgs e)
         {
-            bird.Impact_Bird_pipe(this, pipe, rocket, timer1);
+            bird.Impact_Bird_pipe(this, pipe, rocket, gift, timer1, timer2);
             //rocket.Impact_Rocket_Bird(bird, timer_Bird, timer1);
         }
 
@@ -74,28 +75,28 @@ namespace WindowsFormsApplication1
             ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer, true);
 
             //pipe
-            pipe.PipeInGame(this, pipe);
+            pipe.PipeInGame(this, pipe, bird);
 
-            // coins
+            //// coins
             items.GetCoins(this, bird, pipe);
             items.CoinsInGame();
             items.Impact_Coins_Bird(bird);
 
-            // rocket
+            //// rocket
             rocket.GetRocket(this, bird, pipe);
             rocket.RocketInGame();
-            rocket.Impact_Rocket_Bird(bird, timer_Bird, timer1); 
+            rocket.Impact_Rocket_Bird(bird, gift, timer_Bird, timer1);
             rocket.InvisibleEmergency(this);
 
-            // Gift
+            //// Gift
             gift.GetGift(this, pipe);
             gift.GiftInGame();
-            gift.Impact_Gift_Bird(bird, timer1, timer_Bird);
+            gift.Impact_Gift_Bird(bird, timer1, timer_Bird,timer2);
 
             // bird
             bird.GetScore(pipe, label1);
 
-            //bird.scoreOfGame -= 23;
+           
             label1.Text = bird.scoreOfGame.ToString();
 
             
@@ -103,8 +104,9 @@ namespace WindowsFormsApplication1
 
         private void Timer2_Tick(object sender, EventArgs e)
         {
-            
+            gift.count_Flash++;
         }
+
 
         private void btt_Menu_Click(object sender, EventArgs e)
         {
@@ -123,12 +125,11 @@ namespace WindowsFormsApplication1
             timer1.Start();
 
             timer_Bird.Start();
+
+           
         }
 
        
-
-       
-
         private void btt_exit2_Click(object sender, EventArgs e)
         {
             //Application.Exit();
