@@ -109,7 +109,7 @@ namespace WindowsFormsApplication1
             // shield character
             if(lifeSpan.GetCount() > 1)
             {
-                lifeSpan.SetVisibleOn(bird.X_Bird + 40, bird.Y_Bird - 30);
+                lifeSpan.SetVisibleOn(bird.X_Bird + 37, bird.Y_Bird - 30);
             }    
             
             //// rocket

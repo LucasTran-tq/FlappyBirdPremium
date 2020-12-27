@@ -87,7 +87,7 @@ namespace WindowsFormsApplication1
         public PictureBox picBoxShieldCharacter = new PictureBox()
         {
             BackColor = System.Drawing.Color.Transparent,
-            Image = global::WindowsFormsApplication1.Properties.Resources.shield_character,
+            Image = global::WindowsFormsApplication1.Properties.Resources.superman,
             Location = new System.Drawing.Point(70, 420),
             Name = "pictureLifeSpan",
             Size = new System.Drawing.Size(80, 80),
