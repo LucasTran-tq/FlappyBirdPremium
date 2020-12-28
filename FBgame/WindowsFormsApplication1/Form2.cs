@@ -25,6 +25,7 @@ namespace WindowsFormsApplication1
         Timer timer_Bird = new Timer();
 
         Timer timer2 = new Timer();
+        
         private void Form2_Load(object sender, EventArgs e)
         {
             
@@ -174,10 +175,20 @@ namespace WindowsFormsApplication1
 
         private void btt_Back_Click(object sender, EventArgs e)
         {
-            ctrg.MainScreenOn(btt_Play, btt_Menu, btt_Exit);
-            ctrg.SubMenuOff(btt_SpeedEasy, btt_SpeedHard, btt_SpeedMedium, btt_Back);
-            ctrg.MenuOff(btt_scene, btt_speed, btt_item, btt_Back);
-            pl_BgMenu.Visible = false;
+            if (ctrg.Check(btt_item, rebirdPictureBox) == 1)
+            {
+                ctrg.MainScreenOn(btt_Play, btt_Menu, btt_Exit);
+                ctrg.SubMenuOff(btt_SpeedEasy, btt_SpeedHard, btt_SpeedMedium, btt_Back);
+                ctrg.MenuOff(btt_scene, btt_speed, btt_item, btt_Back);
+                pl_BgMenu.Visible = false;
+            }
+            else
+            {
+                ctrg.Item_SubMenuOff(yebirdPictureBox, blbirdPictureBox, rebirdPictureBox, pl_BgMenu, choose_lb, btt_Back);
+                ctrg.SubMenuOff(btt_SpeedEasy, btt_SpeedHard, btt_SpeedMedium, btt_Back);
+                pl_BgMenu.Visible = true;
+                ctrg.MenuOn(pB_IntroBird, btt_scene, btt_speed, btt_item, pl_BgMenu, btt_Back);
+            }                
         }
 
         private void btt_SpeedHard_Click(object sender, EventArgs e)
@@ -207,6 +218,33 @@ namespace WindowsFormsApplication1
             }
                 //MessageBox.Show("go into");
                 //pB_IntroBird.Visible = false;
+        }
+
+        private void btt_item_Click(object sender, EventArgs e)
+        {
+            ctrg.SubMenuOff(btt_scene, btt_item, btt_speed, btt_Back);
+            ctrg.Item_SubMenuOn(yebirdPictureBox, blbirdPictureBox, rebirdPictureBox, pl_BgMenu, choose_lb, btt_Back);
+        }
+
+        private void yebirdPictureBox_Click(object sender, EventArgs e)
+        {
+            bird.index_bird = 1;
+            ctrg.Item_SubMenuOff(yebirdPictureBox, blbirdPictureBox, rebirdPictureBox, pl_BgMenu, choose_lb, btt_Back);
+            ctrg.MainScreenOn(btt_Play, btt_Menu, btt_Exit);
+        }
+
+        private void blbirdPictureBox_Click(object sender, EventArgs e)
+        {
+            bird.index_bird = 2;
+            ctrg.Item_SubMenuOff(yebirdPictureBox, blbirdPictureBox, rebirdPictureBox, pl_BgMenu, choose_lb, btt_Back);
+            ctrg.MainScreenOn(btt_Play, btt_Menu, btt_Exit);
+        }
+
+        private void rebirdPictureBox_Click(object sender, EventArgs e)
+        {
+            bird.index_bird = 3;
+            ctrg.Item_SubMenuOff(yebirdPictureBox, blbirdPictureBox, rebirdPictureBox, pl_BgMenu, choose_lb, btt_Back);
+            ctrg.MainScreenOn(btt_Play, btt_Menu, btt_Exit);
         }
     }
 }

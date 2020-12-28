@@ -39,6 +39,10 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pB_IntroBird = new System.Windows.Forms.PictureBox();
             this.pl_BgMenu = new System.Windows.Forms.Panel();
+            this.rebirdPictureBox = new System.Windows.Forms.PictureBox();
+            this.choose_lb = new System.Windows.Forms.Label();
+            this.blbirdPictureBox = new System.Windows.Forms.PictureBox();
+            this.yebirdPictureBox = new System.Windows.Forms.PictureBox();
             this.btt_Back = new Guna.UI.WinForms.GunaCircleButton();
             this.btt_scene = new Guna.UI.WinForms.GunaCircleButton();
             this.btt_speed = new Guna.UI.WinForms.GunaCircleButton();
@@ -49,6 +53,9 @@
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pB_IntroBird)).BeginInit();
             this.pl_BgMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rebirdPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blbirdPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yebirdPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaElipse1
@@ -201,6 +208,10 @@
             // pl_BgMenu
             // 
             this.pl_BgMenu.BackColor = System.Drawing.Color.Transparent;
+            this.pl_BgMenu.Controls.Add(this.rebirdPictureBox);
+            this.pl_BgMenu.Controls.Add(this.choose_lb);
+            this.pl_BgMenu.Controls.Add(this.blbirdPictureBox);
+            this.pl_BgMenu.Controls.Add(this.yebirdPictureBox);
             this.pl_BgMenu.Controls.Add(this.btt_Back);
             this.pl_BgMenu.Controls.Add(this.btt_scene);
             this.pl_BgMenu.Controls.Add(this.btt_speed);
@@ -210,9 +221,61 @@
             this.pl_BgMenu.Controls.Add(this.btt_SpeedMedium);
             this.pl_BgMenu.Location = new System.Drawing.Point(127, 193);
             this.pl_BgMenu.Name = "pl_BgMenu";
-            this.pl_BgMenu.Size = new System.Drawing.Size(150, 234);
+            this.pl_BgMenu.Size = new System.Drawing.Size(158, 234);
             this.pl_BgMenu.TabIndex = 12;
             this.pl_BgMenu.Visible = false;
+            // 
+            // rebirdPictureBox
+            // 
+            this.rebirdPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.rebirdPictureBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.rebirdPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("rebirdPictureBox.Image")));
+            this.rebirdPictureBox.Location = new System.Drawing.Point(54, 149);
+            this.rebirdPictureBox.Name = "rebirdPictureBox";
+            this.rebirdPictureBox.Size = new System.Drawing.Size(53, 36);
+            this.rebirdPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.rebirdPictureBox.TabIndex = 19;
+            this.rebirdPictureBox.TabStop = false;
+            this.rebirdPictureBox.Visible = false;
+            this.rebirdPictureBox.Click += new System.EventHandler(this.rebirdPictureBox_Click);
+            // 
+            // choose_lb
+            // 
+            this.choose_lb.Font = new System.Drawing.Font("Kosal says hy", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.choose_lb.Location = new System.Drawing.Point(23, 22);
+            this.choose_lb.Name = "choose_lb";
+            this.choose_lb.Size = new System.Drawing.Size(130, 24);
+            this.choose_lb.TabIndex = 15;
+            this.choose_lb.Text = "CHOOSE ONE";
+            this.choose_lb.Visible = false;
+            // 
+            // blbirdPictureBox
+            // 
+            this.blbirdPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.blbirdPictureBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.blbirdPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("blbirdPictureBox.Image")));
+            this.blbirdPictureBox.Location = new System.Drawing.Point(54, 105);
+            this.blbirdPictureBox.Name = "blbirdPictureBox";
+            this.blbirdPictureBox.Size = new System.Drawing.Size(53, 38);
+            this.blbirdPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.blbirdPictureBox.TabIndex = 18;
+            this.blbirdPictureBox.TabStop = false;
+            this.blbirdPictureBox.Visible = false;
+            this.blbirdPictureBox.Click += new System.EventHandler(this.blbirdPictureBox_Click);
+            // 
+            // yebirdPictureBox
+            // 
+            this.yebirdPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.yebirdPictureBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.yebirdPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("yebirdPictureBox.Image")));
+            this.yebirdPictureBox.Location = new System.Drawing.Point(54, 59);
+            this.yebirdPictureBox.Name = "yebirdPictureBox";
+            this.yebirdPictureBox.Size = new System.Drawing.Size(53, 39);
+            this.yebirdPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.yebirdPictureBox.TabIndex = 17;
+            this.yebirdPictureBox.TabStop = false;
+            this.yebirdPictureBox.Visible = false;
+            this.yebirdPictureBox.Click += new System.EventHandler(this.yebirdPictureBox_Click);
             // 
             // btt_Back
             // 
@@ -227,7 +290,7 @@
             this.btt_Back.ForeColor = System.Drawing.Color.White;
             this.btt_Back.Image = null;
             this.btt_Back.ImageSize = new System.Drawing.Size(29, 20);
-            this.btt_Back.Location = new System.Drawing.Point(3, 196);
+            this.btt_Back.Location = new System.Drawing.Point(3, 204);
             this.btt_Back.Name = "btt_Back";
             this.btt_Back.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.btt_Back.OnHoverBorderColor = System.Drawing.Color.Transparent;
@@ -309,6 +372,7 @@
             this.btt_item.OnPressedColor = System.Drawing.Color.Transparent;
             this.btt_item.Size = new System.Drawing.Size(130, 65);
             this.btt_item.TabIndex = 7;
+            this.btt_item.Click += new System.EventHandler(this.btt_item_Click);
             // 
             // btt_SpeedEasy
             // 
@@ -421,6 +485,9 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form2_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pB_IntroBird)).EndInit();
             this.pl_BgMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.rebirdPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blbirdPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yebirdPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -445,5 +512,9 @@
         private Guna.UI.WinForms.GunaCircleButton btt_SpeedHard;
         private Guna.UI.WinForms.GunaCircleButton btt_SpeedMedium;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox rebirdPictureBox;
+        private System.Windows.Forms.Label choose_lb;
+        private System.Windows.Forms.PictureBox blbirdPictureBox;
+        private System.Windows.Forms.PictureBox yebirdPictureBox;
     }
 }

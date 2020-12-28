@@ -13,7 +13,6 @@ namespace WindowsFormsApplication1
 {
     class CtrlGame
     {
-
         WindowsMediaPlayer soundClick = new WMPLib.WindowsMediaPlayer();
         WindowsMediaPlayer soundStartGame = new WMPLib.WindowsMediaPlayer();
 
@@ -104,6 +103,36 @@ namespace WindowsFormsApplication1
             // sound click
             SoundClick();
 
+        }
+
+        public void Item_SubMenuOn(Control c1, Control c2, Control c3, Control c4, Control c5, Control c6)
+        {
+            c1.Visible = true;
+            c2.Visible = true;
+            c3.Visible = true;
+            c4.BackgroundImage = Properties.Resources.panel;
+            c4.BackgroundImageLayout = ImageLayout.Stretch;
+            c5.Visible = true;
+            c6.Location = new Point(20, 204);
+            c6.Visible = true;
+        }
+
+        public void Item_SubMenuOff(Control c1, Control c2, Control c3, Control c4, Control c5, Control c6)
+        {
+            c1.Visible = false;
+            c2.Visible = false;
+            c3.Visible = false;
+            c4.BackgroundImage = null;
+            c4.Visible = false;
+            c5.Visible = false;
+            c6.Location = new Point(3, 204);
+            c6.Visible = false;
+        }
+
+        public int Check(Control c1, Control c2)
+        {
+            if (c1.Visible == true) return 1;
+            else return 2;
         }
         public void GameOver(Control c1, Control c2, Control c3)
         {

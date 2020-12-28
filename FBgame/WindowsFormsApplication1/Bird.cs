@@ -57,7 +57,7 @@ namespace WindowsFormsApplication1
         public int Y_Bird = 100;
 
         int count = 0;
-        public int choose = 0;
+        public int index_bird = 0;
 
         public bool isAlive = true;
         public bool isGetRocket = false;
@@ -80,7 +80,10 @@ namespace WindowsFormsApplication1
 
         public Bitmap Draw2D_Bird()
         {
-            array_Bird = new Bitmap[] { yebird_1, yebird_2, yebird_3 };
+            if (index_bird == 1) array_Bird = new Bitmap[] { yebird_1, yebird_2, yebird_3 };
+            else if (index_bird == 2) array_Bird = new Bitmap[] { blbird_1, blbird_2, blbird_3 };
+            else if (index_bird == 3) array_Bird = new Bitmap[] { rebird_1, rebird_2, rebird_3 };
+            else array_Bird = new Bitmap[] { yebird_1, yebird_2, yebird_3 };
 
             if (count < array_Bird.Length)
             {
@@ -282,7 +285,18 @@ namespace WindowsFormsApplication1
             if (!isAlive)
             {
                 picBoxBird.Size = new Size(24, 34);
-                picBoxBird.Image = yebird_die;
+                if (index_bird == 1)
+                {
+                    picBoxBird.Image = yebird_die;
+                }
+                else if (index_bird == 2)
+                {
+                    picBoxBird.Image = blbird_die;
+                }
+                else
+                {
+                    picBoxBird.Image = rebird_die;
+                }                    
             }
             if (isGetGift && isAlive)
             {
