@@ -193,6 +193,8 @@ namespace WindowsFormsApplication1
 
                     gift.count_Flash = 0;
 
+                    gift.soundThunder.controls.stop();
+
                     timer2.Stop();
                 }
 

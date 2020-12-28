@@ -24,7 +24,7 @@ namespace WindowsFormsApplication1
             Name = "pictureLifeSpan",
             Size = new System.Drawing.Size(30, 30),
             SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom,
-            Visible = false,
+            Visible = true,
         };
 
         public PictureBox picBoxLifeSpan2 = new PictureBox()
@@ -49,7 +49,18 @@ namespace WindowsFormsApplication1
             Visible = false,
         };
 
-        public void DrawLifeSpan(Form form)
+        public PictureBox picBoxShieldCharacter = new PictureBox()
+        {
+            BackColor = System.Drawing.Color.Transparent,
+            Image = global::WindowsFormsApplication1.Properties.Resources.superman,
+            Location = new System.Drawing.Point(70, 420),
+            Name = "pictureLifeSpan",
+            Size = new System.Drawing.Size(80, 80),
+            SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom,
+            Visible = false,
+        };
+
+        public void DrawLifeSpan(Heart heart)
         {
             if (iHearts == 1)
             {
@@ -61,39 +72,44 @@ namespace WindowsFormsApplication1
             {
                 picBoxLifeSpan1.Visible = true;
                 picBoxLifeSpan2.Visible = true;
-                picBoxLifeSpan3.Visible = false;
+                picBoxLifeSpan3.Visible = false; 
             }    
             else if (iHearts == 3)
             {
                 picBoxLifeSpan1.Visible = true;
                 picBoxLifeSpan2.Visible = true;
                 picBoxLifeSpan3.Visible = true;
-            }    
+            }
+            
         }
         public bool CheckIncrease()
         {
             if (iHearts < 3 && iHearts > 0) return true;
             else return false;
         }
-        public void Increase()
+        public void Increase(Heart heart)
         {
-            if (CheckIncrease() == true) iHearts++;
+            if (CheckIncrease())
+            {
+                
+                if (iHearts == 2)
+                {
+                    iHearts = 3;
+                }
+                else if (iHearts == 1)
+                {
+                    iHearts = 2;
+                }
+                heart.sign_getHearts = false;
+                //MessageBox.Show("iheart = " + iHearts);
+            }
         }
         public int GetCount()
         {
             return iHearts;
         }
 
-        public PictureBox picBoxShieldCharacter = new PictureBox()
-        {
-            BackColor = System.Drawing.Color.Transparent,
-            Image = global::WindowsFormsApplication1.Properties.Resources.superman,
-            Location = new System.Drawing.Point(70, 420),
-            Name = "pictureLifeSpan",
-            Size = new System.Drawing.Size(80, 80),
-            SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom,
-            Visible = false,
-        };
+       
         public void SetVisibleOn(int iX, int iY)
         {
             picBoxShieldCharacter.Location = new Point(iX, iY);

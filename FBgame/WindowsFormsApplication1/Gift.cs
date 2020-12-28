@@ -24,7 +24,7 @@ namespace WindowsFormsApplication1
 
         public Bitmap gift = new Bitmap(Properties.Resources.gift_gif);
 
-        WindowsMediaPlayer soundThunder = new WMPLib.WindowsMediaPlayer();
+        public WindowsMediaPlayer soundThunder = new WMPLib.WindowsMediaPlayer();
         public WindowsMediaPlayer soundTheFlash = new WMPLib.WindowsMediaPlayer();
 
         string path_SoundThunder = string.Format("{0}Resources\\thunder.wav",

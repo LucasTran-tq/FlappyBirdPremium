@@ -28,7 +28,7 @@ namespace WindowsFormsApplication1
         public Bitmap fire = new Bitmap(Properties.Resources.fire_gif);
 
         WindowsMediaPlayer soundEmergency = new WMPLib.WindowsMediaPlayer();
-        WindowsMediaPlayer soundBoomExplosion = new WMPLib.WindowsMediaPlayer();
+        public WindowsMediaPlayer soundBoomExplosion = new WMPLib.WindowsMediaPlayer();
 
         string path_SoundEmergency = string.Format("{0}Resources\\emergency.wav",
                  Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\")));
@@ -143,14 +143,6 @@ namespace WindowsFormsApplication1
             
             if (bird.isGetRocket && !bird.isAlive)
             {
-                
-
-                //bird.picBoxBird.Parent = picBoxFire;
-                //picBoxFire.Parent = bird.picBoxBird;
-                //bird.picBoxBird.BackColor = Color.Transparent;
-                //picBoxFire.BackColor = Color.Transparent;
-                
-
                 X_Fire = bird.X_Bird - 30;
                 Y_Fire = bird.Y_Bird - 50;
 

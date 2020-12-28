@@ -13,13 +13,17 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+        
 
         CtrlGame ctrg = new CtrlGame();
         Pipe pipe = new Pipe();
-        Items items = new Items();
+        Coins coins = new Coins();
+        
         Rocket rocket = new Rocket();
         Gift gift = new Gift();
         Bird bird = new Bird();
+
+        Heart heart = new Heart();
         LifeSpan lifeSpan = new LifeSpan();
 
         Timer timer_Bird = new Timer();
@@ -39,8 +43,10 @@ namespace WindowsFormsApplication1
             this.Controls.Add(bird.picBoxBird);
 
             // add items
-            this.Controls.Add(items.picBoxCoins);
-            this.Controls.Add(items.picBoxHearts);
+            this.Controls.Add(coins.picBoxCoins);
+
+            // add heart
+            this.Controls.Add(heart.picBoxHearts);
 
             // add lifespan
             this.Controls.Add(lifeSpan.picBoxLifeSpan1);
@@ -89,30 +95,32 @@ namespace WindowsFormsApplication1
             pipe.PipeInGame(this, pipe, bird);
 
             //// coins
-            items.GetCoins(this, bird, pipe);
-            items.CoinsInGame();
-            items.Impact_Coins_Bird(bird);
-
-            /// lifespan
-            lifeSpan.DrawLifeSpan(this);
-            if (items.sign_getHearts == true)
-            {
-                lifeSpan.Increase();
-                items.sign_getHearts = false;
-            }
+            coins.GetCoins(this, bird, pipe);
+            coins.CoinsInGame();
+            coins.Impact_Coins_Bird(bird);
 
             //// hearts
-            items.GetHearts(this, bird, pipe);
-            items.HeartsInGame();
-            items.Impact_Hearts_Bird(bird);
-            
-           
+            heart.GetHearts(this, bird, pipe);
+            heart.HeartsInGame();
+            heart.Impact_Hearts_Bird(bird);
+
+
+            /// lifespan
+            lifeSpan.DrawLifeSpan(heart);
+
+            if (heart.sign_getHearts)
+            {
+                lifeSpan.Increase(heart);
+                //heart.sign_getHearts = false;
+            }
+
+
             // shield character
-            if(lifeSpan.GetCount() > 1)
+            if (lifeSpan.GetCount() > 1)
             {
                 lifeSpan.SetVisibleOn(bird.X_Bird + 37, bird.Y_Bird - 30);
-            }    
-            
+            }
+
             //// rocket
             rocket.GetRocket(this, bird, pipe);
             rocket.RocketInGame();
@@ -122,7 +130,7 @@ namespace WindowsFormsApplication1
             //// Gift
             gift.GetGift(this, pipe);
             gift.GiftInGame();
-            gift.Impact_Gift_Bird(bird, timer1, timer_Bird,timer2);
+            gift.Impact_Gift_Bird(bird, timer1, timer_Bird, timer2);
 
             // bird
             bird.GetScore(pipe, label1);
