@@ -102,16 +102,20 @@ namespace WindowsFormsApplication1
             X_pipePairs1 = frm.Width + 150;
             Y_pipeAbove1 = -150;
             picBoxPipeAbove1.Location = new Point(X_pipePairs1, Y_pipeAbove1);
+          
 
             Y_pipeBottom1 = (pipe.picBoxPipeBottom1.Height + Y_pipeAbove1) + distance_Between2Pipes;
             picBoxPipeBottom1.Location = new Point(X_pipePairs1, Y_pipeBottom1);
+           
 
             X_pipePairs2 = X_pipePairs1 + 300;
             Y_pipeAbove2 = -100;
             picBoxPipeAbove2.Location = new Point(X_pipePairs2, Y_pipeAbove2);
+            
 
             Y_pipeBottom2 = (pipe.picBoxPipeBottom1.Height + Y_pipeAbove2) + distance_Between2Pipes;
             picBoxPipeBottom2.Location = new Point(X_pipePairs2, Y_pipeBottom2);
+            
         }
 
        
@@ -130,9 +134,13 @@ namespace WindowsFormsApplication1
             
 
             picBoxPipeAbove1.Location = new Point(X_pipePairs1, Y_pipeAbove1);
+            
             picBoxPipeBottom1.Location = new Point(X_pipePairs1, Y_pipeBottom1);
+            
             picBoxPipeAbove2.Location = new Point(X_pipePairs2, Y_pipeAbove2);
+            
             picBoxPipeBottom2.Location = new Point(X_pipePairs2, Y_pipeBottom2);
+           
 
             if (X_pipePairs1 + picBoxPipeAbove1.Width <= -10)
             {
@@ -144,7 +152,9 @@ namespace WindowsFormsApplication1
                 Y_pipeBottom1 = (pipe.picBoxPipeBottom1.Height + Y_pipeAbove1) + distance_Between2Pipes;
 
                 picBoxPipeAbove1.Location = new Point(X_pipePairs1, Y_pipeAbove1);
+                picBoxPipeAbove1.Visible = true;
                 picBoxPipeBottom1.Location = new Point(X_pipePairs1, Y_pipeBottom1);
+                picBoxPipeBottom1.Visible = true;
             }
 
             if (X_pipePairs2 + picBoxPipeAbove2.Width <= -10)
@@ -157,7 +167,9 @@ namespace WindowsFormsApplication1
                 Y_pipeBottom2 = (pipe.picBoxPipeBottom1.Height + Y_pipeAbove2) + distance_Between2Pipes;
 
                 picBoxPipeAbove2.Location = new Point(X_pipePairs2, Y_pipeAbove2);
+                picBoxPipeAbove2.Visible = true;
                 picBoxPipeBottom2.Location = new Point(X_pipePairs2, Y_pipeBottom2);
+                picBoxPipeBottom2.Visible = true;
             }
 
         }

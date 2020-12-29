@@ -57,11 +57,13 @@ namespace WindowsFormsApplication1
         public int Y_Bird = 100;
 
         int count = 0;
-        public int index_bird = 0;
+        public int index_bird = 1;
 
         public bool isAlive = true;
         public bool isGetRocket = false;
         public bool isGetGift = false;
+        public bool isShieldExist = false;
+
 
         public PictureBox picBoxBird = new PictureBox()
         {
@@ -175,9 +177,9 @@ namespace WindowsFormsApplication1
 
 
 
-        public void Impact_Bird_pipe(Form form,Pipe pipe, Rocket rocket, Gift gift, Timer timer, Timer timer2)
+        public void Impact_Bird_pipe(Form form,Pipe pipe, Rocket rocket, Gift gift, LifeSpan lifeSpan, Timer timer, Timer timer2)
         {
-            
+
             // inside form 
             if (Y_Bird >= 0 && Y_Bird + picBoxBird.Height <= form.Height)
             {
@@ -187,7 +189,7 @@ namespace WindowsFormsApplication1
                 rocket.Move_Fire(this);
                 gift.Appear_Thunder(this);
 
-                if (gift.count_Flash >= 95 )
+                if (gift.count_Flash >= 95)
                 {
                     isGetGift = false;
 
@@ -197,66 +199,228 @@ namespace WindowsFormsApplication1
 
                     timer2.Stop();
                 }
-
-                if (X_Bird + picBoxBird.Width >= pipe.X_pipePairs1 && X_Bird + picBoxBird.Width <= pipe.X_pipePairs1 + 52)
+                /// Shield is existed
+                if (isShieldExist)
                 {
-
-                    if (Y_Bird <= 250 + pipe.Y_pipeAbove1 || Y_Bird + picBoxBird.Height >= pipe.Y_pipeBottom1)
+                    int X_Shield = X_Bird + 37;
+                    int Y_Shield = Y_Bird - 30;
+                    if (X_Shield + lifeSpan.picBoxShieldCharacter.Width >= pipe.X_pipePairs1 && X_Shield + lifeSpan.picBoxShieldCharacter.Width <= pipe.X_pipePairs1 + 52)
                     {
-                        if (isAlive && isGetGift)
+
+                        if (Y_Shield <= 250 + pipe.Y_pipeAbove1)
                         {
+                            lifeSpan.Decrease();
+                            pipe.picBoxPipeAbove1.Visible = false;
+
+
+                        }
+                        else if (Y_Shield + lifeSpan.picBoxShieldCharacter.Height >= pipe.Y_pipeBottom1)
+                        {
+                            lifeSpan.Decrease();
+                            pipe.picBoxPipeBottom1.Visible = false;
+
+                        }
+
+                    }
+                    if (X_Shield + lifeSpan.picBoxShieldCharacter.Width >= pipe.X_pipePairs2 && X_Shield + lifeSpan.picBoxShieldCharacter.Width <= pipe.X_pipePairs2 + 52)
+                    {
+
+                        if (Y_Shield <= 250 + pipe.Y_pipeAbove2)
+                        {
+                            lifeSpan.Decrease();
+                            pipe.picBoxPipeAbove2.Visible = false;
+
+                        }
+                        else if (Y_Shield + lifeSpan.picBoxShieldCharacter.Height >= pipe.Y_pipeBottom2)
+                        {
+                            lifeSpan.Decrease();
+                            pipe.picBoxPipeBottom2.Visible = false;
+
+                        }
+
+                    }
+
+                    if (X_Bird + picBoxBird.Width >= pipe.X_pipePairs1 && X_Bird + picBoxBird.Width <= pipe.X_pipePairs1 + 52)
+                    {
+
+                        if (Y_Bird <= 250 + pipe.Y_pipeAbove1)
+                        {
+                            if (isAlive && isGetGift)
+                            {
+
+                            }
                             
-                        }
+                            if (pipe.picBoxPipeAbove1.Visible == false)
+                            { 
 
-                        // is alive and DIE
-                        else
+                            }    
+                            // is alive and DIE
+                            else
+                            {
+
+                                //ctrlGame.GameOver(c1, c2, c3);
+                                timer.Stop();
+                                //MessageBox.Show("GAME OVER");
+                                //return;
+
+                                SoundHit();
+                                SoundGameOver();
+
+                                isAlive = false;
+                               
+                            }
+                        }
+                        if (Y_Bird + picBoxBird.Height >= pipe.Y_pipeBottom1)
                         {
+                            if (isAlive && isGetGift)
+                            {
 
-                            //ctrlGame.GameOver(c1, c2, c3);
-                            timer.Stop();
-                            //MessageBox.Show("GAME OVER");
-                            //return;
+                            }
 
-                            SoundHit();
-                            SoundGameOver();
+                            if (pipe.picBoxPipeBottom1.Visible == false)
+                            {
 
-                            isAlive = false;
-                        }
+                            }
+                            // is alive and DIE
+                            else
+                            {
+
+                                //ctrlGame.GameOver(c1, c2, c3);
+                                timer.Stop();
+                                //MessageBox.Show("GAME OVER");
+                                //return;
+
+                                SoundHit();
+                                SoundGameOver();
+
+                                isAlive = false;
+                               
+                            }
+                        }        
                     }
-                }
-                if (X_Bird + picBoxBird.Width >= pipe.X_pipePairs2 && X_Bird + picBoxBird.Width <= pipe.X_pipePairs2 + 52)
-                {
-                    if (Y_Bird <= 250 + pipe.Y_pipeAbove2 || Y_Bird + picBoxBird.Height >= pipe.Y_pipeBottom2)
+                    if (X_Bird + picBoxBird.Width >= pipe.X_pipePairs2 && X_Bird + picBoxBird.Width <= pipe.X_pipePairs2 + 52)
                     {
-                        if (isAlive && isGetGift)
+                         if (Y_Bird <= 250 + pipe.Y_pipeAbove1)
                         {
-                           
-                        }
+                            if (isAlive && isGetGift)
+                            {
 
-                        // is alive and DIE
-                        else
+                            }
+                            
+                            if (pipe.picBoxPipeAbove1.Visible == false)
+                            { 
+
+                            }    
+                            // is alive and DIE
+                            else
+                            {
+
+                                //ctrlGame.GameOver(c1, c2, c3);
+                                timer.Stop();
+                                //MessageBox.Show("GAME OVER");
+                                //return;
+
+                                SoundHit();
+                                SoundGameOver();
+
+                                isAlive = false;
+                                
+                            }
+                        }
+                        if (Y_Bird + picBoxBird.Height >= pipe.Y_pipeBottom1)
                         {
+                            if (isAlive && isGetGift)
+                            {
 
-                            //ctrlGame.GameOver(c1, c2, c3);
-                            timer.Stop();
-                            //MessageBox.Show("GAME OVER");
-                            //return;
+                            }
 
-                            SoundHit();
-                            SoundGameOver();
+                            if (pipe.picBoxPipeBottom1.Visible == false)
+                            {
 
-                            isAlive = false;
-                        }
+                            }
+                            // is alive and DIE
+                            else
+                            {
+
+                                //ctrlGame.GameOver(c1, c2, c3);
+                                timer.Stop();
+                                //MessageBox.Show("GAME OVER");
+                                //return;
+
+                                SoundHit();
+                                SoundGameOver();
+
+                                isAlive = false;
+                               
+                            }
+                        }        
                     }
                 }
 
-            }
+                //Shield is not existed
+                if (isShieldExist != true)
+                {
+                    if (X_Bird + picBoxBird.Width >= pipe.X_pipePairs1 && X_Bird + picBoxBird.Width <= pipe.X_pipePairs1 + 52)
+                    {
 
+                        if (Y_Bird <= 250 + pipe.Y_pipeAbove1 || Y_Bird + picBoxBird.Height >= pipe.Y_pipeBottom1)
+                        {
+                            if (isAlive && isGetGift)
+                            {
+
+                            }
+
+                            // is alive and DIE
+                            else
+                            {
+
+                                //ctrlGame.GameOver(c1, c2, c3);
+                                timer.Stop();
+                                //MessageBox.Show("GAME OVER");
+                                //return;
+
+                                SoundHit();
+                                SoundGameOver();
+
+                                isAlive = false;
+                                
+                            }
+                        }
+                    }
+                    if (X_Bird + picBoxBird.Width >= pipe.X_pipePairs2 && X_Bird + picBoxBird.Width <= pipe.X_pipePairs2 + 52)
+                    {
+                        if (Y_Bird <= 250 + pipe.Y_pipeAbove2 || Y_Bird + picBoxBird.Height >= pipe.Y_pipeBottom2)
+                        {
+                            if (isAlive && isGetGift)
+                            {
+
+                            }
+
+                            // is alive and DIE
+                            else
+                            {
+
+                                //ctrlGame.GameOver(c1, c2, c3);
+                                timer.Stop();
+                                //MessageBox.Show("GAME OVER");
+                                //return;
+
+                                SoundHit();
+                                SoundGameOver();
+
+                                isAlive = false;
+                                
+                            }
+                        }
+                    }
+
+                }
+            }
             // outside form and bird die
             else
             {
                 Y_Bird += 7;
-                
+
                 picBoxBird.Location = new Point(X_Bird, Y_Bird);
 
                 rocket.Move_Fire(this);

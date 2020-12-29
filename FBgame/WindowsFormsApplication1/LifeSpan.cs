@@ -109,6 +109,11 @@ namespace WindowsFormsApplication1
             return iHearts;
         }
 
+        public void Decrease()
+        {
+            iHearts--;
+        }
+
        
         public void SetVisibleOn(int iX, int iY)
         {

@@ -82,7 +82,8 @@ namespace WindowsFormsApplication1
 
         private void Timer_Bird_Tick(object sender, EventArgs e)
         {
-            bird.Impact_Bird_pipe(this, pipe, rocket, gift, timer1, timer2);
+            bird.Impact_Bird_pipe(this, pipe, rocket, gift, lifeSpan, timer1, timer2);
+            
             //rocket.Impact_Rocket_Bird(bird, timer_Bird, timer1);
         }
 
@@ -116,10 +117,18 @@ namespace WindowsFormsApplication1
 
 
             // shield character
+            if (lifeSpan.GetCount() == 1)
+            {
+                lifeSpan.picBoxShieldCharacter.Visible = false;
+                bird.isShieldExist = false;
+            }
+
             if (lifeSpan.GetCount() > 1)
             {
                 lifeSpan.SetVisibleOn(bird.X_Bird + 37, bird.Y_Bird - 30);
+                bird.isShieldExist = true;
             }
+                    
 
             //// rocket
             rocket.GetRocket(this, bird, pipe);

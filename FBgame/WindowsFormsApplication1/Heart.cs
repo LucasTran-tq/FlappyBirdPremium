@@ -19,6 +19,7 @@ namespace WindowsFormsApplication1
         int randomNext_Hearts = 3;
         public bool sign_getHearts = false;
 
+
         Random random = new Random();
 
         public Bitmap hearts = new Bitmap(Properties.Resources.heart_item);
