@@ -128,19 +128,19 @@ namespace WindowsFormsApplication1
                 lifeSpan.SetVisibleOn(bird.X_Bird + 37, bird.Y_Bird - 30);
                 bird.isShieldExist = true;
             }
-                    
 
+            lifeSpan.Impact_Shield_Rocket(rocket, bird);
+            //lifeSpan.Impact_Shield_Pipes(pipe, bird);
             //// rocket
             rocket.GetRocket(this, bird, pipe);
             rocket.RocketInGame();
-            rocket.Impact_Rocket_Bird(bird, gift, timer_Bird, timer1);
+            rocket.Impact_Rocket_Bird(bird, gift, lifeSpan, timer_Bird, timer1);
             rocket.InvisibleEmergency(this);
 
             //// Gift
             gift.GetGift(this, pipe);
             gift.GiftInGame();
             gift.Impact_Gift_Bird(bird, timer1, timer_Bird, timer2);
-
             // bird
             bird.GetScore(pipe, label1);
 

@@ -12,8 +12,8 @@ namespace WindowsFormsApplication1
 {
     class Rocket
     {
-        int X_Rocket;
-        int Y_Rocket;
+        public int X_Rocket;
+        public int Y_Rocket;
         int rocket_Count = 0;
         int randomNext_Rocket = 4;
         int distance_2pipe = 150;
@@ -151,7 +151,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        public void Impact_Rocket_Bird(Bird bird, Gift gift, Timer timer_Bird, Timer timer)
+        public void Impact_Rocket_Bird(Bird bird, Gift gift, LifeSpan lifeSpan, Timer timer_Bird, Timer timer)
         {
 
             if ((bird.X_Bird + bird.picBoxBird.Width >= X_Rocket)
