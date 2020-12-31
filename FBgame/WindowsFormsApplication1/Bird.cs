@@ -62,8 +62,6 @@ namespace WindowsFormsApplication1
         public bool isAlive = true;
         public bool isGetRocket = false;
         public bool isGetGift = false;
-        public bool isShieldExist = false;
-        public bool shield_iBroken = false;
 
 
         public PictureBox picBoxBird = new PictureBox()

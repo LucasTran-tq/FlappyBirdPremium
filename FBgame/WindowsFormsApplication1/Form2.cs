@@ -107,7 +107,7 @@ namespace WindowsFormsApplication1
 
 
             /// lifespan
-            lifeSpan.DrawLifeSpan(heart);
+            lifeSpan.DrawLifeSpan();
 
             if (heart.sign_getHearts)
             {
@@ -120,19 +120,22 @@ namespace WindowsFormsApplication1
             if (lifeSpan.GetCount() == 1)
             {
                 lifeSpan.picBoxShieldCharacter.Visible = false;
-                bird.isShieldExist = false;
             }
 
             if (lifeSpan.GetCount() > 1)
             {
                 lifeSpan.SetVisibleOn(bird.X_Bird + 37, bird.Y_Bird - 30);
-                bird.isShieldExist = true;
             }
 
-            lifeSpan.Impact_Shield_Rocket(rocket, bird);
-            //lifeSpan.Impact_Shield_Pipes(pipe, bird);
+            //lifeSpan.Impact_Shield_Rocket(rocket, bird);
+            lifeSpan.Impact_Shield_Pipes(pipe, bird, heart);
+            if (heart.sign_decreaseHearts)
+            {
+                lifeSpan.Decrease(heart);
+                MessageBox.Show(lifeSpan.GetCount().ToString());
+            }
             //// rocket
-            rocket.GetRocket(this, bird, pipe);
+            /*rocket.GetRocket(this, bird, pipe);
             rocket.RocketInGame();
             rocket.Impact_Rocket_Bird(bird, gift, lifeSpan, timer_Bird, timer1);
             rocket.InvisibleEmergency(this);
@@ -140,7 +143,7 @@ namespace WindowsFormsApplication1
             //// Gift
             gift.GetGift(this, pipe);
             gift.GiftInGame();
-            gift.Impact_Gift_Bird(bird, timer1, timer_Bird, timer2);
+            gift.Impact_Gift_Bird(bird, timer1, timer_Bird, timer2);*/
             // bird
             bird.GetScore(pipe, label1);
 

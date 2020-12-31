@@ -18,6 +18,7 @@ namespace WindowsFormsApplication1
         int distance_2pipe = 150;
         int randomNext_Hearts = 3;
         public bool sign_getHearts = false;
+        public bool sign_decreaseHearts = false;
 
 
         Random random = new Random();

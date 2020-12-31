@@ -55,12 +55,12 @@ namespace WindowsFormsApplication1
             Image = global::WindowsFormsApplication1.Properties.Resources.superman,
             Location = new System.Drawing.Point(70, 420),
             Name = "pictureLifeSpan",
-            Size = new System.Drawing.Size(80, 80),
+            Size = new System.Drawing.Size(60, 60),
             SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom,
             Visible = false,
         };
 
-        public void DrawLifeSpan(Heart heart)
+        public void DrawLifeSpan()
         {
             if (iHearts == 1)
             {
@@ -98,7 +98,7 @@ namespace WindowsFormsApplication1
                 }
                 else if (iHearts == 1)
                 {
-                    iHearts = 3;
+                    iHearts = 2;
                 }
                 heart.sign_getHearts = false;
                 //MessageBox.Show("iheart = " + iHearts);
@@ -109,8 +109,9 @@ namespace WindowsFormsApplication1
             return iHearts;
         }
 
-        public void Decrease(Bird bird)
+        public void Decrease(Heart heart)
         {
+            
             if (iHearts == 3)
             {
                 iHearts = 2;
@@ -119,7 +120,7 @@ namespace WindowsFormsApplication1
             {
                 iHearts = 1;
             }
-            bird.shield_iBroken = false;
+            heart.sign_decreaseHearts = false;
         }
 
         public bool Shield_IsExist()
@@ -133,7 +134,7 @@ namespace WindowsFormsApplication1
             picBoxShieldCharacter.Visible = true;
         }
 
-        public void Impact_Shield_Pipes(Pipe pipe, Bird bird)
+        public void Impact_Shield_Pipes(Pipe pipe, Bird bird, Heart heart)
         {
             if (Shield_IsExist())
             {
@@ -144,13 +145,15 @@ namespace WindowsFormsApplication1
 
                     if (Y_Shield <= 250 + pipe.Y_pipeAbove1)
                     {
-                        iHearts--;
                         pipe.picBoxPipeAbove1.Visible = false;
+                        heart.sign_decreaseHearts = true;
+
                     }
                     else if (Y_Shield + picBoxShieldCharacter.Height >= pipe.Y_pipeBottom1)
                     {
-                        iHearts--;
+
                         pipe.picBoxPipeBottom1.Visible = false;
+                        heart.sign_decreaseHearts = true;
 
                     }
 
@@ -160,14 +163,15 @@ namespace WindowsFormsApplication1
 
                     if (Y_Shield <= 250 + pipe.Y_pipeAbove2)
                     {
-                        iHearts--;
                         pipe.picBoxPipeAbove2.Visible = false;
-
+                        heart.sign_decreaseHearts = true;
                     }
+
+
                     else if (Y_Shield + picBoxShieldCharacter.Height >= pipe.Y_pipeBottom2)
                     {
-                        iHearts--;
                         pipe.picBoxPipeBottom2.Visible = false;
+                        heart.sign_decreaseHearts = true;
 
                     }
 
