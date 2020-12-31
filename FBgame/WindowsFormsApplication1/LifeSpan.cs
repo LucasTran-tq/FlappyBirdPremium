@@ -145,16 +145,20 @@ namespace WindowsFormsApplication1
 
                     if (Y_Shield <= 250 + pipe.Y_pipeAbove1)
                     {
-                        pipe.picBoxPipeAbove1.Visible = false;
-                        heart.sign_decreaseHearts = true;
+                        if (pipe.picBoxPipeAbove1.Visible)
+                        {
+                            pipe.picBoxPipeAbove1.Visible = false;
+                            heart.sign_decreaseHearts = true;
+                        }
 
                     }
                     else if (Y_Shield + picBoxShieldCharacter.Height >= pipe.Y_pipeBottom1)
                     {
-
-                        pipe.picBoxPipeBottom1.Visible = false;
-                        heart.sign_decreaseHearts = true;
-
+                        if (pipe.picBoxPipeBottom1.Visible)
+                        {
+                            pipe.picBoxPipeBottom1.Visible = false;
+                            heart.sign_decreaseHearts = true;
+                        }
                     }
 
                 }
@@ -163,15 +167,21 @@ namespace WindowsFormsApplication1
 
                     if (Y_Shield <= 250 + pipe.Y_pipeAbove2)
                     {
-                        pipe.picBoxPipeAbove2.Visible = false;
-                        heart.sign_decreaseHearts = true;
+                        if (pipe.picBoxPipeAbove2.Visible)
+                        {
+                            pipe.picBoxPipeAbove2.Visible = false;
+                            heart.sign_decreaseHearts = true;
+                        }
                     }
 
 
                     else if (Y_Shield + picBoxShieldCharacter.Height >= pipe.Y_pipeBottom2)
                     {
-                        pipe.picBoxPipeBottom2.Visible = false;
-                        heart.sign_decreaseHearts = true;
+                        if (pipe.picBoxPipeBottom2.Visible)
+                        {
+                            pipe.picBoxPipeBottom2.Visible = false;
+                            heart.sign_decreaseHearts = true;
+                        }
 
                     }
 
