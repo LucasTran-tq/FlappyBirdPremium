@@ -13,6 +13,10 @@ namespace WindowsFormsApplication1
     class Bird
     {
         Pipe pipe = new Pipe();
+        //string filePathOfHightemp = Environment.CurrentDirectory + "/" + "highscore.txt";
+        //string filePathOfScore = Environment.CurrentDirectory + "/" + "score.txt";
+        HighScoreInfo highScore = new HighScoreInfo();
+        //string scoreInText = null;
         public Bitmap rebird_1 = new Bitmap(Properties.Resources.redbird_downflap),
            rebird_2 = new Bitmap(Properties.Resources.redbird_midflap),
            rebird_3 = new Bitmap(Properties.Resources.redbird_upflap),
@@ -218,6 +222,9 @@ namespace WindowsFormsApplication1
 
                             //ctrlGame.GameOver(c1, c2, c3);
                             timer.Stop();
+                           
+
+                           
                             //MessageBox.Show("GAME OVER");
                             //return;
 
@@ -240,6 +247,8 @@ namespace WindowsFormsApplication1
 
                             //ctrlGame.GameOver(c1, c2, c3);
                             timer.Stop();
+
+                            
                             //MessageBox.Show("GAME OVER");
                             //return;
 
@@ -265,6 +274,7 @@ namespace WindowsFormsApplication1
 
                             //ctrlGame.GameOver(c1, c2, c3);
                             timer.Stop();
+                            
                             //MessageBox.Show("GAME OVER");
                             //return;
 
@@ -288,6 +298,7 @@ namespace WindowsFormsApplication1
 
                             //ctrlGame.GameOver(c1, c2, c3);
                             timer.Stop();
+                            
                             //MessageBox.Show("GAME OVER");
                             //return;
 
@@ -369,14 +380,22 @@ namespace WindowsFormsApplication1
         }
 
 
-        public int scoreOfGame = 0;
+     //   public int scoreOfGame = 0;
+        
         public void GetScore(Pipe pipe, Control c1)
         {
+            string FilePath = Environment.CurrentDirectory + "/" + "temp.txt";
             if((X_Bird >= pipe.X_pipePairs1 + pipe.picBoxPipeAbove1.Width && X_Bird - 3 <= pipe.X_pipePairs1 + pipe.picBoxPipeAbove1.Width)
                    || (X_Bird >= pipe.X_pipePairs2 + pipe.picBoxPipeAbove1.Width && X_Bird - 3 <= pipe.X_pipePairs2 + pipe.picBoxPipeAbove1.Width))
+           // if ( pipe.X_pipePairs1 <= 0 || pipe.X_pipePairs2 <= 0)
             {
-                scoreOfGame++;
-                SoundPoint();
+               highScore.scoreOfGame++;
+               StreamWriter sw = new StreamWriter(FilePath);
+               sw.Write(highScore.scoreOfGame.ToString());
+               sw.Close();
+               c1.Text = highScore.scoreOfGame.ToString();
+               SoundPoint();
+                
             }
 
             if (isGetGift)
@@ -384,12 +403,17 @@ namespace WindowsFormsApplication1
                 if ((X_Bird >= pipe.X_pipePairs1 + pipe.picBoxPipeAbove1.Width && X_Bird - 20 <= pipe.X_pipePairs1 + pipe.picBoxPipeAbove1.Width)
                    || (X_Bird >= pipe.X_pipePairs2 + pipe.picBoxPipeAbove1.Width && X_Bird - 20 <= pipe.X_pipePairs2 + pipe.picBoxPipeAbove1.Width))
                 {
-                    scoreOfGame++;
+                    highScore.scoreOfGame++;
+                    StreamWriter sw = new StreamWriter(FilePath);
+                    sw.Write(highScore.scoreOfGame.ToString());
+                    sw.Close();
+                    c1.Text = highScore.scoreOfGame.ToString();
                     SoundPoint();
+                  
                 }
             }
-            
 
+           
         }
     }
 }

@@ -19,6 +19,8 @@ namespace WindowsFormsApplication1
 
         Random random = new Random();
 
+        HighScoreInfo highScore = new HighScoreInfo();
+
         public Bitmap coins = new Bitmap(Properties.Resources.Coins);
         
         WindowsMediaPlayer soundCash = new WMPLib.WindowsMediaPlayer();
@@ -95,7 +97,7 @@ namespace WindowsFormsApplication1
                     SoundCash();
                     if (picBoxCoins.Visible)
                     {
-                        bird.scoreOfGame += 3;
+                       highScore.scoreOfGame += 3;
                     }
                     picBoxCoins.Visible = false;
                 }

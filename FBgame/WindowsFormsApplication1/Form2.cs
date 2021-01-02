@@ -13,11 +13,16 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
-        
 
+       // string filePathOfHightemp = Environment.CurrentDirectory + "/" + "highscore.txt";
+       // string filePathOfScore = Environment.CurrentDirectory + "/" + "score.txt";
+        //HighScoreInfo highScore = new HighScoreInfo();
+       // string scoreInText = null;
         CtrlGame ctrg = new CtrlGame();
         Pipe pipe = new Pipe();
         Coins coins = new Coins();
+        HighScoreInfo highScore = new HighScoreInfo();
+
         
         Rocket rocket = new Rocket();
         Gift gift = new Gift();
@@ -146,9 +151,13 @@ namespace WindowsFormsApplication1
             gift.Impact_Gift_Bird(bird, timer1, timer_Bird, timer2);*/
             // bird
             bird.GetScore(pipe, label1);
-
+            //MessageBox.Show(bird.GetScore(pipe, label1));
+            highScore.HighScore();
            
-            label1.Text = bird.scoreOfGame.ToString();
+                
+
+            //HighScoreInf
+            //label1.Text = bird.scoreOfGame.ToString();
 
             
         }
@@ -177,6 +186,7 @@ namespace WindowsFormsApplication1
 
             timer_Bird.Start();
 
+            label1.Visible = true;
            
         }
 
@@ -266,5 +276,14 @@ namespace WindowsFormsApplication1
             ctrg.Item_SubMenuOff(yebirdPictureBox, blbirdPictureBox, rebirdPictureBox, pl_BgMenu, choose_lb, btt_Back);
             ctrg.MainScreenOn(btt_Play, btt_Menu, btt_Exit);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            button1.Visible = false;
+            pictureBox1.Visible = false;
+        }
+
+      
+       
     }
 }

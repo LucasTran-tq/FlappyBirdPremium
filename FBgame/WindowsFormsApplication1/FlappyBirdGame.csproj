@@ -68,6 +68,7 @@
     <Compile Include="Gift.cs" />
     <Compile Include="Heart.cs" />
     <Compile Include="Coins.cs" />
+    <Compile Include="HighScoreInfo.cs" />
     <Compile Include="LifeSpan.cs" />
     <Compile Include="Pipe.cs" />
     <Compile Include="Program.cs" />

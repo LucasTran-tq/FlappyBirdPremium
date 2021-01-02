@@ -59,3 +59,13 @@ D:\FLAPPY BIRD\FBgame\WindowsFormsApplication1\obj\x86\Debug\FlappyBirdGame.cspr
 D:\FLAPPY BIRD\FBgame\WindowsFormsApplication1\obj\x86\Debug\FlappyBirdGame.csproj.CopyComplete
 D:\FLAPPY BIRD\FBgame\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
 D:\FLAPPY BIRD\FBgame\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+C:\Users\PC\Desktop\11\FBgame\WindowsFormsApplication1\obj\x86\Debug\Interop.WMPLib.dll
+C:\Users\PC\Desktop\11\FBgame\WindowsFormsApplication1\obj\x86\Debug\FlappyBirdGame.csproj.ResolveComReference.cache
+C:\Users\PC\Desktop\11\FBgame\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+C:\Users\PC\Desktop\11\FBgame\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+C:\Users\PC\Desktop\11\FBgame\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\PC\Desktop\11\FBgame\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\PC\Desktop\11\FBgame\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\PC\Desktop\11\FBgame\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form2.resources
+C:\Users\PC\Desktop\11\FBgame\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\PC\Desktop\11\FBgame\WindowsFormsApplication1\obj\x86\Debug\FlappyBirdGame.csproj.GenerateResource.Cache
