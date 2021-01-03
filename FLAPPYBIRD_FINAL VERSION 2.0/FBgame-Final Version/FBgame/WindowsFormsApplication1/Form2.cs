@@ -16,6 +16,7 @@ namespace WindowsFormsApplication1
         }
 
 
+         
         CtrlGame ctrg = new CtrlGame();
         Pipe pipe = new Pipe();
         Coins coins = new Coins();
@@ -37,6 +38,8 @@ namespace WindowsFormsApplication1
         int speedOfGame;
         private void Form2_Load(object sender, EventArgs e)
         {
+
+            
 
             // add coins
             this.Controls.Add(coins.picBoxCoins);
@@ -371,17 +374,35 @@ namespace WindowsFormsApplication1
             ctrg.SubMenuOn(btt_scenceChrist, btt_scenceHallow, btt_scenceOrigin);
         }
 
-       
+      //  Form1 F = new Form1();
+
+        public bool buttonOriWasClicked = false;
 
         private void btt_scenceOrigin_Click(object sender, EventArgs e)
         {
+            buttonOriWasClicked = true;
+
+            if (buttonHaloWasClicked == true || buttonChristWasClicked == true)
+            {
+               buttonOriWasClicked = false;
+            }
+
             iChooseBG = 1;
+           
+        //    Properties.Settings.Default
+
+            // ctrg.ChooseBgGameForm1(1, F);
+             //Form1.BackgroundImage = Properties.Resources.ori_bg;
+             //F.pictureBox1.BackgroundImage = Properties.Resources.ori_logo;
+            // F.panel1.BackgroundImage = Properties.Resources.ori_fame;
 
             Properties.Settings.Default.Bg = iChooseBG.ToString();
             Properties.Settings.Default.Save();
 
             ctrg.MenuOn(pB_IntroBird, btt_scene, btt_speed, btt_item, pl_BgMenu, btt_Back);
             ctrg.SubMenuOff(btt_scenceOrigin, btt_scenceHallow, btt_scenceChrist);
+            
+
 
             btt_Play.BackgroundImage = Properties.Resources.btt_ori;
             btt_Play.OnHoverImage = Properties.Resources.btt_ori;
@@ -406,8 +427,17 @@ namespace WindowsFormsApplication1
 
         }
 
+        public bool buttonChristWasClicked = false;
+
         private void btt_scenceChrist_Click(object sender, EventArgs e)
         {
+            buttonChristWasClicked = true;
+
+          //  if (buttonHaloWasClicked == true || buttonOriWasClicked == true)
+          //  {
+                //buttonChristWasClicked = false;
+           // }
+
             iChooseBG = 2;
 
             Properties.Settings.Default.Bg = iChooseBG.ToString();
@@ -438,9 +468,18 @@ namespace WindowsFormsApplication1
 
            
         }
+        public bool buttonHaloWasClicked = false;
 
         private void btt_scenceHallow_Click(object sender, EventArgs e)
         {
+           buttonHaloWasClicked = true;
+
+          //  if (buttonOriWasClicked == true || buttonOriWasClicked == true)
+           // {
+             //   buttonHaloWasClicked = false;
+           // }
+
+
             iChooseBG = 3;
 
             Properties.Settings.Default.Bg = iChooseBG.ToString();
@@ -470,6 +509,8 @@ namespace WindowsFormsApplication1
             
 
             ctrg.ChooseBgGame(iChooseBG, this);
+          
+
             
         }
 
