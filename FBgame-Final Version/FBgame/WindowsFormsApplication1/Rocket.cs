@@ -114,7 +114,7 @@ namespace WindowsFormsApplication1
 
                     DrawRocket(form, pipe);
                     rocket_Count = 0;
-                    randomNext_Rocket = random.Next(5, 6);
+                    randomNext_Rocket = random.Next(7, 9);
                 }
             }
         }
@@ -130,21 +130,28 @@ namespace WindowsFormsApplication1
 
         }
 
-        public void RocketInGame(Bird bird)
+        public void RocketInGame(Bird bird, int speed)
         {
             if (rocket_Fire)
             {
-                X_Rocket -= 7;
-                Y_Rocket += 7;
+                X_Rocket -= speed;
+                Y_Rocket += speed;
+            }
+
+            // out of form and it stop
+            else if(X_Rocket <= -300)
+            {
+                X_Rocket = -300;
             }
 
             else if (bird.isGetGift)
             {
-                X_Rocket -= 13;
+                X_Rocket -= speed * 2;
             }
+
             else
             {
-                X_Rocket -= 7;
+                X_Rocket -= speed + 4;
             }
         }
 

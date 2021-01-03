@@ -33,7 +33,8 @@ namespace WindowsFormsApplication1
         Timer timer_Bird = new Timer();
 
         Timer timer2 = new Timer();
-        
+
+        int speedOfGame;
         private void Form2_Load(object sender, EventArgs e)
         {
 
@@ -145,20 +146,47 @@ namespace WindowsFormsApplication1
 
             //pipe
             if (iSpeed == 1)
-                pipe.PipeInGame(this, pipe, bird, 5);
+            {
+                speedOfGame = 5;
+
+                pipe.PipeInGame(this, pipe, bird, speedOfGame);
+                rocket.RocketInGame(bird, speedOfGame);
+                gift.GiftInGame(bird,speedOfGame);
+                heart.HeartsInGame(bird, speedOfGame);
+                coins.CoinsInGame(bird, speedOfGame);
+            }
+               
             else if (iSpeed == 2)
-                pipe.PipeInGame(this, pipe, bird, 10);
+            {
+                speedOfGame = 7;
+
+                pipe.PipeInGame(this, pipe, bird, speedOfGame);
+                rocket.RocketInGame(bird, speedOfGame);
+                gift.GiftInGame(bird, speedOfGame);
+                heart.HeartsInGame(bird, speedOfGame);
+                coins.CoinsInGame(bird, speedOfGame);
+            }
+                
             else if (iSpeed == 3)
-                pipe.PipeInGame(this, pipe, bird, 15);
+            {
+                speedOfGame = 10;
+
+                pipe.PipeInGame(this, pipe, bird, speedOfGame);
+                rocket.RocketInGame(bird, speedOfGame);
+                gift.GiftInGame(bird, speedOfGame);
+                heart.HeartsInGame(bird, speedOfGame);
+                coins.CoinsInGame(bird, speedOfGame);
+            }
+                
 
             //// coins
             coins.GetCoins(this, bird, pipe);
-            coins.CoinsInGame();
+            
             coins.Impact_Coins_Bird(bird);
 
             //// hearts
             heart.GetHearts(this, bird, pipe);
-            heart.HeartsInGame();
+            
             heart.Impact_Hearts_Bird(bird);
 
 
@@ -191,13 +219,13 @@ namespace WindowsFormsApplication1
 
             // rocket
             rocket.GetRocket(this, bird, pipe);
-            rocket.RocketInGame(bird);
+            
             rocket.Impact_Rocket_Bird(bird, gift, lifeSpan, timer_Bird, timer1);
             rocket.InvisibleEmergency(this);
 
             //Gift
             gift.GetGift(this, pipe);
-            gift.GiftInGame();
+            
             gift.Impact_Gift_Bird(bird, timer1, timer_Bird, timer2);
 
             Invalidate();

@@ -95,7 +95,7 @@ namespace WindowsFormsApplication1
                     picBoxGift.Visible = true;
                     DrawGift(form);
                     gift_Count = 0;
-                    randomNext_Gift = random.Next(4, 5);
+                    randomNext_Gift = random.Next(5, 8);
                 }
             }
         }
@@ -118,11 +118,26 @@ namespace WindowsFormsApplication1
 
         }
 
-        public void GiftInGame()
+        public void GiftInGame(Bird bird, int speed)
         {
-            X_Gift -= 5;
+            // out of form and it stop
+            if (X_Gift <= -50)
+            {
+                X_Gift = -50;
+                picBoxGift.Location = new Point(X_Gift, Y_Gift);
+            }
 
-            picBoxGift.Location = new Point(X_Gift, Y_Gift);
+            else if (bird.isGetGift)
+            {
+                X_Gift -= speed * 2;
+            }
+            else
+            {
+                X_Gift -= speed;
+
+                picBoxGift.Location = new Point(X_Gift, Y_Gift);
+
+            }
         }
 
         public void Impact_Gift_Bird(Bird bird, Timer timer1, Timer timer_Bird, Timer timer2)

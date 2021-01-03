@@ -75,11 +75,26 @@ namespace WindowsFormsApplication1
             picBoxCoins.Location = new Point(X_Coins, Y_Coins);
         }
 
-        public void CoinsInGame()
+        public void CoinsInGame(Bird bird, int speed)
         {
-            X_Coins -= 5;
+            // out of form and it stop
+            if (X_Coins <= -50)
+            {
+                X_Coins = -50;
 
-            picBoxCoins.Location = new Point(X_Coins, Y_Coins);
+                picBoxCoins.Location = new Point(X_Coins, Y_Coins);
+
+            }
+            else if (bird.isGetGift)
+            {
+                X_Coins -= speed * 2;
+            }
+            else
+            {
+                X_Coins -= speed;
+
+                picBoxCoins.Location = new Point(X_Coins, Y_Coins);
+            }
         }
 
 

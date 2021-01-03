@@ -75,8 +75,8 @@ namespace WindowsFormsApplication1
         {
             if (bird.isGetGift)
             {
-                X_pipePairs1 -= 10;
-                X_pipePairs2 -= 10;
+                X_pipePairs1 -= speed * 2;
+                X_pipePairs2 -= speed * 2;
             }
             else
             {

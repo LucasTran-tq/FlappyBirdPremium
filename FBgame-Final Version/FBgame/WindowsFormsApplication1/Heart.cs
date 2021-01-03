@@ -64,11 +64,25 @@ namespace WindowsFormsApplication1
             }
         }
 
-        public void HeartsInGame()
+        public void HeartsInGame(Bird bird,int speed)
         {
-            X_Hearts -= 5;
+            // out of form and it stop
+            if (X_Hearts <= -50)
+            {
+                X_Hearts = -50;
+                picBoxHearts.Location = new Point(X_Hearts, Y_Hearts);
+            }
 
-            picBoxHearts.Location = new Point(X_Hearts, Y_Hearts);
+            else if (bird.isGetGift)
+            {
+                X_Hearts -= speed * 2;
+            }
+            else
+            {
+                X_Hearts -= speed;
+
+                picBoxHearts.Location = new Point(X_Hearts, Y_Hearts);
+            }
         }
 
         public void Impact_Hearts_Bird(Bird bird)
