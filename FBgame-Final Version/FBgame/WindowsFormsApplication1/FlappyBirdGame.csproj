@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C8ACD799-03E0-45D1-8D4D-91504817C2BA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\Guna\Guna_UI_v2.0.0.6\Guna.UI.WinForms_v1.0.0.9\.net 2.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bird.cs" />
+    <Compile Include="CtrlGame.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gift.cs" />
+    <Compile Include="Heart.cs" />
+    <Compile Include="Coins.cs" />
+    <Compile Include="HighScoreInfo.cs" />
+    <Compile Include="LifeSpan.cs" />
+    <Compile Include="Pipe.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Rocket.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\pipe_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pipe_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chimney1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chimney2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bluebird-downflap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bluebird-midflap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bluebird-upflap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redbird-downflap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redbird-midflap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redbird-upflap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellowbird-downflap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellowbird-midflap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellowbird-upflap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coins.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clickSound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\die.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hit.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SoundGameOver.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\swoosh.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wing.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Sound\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emergency.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\startGame.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cash Register.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ezgif.com-gif-maker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emergency.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emergency_gif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fire_gif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boomExplosion.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bird_flash_gif.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thunder_gif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gift_gif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bluebird_die.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redbird_die.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellowbird_die.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\theFlash.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thunder.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart_item.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lifespan-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lifespan-removebg-preview Cropped.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lifespan-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ezgif.com-gif-maker %282%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ezgif.com-gif-maker %283%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\superman.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panel-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BgGame_Christmas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BgGame_Halloween.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bg_Origin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cursorOrigin.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cursorHallo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cursorChristmas.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cursor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bg_Origin %285%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\playyyy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\160803805964364675.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image%2811%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image%2810%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seasion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image%2814%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image%2813%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image%2812%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image%289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nenuuuu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play_christ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image%2815%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image%2820%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image%2819%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image%2818%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image%2817%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rocket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GiftChristmas.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GiftOrigin.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GiftHalloween.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image%2821%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image%2824%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image%2823%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image%2822%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image%2827%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image%2826%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image%2825%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disapear_pipe_sound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shield_sound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shield.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
